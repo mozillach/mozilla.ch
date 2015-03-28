@@ -18,7 +18,7 @@
     <link href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
     <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
 
-    {% javascripts '../app/Resources/public/scripts/menu.js' %}
+    {% javascripts '../app/Resources/public/scripts/*.js' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
 </head>
@@ -109,11 +109,11 @@
                 <form id="lang_form">
                     <label for="language">{% trans %}footer.other-languages{% endtrans %}</label>
                     <select id="language" name="lang">
-                        <option lang="de-ch" value="de-ch">Deutsch</option>
-                        <option lang="en" value="en">English</option>
-                        <option lang="fr-ch" value="fr-ch">Français</option>
-                        <option lang="it-ch" value="it-ch">Italiano</option>
-                        <option lang="rm" value="rm">Rumantsch</option>
+                        <option lang="de-CH" value="de" {% if app.request.locale == "de" %} selected="selected"{% endif %}>Deutsch</option>
+                        <option lang="en" value="en" {% if app.request.locale == "en" %} selected="selected"{% endif %}>English</option>
+                        <option lang="fr-CH" value="fr" {% if app.request.locale == "fr" %} selected="selected"{% endif %}>Français</option>
+                        <option lang="it-CH" value="it" {% if app.request.locale == "it" %} selected="selected"{% endif %}>Italiano</option>
+                        <option lang="rm" value="rm" {% if app.request.locale == "rm" %} selected="selected"{% endif %}>Rumantsch</option>
                     </select>
                     <noscript>
                         <button type="submit">{% trans %}footer.go{% endtrans %}</button>
