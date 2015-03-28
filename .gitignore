@@ -10,3 +10,30 @@
 /vendor/
 /bin/
 /composer.phar
+# IDE & System Related Files #
+.buildpath
+.project
+.settings
+.idea
+*~
+
+# Don't include the build main.css file.
+resources/main.css
+
+# Local System Files (i.e. cache, logs, etc.) #
+/.htaccess
+/web.config
+
+# OSX #
+._*
+.Spotlight-V100
+.Trashes
+.DS_Store
+
+# Windows #
+Thumbs.db
+Desktop.ini
+
+# Never ignore #
+# Only apply this rule to the main repository's gitignore files
+!/.gitignore
