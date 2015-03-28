@@ -15,7 +15,7 @@ class DefaultController extends Controller
     {
         $this->nextEventTileAction();
 
-        return $this->render('default/index.html.twig');
+        return $this->render('index.html.twig');
     }
 
     public function contributorTileAction()
@@ -79,6 +79,9 @@ class DefaultController extends Controller
 
     private function getBuzz()
     {
-        return $this->container->get('buzz');
+        $buzz = $this->container->get('buzz');
+        $buzz->getClient()->setVerifyPeer(false);
+
+        return $buzz;
     }
 }

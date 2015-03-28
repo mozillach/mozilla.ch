@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<!-- saved from url=(0027)https://www.mozilla.org/de/ -->
+<html>
+<head>
+    <base target=_blank">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta charset="utf-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>TODO</title>
+    <meta name="description" content="">
+
+    <link rel="stylesheet" type="text/css" href="resources/main.css">
+
+    <!-- Tabzilla intergration -->
+    <link href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
+    <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+</head>
+<body>
+<header id="masthead">
+    <div class="container">
+        <a href="/en-US/" id="tabzilla" data-infobar="update translation" aria-label="Mozilla links">Mozilla</a>
+    </div>
+</header>
+<main role="main">
+    <header class="main-header">
+        <div class="container">
+            <h1><img src="resources/mozillach_wordmark-white.svg" width="403" alt="Mozilla.ch" height="82"></h1>
+        </div>
+    </header>
+
+
+    <div id="tileA"></div>
+    <div id="tileB"></div>
+    <div id="tileC">{{ render(controller('AppBundle:Default:contributorTile')) }}</div>
+    <div id="tileD">{{ render(controller('AppBundle:Default:contributorTile')) }}</div>
+    <div id="tileE"></div>
+    <div id="tileF"></div>
+    <div id="tileG"></div>
+    <div id="tileH"></div>
+    <div id="tileI">
+        <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+    </div>
+    <div id="tileJ"></div>
+    <div id="tileK"></div>
+    <div id="tileL"></div>
+    <div id="tileM"></div>
+    <div id="tileN"></div>
+    <div id="tileO"></div>
+    <div id="tileP"></div>
+    <div id="tileQ"></div>
+    <div id="tileR"></div>
+    <div id="tileS"></div>
+
+    <div class="container"></div>
+    <script>
+        var parseLayout = function(str) {
+            /**
+             * Represents a single tile entry. The tile starts at (xs, ys) and extends
+             * to (xe, ye), where the start and end positions are inclusive. The coordinate
+             * system starts at the top left border with (0, 0).
+             */
+            var TileEntry = function(name, x, y) {
+                this.name = name;
+
+                // Start position of the tile.
+                this.xs = x;
+                this.ys = y;
+                // End position of the tile.
+                this.xe = x;
+                this.ye = y;
+            }
+            TileEntry.prototype.extendTo = function(x, y) {
+                this.xe = Math.max(this.xe, x);
+                this.ye = Math.max(this.ye, y);
+            }
+
+            var tiles = {};
+            var lines = str.replace(/=/g, ' ').split('\n').slice(1);
+            lines.forEach(function(line, y) {
+                line.trim().split(' ').forEach(function(c, x) {
+                    if (c in tiles) {
+                        tiles[c].extendTo(x, y);
+                    } else {
+                        tiles[c] = new TileEntry(c, x, y);
+                    }
+                });
+            });
+
+            return tiles;
+        }
+
+        var layouts = {};
+        layouts['1260'] = parseLayout(`
+        A=A B=B C D E=E
+        A=A F=F=F=F G H
+        A=A F=F=F=F I=I
+        J=J K=K L=L I=I
+        M N K=K L=L I=I
+        O P K=K Q R I=I`);
+
+        var containerDOM = document.querySelector('.container');
+        var tiles = {};
+        var names = [
+            'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+            'M', 'N', 'O', 'P', 'Q', 'R', 'S'
+        ];
+
+        names.map(function(name) {
+            var dom = tiles[name] = document.querySelector(`#tile${name}`);
+            containerDOM.appendChild(dom);
+            if (dom.innerHTML == '') {
+                dom.innerHTML = `Tile-${name}`;
+            }
+        });
+
+
+        var updateTilePosition = function(dom, tileData) {
+            dom.className = 'tileElement';
+            dom.style.left = (tileData.xs * 160) + 'px';
+            dom.style.top = (tileData.ys * 160) + 'px';
+            dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 40) + 'px';
+            dom.style.height = ((tileData.ye - tileData.ys + 1) * 160 - 40) + 'px';
+            return dom;
+        }
+
+
+        var layout = layouts['1260'];
+        names.forEach(function(name) {
+            updateTilePosition(tiles[name], layout[name]);
+        })
+
+    </script>
+
+    <section class="promo-grid-wrapper">
+        <div class="promo-grid-inner">
+            <ul class="promo-grid  stagger reveal">
+                <li id="promo-1" class="item promo-large-portrait firefox-hello" data-name="Meet Firefox Hello" tabindex="0">
+                </li>
+            </ul>
+        </div>
+    </section>
+    <section class="getinvolved">
+        <h2>Get Involved</h2>
+        <p>Mozilla is a global, open community with an active local group here in Switzerland. You are invited to join us! Can you help to localize content for your region and language? Would you like improve Mozilla products? Do you create cool webapps for an open Web Platform? Or would you just like to get in touch with cool people that share your enthusiasm for an open web? Contact us!</p>
+    </section>
+</main>
+<footer id="colophon" class="">
+    <nav class="row">
+        <div class="col col-1">
+            <h1 class="logo"><a href="https://mozilla.org/">Mozilla</a></h1>
+            <p class="license">Teile dieses Inhalts stehen unter einem ©1998–2015 von einzelnen Mitwirkenden an mozilla.org. Der Inhalt steht unter einer <a href="https://mozilla.org/foundation/licensing/website-content/">Creative-Commons-Lizenz</a>.</p>
+        </div>
+        <div class="col col-2">
+            <ul class="links-join">
+                <li><a href="https://mozilla.org/contact/spaces/">Kontakt</a></li>
+                <li class="wrap"><a href="https://mozilla.org/about/partnerships/">Werden Sie Partner</a></li>
+                <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/" class="donate">Spenden</a></li>
+                <li class="wrap"><a href="https://affiliates.mozilla.org/">Firefox-Partnerprogramm</a></li>
+                <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org">Zu dieser Seite beitragen</a></li>
+            </ul>
+            <ul class="links-legal">
+                <li><a href="https://mozilla.org/privacy/">Datenschutz</a></li>
+                <li class="wrap"><a href="https://mozilla.org/privacy/websites/#cookies">Cookies</a></li>
+                <li class="wrap"><a href="https://mozilla.org/about/legal/">Rechtliches</a></li>
+                <li class="clear"><a href="https://mozilla.org/about/legal/fraud-report/">Markenrechtsverletzung melden</a></li>
+            </ul>
+        </div>
+        <div class="col col-3">
+            <ul class="links-social">
+                <li>
+                    Mozilla Schweiz:
+                    <ul>
+                        <li><a href="https://twitter.com/MozillaCH">Twitter<span> (@MozillaCH)</span></a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </nav>
+</footer>
+</body>
+</html>
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <style type="text/css">
+        html, body {
+            height: 100%;
+        }
+
+        .container {
+            margin: 0 auto;
+            border: 1px solid gray;
+            position: relative;
+            width: 1260px;
+            height: 100%;
+        }
+
+        .tileElement {
+            position: absolute;
+            border: 1px solid gray;
+            display: inline-block;
+        }
+
+    </style>
+</head>
+<body>
+<div id="tileA"></div>
+<div id="tileB"></div>
+<div id="tileC">{{ render(controller('AppBundle:Default:contributorTile')) }}</div>
+<div id="tileD">{{ render(controller('AppBundle:Default:contributorTile')) }}</div>
+<div id="tileE"></div>
+<div id="tileF"></div>
+<div id="tileG"></div>
+<div id="tileH"></div>
+<div id="tileI">
+    <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a> <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script>
+</div>
+<div id="tileJ"></div>
+<div id="tileK"></div>
+<div id="tileL"></div>
+<div id="tileM"></div>
+<div id="tileN"></div>
+<div id="tileO"></div>
+<div id="tileP"></div>
+<div id="tileQ"></div>
+<div id="tileR"></div>
+<div id="tileS"></div>
+
+<div class="container"></div>
+<script>
+    var parseLayout = function(str) {
+        /**
+         * Represents a single tile entry. The tile starts at (xs, ys) and extends
+         * to (xe, ye), where the start and end positions are inclusive. The coordinate
+         * system starts at the top left border with (0, 0).
+         */
+        var TileEntry = function(name, x, y) {
+            this.name = name;
+
+            // Start position of the tile.
+            this.xs = x;
+            this.ys = y;
+            // End position of the tile.
+            this.xe = x;
+            this.ye = y;
+        }
+        TileEntry.prototype.extendTo = function(x, y) {
+            this.xe = Math.max(this.xe, x);
+            this.ye = Math.max(this.ye, y);
+        }
+
+        var tiles = {};
+        var lines = str.replace(/=/g, ' ').split('\n').slice(1);
+        lines.forEach(function(line, y) {
+            line.trim().split(' ').forEach(function(c, x) {
+                if (c in tiles) {
+                    tiles[c].extendTo(x, y);
+                } else {
+                    tiles[c] = new TileEntry(c, x, y);
+                }
+            });
+        });
+
+        return tiles;
+    }
+
+    var layouts = {};
+    layouts['1260'] = parseLayout(`
+    A=A B=B C D E=E
+    A=A F=F=F=F G H
+    A=A F=F=F=F I=I
+    J=J K=K L=L I=I
+    M N K=K L=L I=I
+    O P K=K Q R I=I`);
+
+    var containerDOM = document.querySelector('.container');
+    var tiles = {};
+    var names = [
+        'A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L',
+        'M', 'N', 'O', 'P', 'Q', 'R', 'S'
+    ];
+
+    names.map(function(name) {
+        var dom = tiles[name] = document.querySelector(`#tile${name}`);
+        containerDOM.appendChild(dom);
+        if (dom.innerHTML == '') {
+            dom.innerHTML = `Tile-${name}`;
+        }
+    });
+
+
+    var updateTilePosition = function(dom, tileData) {
+        dom.className = 'tileElement';
+        dom.style.left = (tileData.xs * 160) + 'px';
+        dom.style.top = (tileData.ys * 160) + 'px';
+        dom.style.width = ((tileData.xe - tileData.xs + 1) * 160 - 40) + 'px';
+        dom.style.height = ((tileData.ye - tileData.ys + 1) * 160 - 40) + 'px';
+        return dom;
+    }
+
+
+    var layout = layouts['1260'];
+    names.forEach(function(name) {
+        updateTilePosition(tiles[name], layout[name]);
+    })
+
+</script>
+</body>
+</html>
