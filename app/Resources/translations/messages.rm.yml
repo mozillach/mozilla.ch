@@ -23,9 +23,7 @@ getinvolved:
 general:
     donate: Donar
 footer:
-    copyright-1: Parts dal cuntegn èn ©1998–2015 da divers contribuents a mozilla.org. Il cuntegn stat a disposiziun tenor la
-    copyright-2: .
-    cc: licenza da Creative Commons
+    copyright: Parts dal cuntegn èn ©1998–2015 da divers contribuents a mozilla.org. Il cuntegn stat a disposiziun tenor la <a href="https://mozilla.org/foundation/licensing/website-content/">licenza da Creative Commons</a>.
     contact: Ans contactescha
     partner: Daventa in partenari
     firefoxaffiliates: Firefox Affiliates

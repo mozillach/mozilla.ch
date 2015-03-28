@@ -23,9 +23,7 @@ getinvolved:
 general:
     donate: Donate
 footer:
-    copyright-1: Portions of this content are ©1998–2015 by individual mozilla.org contributors. Content available under a
-    copyright-2: .
-    cc: Creative Commons license
+    copyright: Portions of this content are ©1998–2015 by individual mozilla.org contributors. Content available under a <a href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
     contact: Contact us
     partner: Partner with Us
     firefoxaffiliates: Firefox Affiliates
