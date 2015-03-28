@@ -19,11 +19,11 @@ header:
     mission: Mission
     menu: Menu
 getinvolved:
-    title: ~~Get Involved~~
+    title: Get involved
     description: Mozilla is a global, open community with an active local group here in Switzerland. You are invited to join us! Can you help to localize content for your region and language? Would you like improve Mozilla products? Do you create cool webapps for an open Web Platform? Or would you just like to get in touch with cool people that share your enthusiasm for an open web? Contact us!
 l10n:
     title: Localization
-    description: TODO: Platzhalter für einen kurzen Satz zur Mehrsprachigkeit in der Schweiz über zwei oder mehr Zeilen
+    description: Would you like to contribute to Mozilla with your language? Please contact us!
 get-in-touch:
     title: Get in touch
     description: Get in touch with the Swiss community, ask your questions and participate at our events.
