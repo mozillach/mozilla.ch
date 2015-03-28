@@ -18,8 +18,14 @@ header:
     support: Agid
     mission: Missiun
 getinvolved:
+    title: Ta participar
     description: Mozilla è ina communitad mundiala averta cun ina gruppa locala activa en Svizra. Ti es envidà da ta participar! Sas ti gidar da translatar cuntegn per tia regiun en tia lingua? Vuls ti meglierar ils products da Mozilla? Has ti creà web-apps coolas per ina plattafurma averta? Ni vuls ti simplamain emprender ad enconuscher glieud simpatica che partan tes entusiassem per in web avert? Ans contactescha!
-    tile-1: Translatescha Firefox per rumantsch! Ussa! Hopp!
+l10n:
+    title: Translaziun
+    description: TODO: Platzhalter für einen kurzen Satz zur Mehrsprachigkeit in der Schweiz über zwei oder mehr Zeilen
+get-in-touch:
+    title: Ans contactescha
+    description: Ta participescha da la communitad svizra, tschenta tias dumondas e ta participescha da nossas occurrenzas.
 general:
     donate: Donar
 footer:
@@ -32,3 +38,6 @@ footer:
     cookies: Cookies
     legal: Legal
     trademark-abuse: Rapportar abus da la marca
+    other-languages: Autras linguas:
+    go: Dai
+    mozilla-ch: Mozilla Svizra:

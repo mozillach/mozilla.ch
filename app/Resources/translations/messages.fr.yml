@@ -18,8 +18,14 @@ header:
     support: Support
     mission: Mission
 getinvolved:
+    title: ~~Get Involved~~
     description: Mozilla est une communauté mondiale ouverte avec un groupe local actif en Suisse. Vous êtes invités à nous rejoindre! Pouvez-vous aider à localiser du contenu pour votre région et votre langue? Aimeriez-vous améliorer les produits Mozilla? Avez-vous créé des webapps cool pour une plate-forme ouverte? Ou souhaitez-vous tout simplement entrer en contact avec des gens sympas qui partagent votre enthousiasme pour un Web ouvert? Contactez-nous!
-    tile-1: Localisation
+l10n:
+    title: Localisation
+    description: ~~Platzhalter für einen kurzen Satz zur Mehrsprachigkeit in der Schweiz über zwei oder mehr Zeilen~~
+get-in-touch:
+    title: ~~Get in touch~~
+    description: ~~Get in touch with the Swiss community, ask your questions and participate at our events.~~
 general:
     donate: Faire un don
 footer:
@@ -32,3 +38,6 @@ footer:
     cookies: Cookies
     legal: Legal
     trademark-abuse: Signaler un abus de marque déposée
+    other-languages: Autres langues:
+    go: Go
+    mozilla-ch: Mozilla Suisse:
