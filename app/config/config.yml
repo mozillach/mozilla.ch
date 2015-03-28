@@ -78,14 +78,14 @@ services:
     cache:
         class: Doctrine\Common\Cache\FilesystemCache
         arguments: ['%kernel.cache_dir%']
-    insecure-buzz-client:
+    insecurebuzzclient:
         class:  Buzz\Client\Curl
         public: false
         calls:
         - [setVerifyPeer, [false]]
-    insecure-buzz-browser:
+    insecurebuzzbrowser:
         class:     Buzz\Browser
-        arguments: ['@insecure-buzz-client']
+        arguments: ['@insecurebuzzclient']
 
 
 endroid_twitter:

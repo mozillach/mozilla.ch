@@ -80,6 +80,6 @@ class DefaultController extends Controller
 
     private function getBuzz()
     {
-        return $this->container->get('buzz');
+        return $this->container->get('insecurebuzzbrowser');
     }
 }
