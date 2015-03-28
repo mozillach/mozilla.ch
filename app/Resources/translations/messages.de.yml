@@ -1,0 +1,36 @@
+tiles:
+    upcoming: Nächste Events
+    getinvolved: Mitmachen
+    pastevents: Vergangene Events
+    follow-twitter: Folge uns auf Twitter
+    download-firefox: Firefox herunterladen
+    ch-apps: Firefox OS Apps aus der Schweiz
+    firefox-os: Lerne Firefox OS kennen
+    webmaker: Entwickle das Web, das du möchtest
+    firefox-hello: Lerne Firefox Hello kennen
+    dev-edition: Hier kommt Firefox Developer Edition
+    firefox-android: Hole dir Firefox auf dein Android-Gerät
+    marketplace: Installiere Web Apps vom Firefox Marketplace
+    gearstore: Hier gibt es die offiziellen Mozilla-Fanartikel
+    donation: Spenden
+    external-blog-posts: Blogposts
+header:
+    support: Support
+    mission: Mission
+getinvolved:
+    description: Mozilla ist eine globale, offene Community mit einer aktiven lokalen Gruppe hier in der Schweiz. Du kannst mitmachen! Hast du Lust, Inhalte für deine Region und Sprache zu übersetzen? Willst du helfen, Mozilla Produkte zu verbessern? Erstellst du coole Webapps für eine offene Web Platform? Oder hast du einfach Lust, coole Leute kennen zu lernen, die deine Begeisterung für ein offenes Web teilen? Melde dich!
+    tile-1: Lokalisierung
+general:
+    donate: Spenden
+footer:
+    copyright-1: Teile dieses Inhalts stehen unter einem ©1998–2015 von einzelnen Mitwirkenden an mozilla.org. Der Inhalt steht unter einer
+    copyright-2: .
+    cc: Creative Commons Lizenz
+    contact: Kontakt
+    partner: Werde Partner
+    firefoxaffiliates: Firefox-Partnerprogramm
+    contribute: Zu dieser Seite beitragen
+    privacy: Datenschutz
+    cookies: Cookies
+    legal: Rechtliches
+    trademark-abuse: Merkenrechtsverletzung melden
