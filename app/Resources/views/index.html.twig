@@ -26,8 +26,8 @@
         <nav id="nav-main" role="navigation">
             <ul id="nav-main-menu">
                 <li class="first"><a data-name="donate" href="https://sendto.mozilla.org/page/contribute/">Donate</a></li>
-                <li><a data-name="mission" href="https://www.mozilla.org/mission">Mission</a></li>
-                <li><a data-name="support" href="https://support.mozilla.org/">Support</a></li>
+                <li><a data-name="mission" href="https://www.mozilla.org/mission">{% trans %}header.mission{% endtrans %}</a></li>
+                <li><a data-name="support" href="https://support.mozilla.org/">{% trans %}header.support{% endtrans %}</a></li>
                 <li class="last"><a data-name="community" href="https://www.mozilla.org/">mozilla.org</a></li>
             </ul>
         </nav>
@@ -52,7 +52,7 @@
         <div class="container">
             <div class="get-involved">
                 <h2>Get Involved</h2>
-                <p>Mozilla is a global, open community with an active local group here in Switzerland. You are invited to join us! Can you help to localize content for your region and language? Would you like improve Mozilla products? Do you create cool webapps for an open Web Platform? Or would you just like to get in touch with cool people that share your enthusiasm for an open web? Contact us!</p>
+                <p>{% trans %}getinvolved.description{% endtrans %}</p>
             </div>
             <ul>
                 <li>
@@ -79,17 +79,17 @@
         </div>
         <div class="col col-2">
             <ul class="links-join">
-                <li><a href="https://mozilla.org/contact/spaces/">Kontakt</a></li>
-                <li class="wrap"><a href="https://mozilla.org/about/partnerships/">Werden Sie Partner</a></li>
-                <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/" class="donate">Spenden</a></li>
-                <li class="wrap"><a href="https://affiliates.mozilla.org/">Firefox-Partnerprogramm</a></li>
-                <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org">Zu dieser Seite beitragen</a></li>
+                <li><a href="https://mozilla.org/contact/spaces/">{% trans %}footer.contact{% endtrans %}</a></li>
+                <li class="wrap"><a href="https://mozilla.org/about/partnerships/">{% trans %}footer.partner{% endtrans %}</a></li>
+                <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/" class="donate">{% trans %}general.donate{% endtrans %}</a></li>
+                <li class="wrap"><a href="https://affiliates.mozilla.org/">{% trans %}footer.firefoxaffiliates{% endtrans %}</a></li>
+                <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org">{% trans %}footer.contribute{% endtrans %}</a></li>
             </ul>
             <ul class="links-legal">
-                <li><a href="https://mozilla.org/privacy/">Datenschutz</a></li>
-                <li class="wrap"><a href="https://mozilla.org/privacy/websites/#cookies">Cookies</a></li>
-                <li class="wrap"><a href="https://mozilla.org/about/legal/">Rechtliches</a></li>
-                <li class="clear"><a href="https://mozilla.org/about/legal/fraud-report/">Markenrechtsverletzung melden</a></li>
+                <li><a href="https://mozilla.org/privacy/">{% trans %}footer.privacy{% endtrans %}</a></li>
+                <li class="wrap"><a href="https://mozilla.org/privacy/websites/#cookies">{% trans %}footer.cookies{% endtrans %}</a></li>
+                <li class="wrap"><a href="https://mozilla.org/about/legal/">{% trans %}footer.legal{% endtrans %}</a></li>
+                <li class="clear"><a href="https://mozilla.org/about/legal/fraud-report/">{% trans %}footer.trademark-abuse{% endtrans %}</a></li>
             </ul>
         </div>
         <div class="col col-3">

@@ -9,7 +9,7 @@ use ICal;
 class DefaultController extends Controller
 {
     /**
-     * @Route("/", name="homepage")
+     * @Route("/{_locale}", name="homepage")
      */
     public function indexAction()
     {
