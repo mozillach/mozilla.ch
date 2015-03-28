@@ -13,14 +13,15 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        $this->nextEventTileAction();
+        //$this->nextEventTileAction();
 
         return $this->render('index.html.twig');
     }
 
     public function contributorTileAction()
     {
-        $mozillianGravatarUrls = $this->getMozillianGravatarUrls();
+        //$mozillianGravatarUrls = $this->getMozillianGravatarUrls();
+        $mozillianGravatarUrls = array('foobla');
 
         return $this->render('tiles/contributor.html.twig', array('url' => reset($mozillianGravatarUrls)));
     }
@@ -79,9 +80,6 @@ class DefaultController extends Controller
 
     private function getBuzz()
     {
-        $buzz = $this->container->get('buzz');
-        $buzz->getClient()->setVerifyPeer(false);
-
-        return $buzz;
+        return $this->container->get('buzz');
     }
 }
