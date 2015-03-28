@@ -17,6 +17,7 @@ tiles:
 header:
     support: Support
     mission: Mission
+    menu: Menu
 getinvolved:
     title: ~~Get Involved~~
     description: Mozilla is a global, open community with an active local group here in Switzerland. You are invited to join us! Can you help to localize content for your region and language? Would you like improve Mozilla products? Do you create cool webapps for an open Web Platform? Or would you just like to get in touch with cool people that share your enthusiasm for an open web? Contact us!

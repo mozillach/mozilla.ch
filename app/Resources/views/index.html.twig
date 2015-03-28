@@ -17,12 +17,19 @@
     <!-- Tabzilla intergration -->
     <link href="https://mozorg.cdn.mozilla.net/media/css/tabzilla-min.css" rel="stylesheet" />
     <script src="https://mozorg.cdn.mozilla.net/tabzilla/tabzilla.js"></script>
+
+    {% javascripts '../app/Resources/public/scripts/menu.js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
 </head>
 <body>
 <header id="masthead">
     <div class="container">
         <a href="/en-US/" id="tabzilla" data-infobar="update translation" aria-label="Mozilla links">Mozilla</a>
         <nav id="nav-main" role="navigation">
+            <span class="toggle" role="button" aria-expanded="false" aria-controls="nav-main-menu">
+                {% trans %}header.menu{% endtrans %}
+            </span>
             <ul id="nav-main-menu">
                 <li class="first"><a data-name="donate" href="https://sendto.mozilla.org/page/contribute/">{% trans %}general.donate{% endtrans %}</a></li>
                 <li><a data-name="mission" href="https://www.mozilla.org/mission">{% trans %}header.mission{% endtrans %}</a></li>
