@@ -5,6 +5,15 @@
 @import "home/home.less";
 @import "home/home-promo.less";
 
+promo-grid {
+    margin: auto;
+}
+
+.promo-grid .item {
+    position: static;
+    float: left;
+}
+
 #secondary-links {
     background-color: #F6F4EC;
 }
@@ -29,12 +38,11 @@
     background-size: auto 84px;
 }
 
-
 #colophon .logo a {
     display: block;
     width: 88px;
     height: 24px;
-    background-image: url(/images/footer-mozilla.png);
+    background-image: url("/images/footer-mozilla.png");
     background-size: auto 24px;
     .image-replaced();
 }
@@ -44,10 +52,9 @@
 }
 
 #masthead .toggle {
-    background: no-repeat center top url(https://mozorg.cdn.mozilla.net/media/img/sandstone/icn-menu.png);
+    background: no-repeat center top url("https://mozorg.cdn.mozilla.net/media/img/sandstone/icn-menu.png");
 }
 
 #nav-main-menu::before {
     background: transparent url("https://mozorg.cdn.mozilla.net/media/img/sandstone/menu-point.png") no-repeat scroll;
 }
-
