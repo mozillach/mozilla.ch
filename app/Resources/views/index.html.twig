@@ -28,7 +28,9 @@
 <main role="main">
     <header class="main-header">
         <div class="container">
-            <h1><img src="{{ asset('images/mozillach_wordmark-white.svg') }}" width="403" alt="Mozilla.ch" height="82"></h1>
+            {% image '../app/Resources/public/images/mozillach_wordmark-white.svg' %}
+                <h1><img src="{{ asset_url }}" width="403" alt="Mozilla.ch" height="82"></h1>
+            {% endimage %}
         </div>
     </header>
 
