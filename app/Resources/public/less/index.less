@@ -101,8 +101,11 @@
     letter-spacing: -1px;
 }
 
-#secondary-links ul li {
-    width: 50%;
+@media only screen and (min-width: (@widthSquareGrid_4)) {
+    #secondary-links ul li {
+        float: left;
+        width: 50%;
+    }
 }
 
 #secondary-links a.contact h2::before {
@@ -135,3 +138,4 @@
 #nav-main-menu::before {
     background: transparent url("https://mozorg.cdn.mozilla.net/media/img/sandstone/menu-point.png") no-repeat scroll;
 }
+
