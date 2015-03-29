@@ -92,12 +92,27 @@
                         <h2>Mail</h2>
                     </a>
                 </li>
-                <li class="item promo-large-landscape">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>{% trans %}tiles.upcoming{% endtrans %}</h2>
-                        <h3>Event Name</h3>
-                        <time datetime="">Some Day at 00:00</time> in Place
-                    </a>
+                <li class="item promo-large-landscape" id="upcoming-events">
+                    <div class="container">
+                        <div class="inner-container">
+                            <div class="featured-event">
+                                <a class="date-large" href="#" rel="external">
+                                    <time datetime="">
+                                        <span class="date-month">Month</span>
+                                        <span class="date-day">99</span>
+                                    </time>
+                                </a>
+                                <div class="event-detail">
+                                    <h3 class="next">{% trans %}tiles.upcoming{% endtrans %}</h3>
+                                    <a href="#" rel="external">
+                                        <h4>Event Name</h4>
+                                    </a>
+                                    <time class="event-info" datetime="">99. Month 9999</time>
+                                    <span class="event-info location"><p>Place</p></span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </li>
                 <li class="item promo-tiny random">
                     <a class="panel-link" rel="" href="#">
