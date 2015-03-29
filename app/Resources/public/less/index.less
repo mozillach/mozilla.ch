@@ -28,6 +28,39 @@
     }
 }
 
+.promo-tiny {
+    position: relative;
+    width: 140px;
+    height: 140px;
+    z-index: 0;
+
+    a {
+        display: block;
+        width: 130px;
+        height: 130px;
+        border: 5px solid transparent;
+        .transition(border .3s ease-in-out);
+        cursor: pointer;
+
+        color: #FFFFFF;
+
+        &:hover,
+        &:focus {
+            border: 5px solid rgba(0, 0, 0, 0.2);
+        }
+        z-index: 2;
+    }
+}
+
+.promo-tiny.twitter {
+    background-color: #3CF;
+
+    a.panel-link {
+        text-indent: initial;
+        white-space: initial;
+    }
+}
+
 .promo-small-landscape.firefox-download .primary {
     position: absolute;
     top: 0;
