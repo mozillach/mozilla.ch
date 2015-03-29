@@ -52,7 +52,7 @@
             <ul class="promo-grid stagger reveal">
                 <li class="item promo-face twitter">
                     <a class="panel-link" rel="me" href="https://twitter.com/MozillaCH">
-                        <h2>@MozillaCH</h2>
+                        <h2>{% trans %}tiles.follow-twitter{% endtrans %}</h2>
                     </a>
                 </li>
                 <li class="item promo-face">
@@ -98,7 +98,7 @@
                 </li>
                 <li class="item promo-large-landscape">
                     <a class="panel-link" rel="" href="#">
-                        <h2>Next Event</h2>
+                        <h2>{% trans %}tiles.upcoming{% endtrans %}</h2>
                     </a>
                 </li>
                 <li class="item promo-face random">
@@ -118,9 +118,12 @@
                     </a>
                 </li>
                 <li class="item promo-extra-large-portrait">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Social Media</h2>
-                    </a>
+                    <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a>
+                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                        if(!d.getElementById(id)){
+                            js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+                        }}(document,"script","twitter-wjs");
+                    </script>
                 </li>
                 <li class="item promo-face">
                     <a class="panel-link" rel="" href="#">
@@ -157,7 +160,7 @@
                 </li>
                 <li class="item promo-small-landscape">
                     <a class="panel-link" rel="" href="#">
-                        <h2>Get Involved</h2>
+                        <h2>{% trans %}tiles.getinvolved{% endtrans %}</h2>
                     </a>
                 </li>
                 <li class="item promo-face">
@@ -174,7 +177,7 @@
                 </li>
                 <li class="item promo-small-landscape">
                     <a class="panel-link" rel="" href="#">
-                        <h2>Past Events</h2>
+                        <h2>{% trans %}tiles.pastevents{% endtrans %}</h2>
                     </a>
                 </li>
                 <li class="item promo-face">
