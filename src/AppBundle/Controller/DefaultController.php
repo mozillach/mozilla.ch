@@ -18,12 +18,13 @@ class DefaultController extends Controller
         return $this->render('index.html.twig');
     }
 
-    public function contributorTileAction()
+    public function contributorTileAction($index)
     {
         //$mozillianGravatarUrls = $this->getMozillianGravatarUrls();
-        $mozillianGravatarUrls = array('foobla');
+        $mozillianGravatarUrls = array('foobla', 'barbla');
+        $index = $index % count($mozillianGravatarUrls);
 
-        return $this->render('tiles/contributor.html.twig', array('url' => reset($mozillianGravatarUrls)));
+        return $this->render('tiles/contributor.html.twig', array('url' => $mozillianGravatarUrls[$index]));
     }
 
     public function nextEventTileAction()
