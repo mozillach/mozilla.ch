@@ -172,8 +172,8 @@
                         'AppBundle:Default:contributorTile'
                     )) }}
                 </li>
-                <li class="item promo-small-landscape">
-                    <a class="panel-link" rel="" href="#">
+                <li class="item promo-small-landscape" id="contribute">
+                    <a class="panel-link" href="#secondary-links" target="_self">
                         <h2>{% trans %}tiles.getinvolved{% endtrans %}</h2>
                     </a>
                 </li>
@@ -183,10 +183,9 @@
                     )) }}
                 </li>
                 <li class="item promo-face">
-                    <a class="panel-link" rel="" href="#">
-                        <div class="face-outer">
-                        </div>
-                    </a>
+                    {{ render(controller(
+                        'AppBundle:Default:contributorTile'
+                    )) }}
                 </li>
                 <li class="item promo-small-landscape" id="past-events">
                     <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/#past">
