@@ -1,7 +1,7 @@
 // Responsive menu stuff
 window.addEventListener("load", function() {
-    // adding js class to nav-main, so we can profit from the menu toggling css
-    document.getElementById("nav-main").classList.add("js");
+    // adding js class to doc-root, so we can profit from the menu toggling css
+    document.documentElement.classList.add("js");
     var button = document.querySelector("#nav-main>span"),
         popup = document.getElementById("nav-main-menu");
     button.addEventListener("click", function() {
