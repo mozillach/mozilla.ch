@@ -1,6 +1,6 @@
 tiles:
     upcoming: Proximas occurrenzas
-    noupcoming: Currently no planned events
+    noupcoming: Actualmain na datti naginas occurrenzas planisadas
     getinvolved: Ta participar
     pastevents: Occurrenzas vargadas
     follow-twitter: Ans suonda sin Twitter
@@ -15,7 +15,7 @@ tiles:
     gearstore: Ussa datti la vestgadira uffiziala da Mozilla
     donation: Donar a Mozilla
     external-blog-posts: Posts dal blog
-    help: Help
+    help: Agid
     helpurl: https://support.mozilla.org/
 header:
     support: Agid
