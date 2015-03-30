@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <base href="{{ app.request.getSchemeAndHttpHost() }}" target=_blank">
+<head lang="{{ app.request.locale }}">
+    <base href="{{ app.request.getSchemeAndHttpHost() }}" target="_blank">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
@@ -75,7 +75,7 @@
                     )) }}
                 </li>
                 <li class="item promo-small-landscape firefox-download">
-                    <a class="panel-link" rel="" href="https://download.mozilla.org">
+                    <a class="panel-link" rel="external" href="https://download.mozilla.org">
                         <div class="primary">
                             <h2 class="go">{% trans %}tiles.download-firefox{% endtrans %}</h2>
                             <img width="176" height="184" src="https://mozorg.cdn.mozilla.net/media/img/home/voices/promos/download-firefox/firefox-logo.d99a8d78a049.png">
@@ -93,6 +93,11 @@
                     </a>
                 </li>
                 <li class="item promo-large-landscape" id="upcoming-events">
+                    {#
+                    {{ render(controller(
+                        'AppBundle:Default:nextEventTile'
+                    )) }}
+                    #}
                     <div class="container">
                         <div class="inner-container">
                             <div class="featured-event">
@@ -236,7 +241,7 @@
                 <li class="wrap"><a href="https://mozilla.org/about/partnerships/">{% trans %}footer.partner{% endtrans %}</a></li>
                 <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/" class="donate">{% trans %}general.donate{% endtrans %}</a></li>
                 <li class="wrap"><a href="https://affiliates.mozilla.org/">{% trans %}footer.firefoxaffiliates{% endtrans %}</a></li>
-                <li class="clear"><a href="https://github.com/mozillacommunitych/mozilla.ch">{% trans %}footer.contribute{% endtrans %}</a></li>
+                <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org">{% trans %}footer.contribute{% endtrans %}</a></li>
             </ul>
             <ul class="links-legal">
                 <li><a href="https://mozilla.org/privacy/">{% trans %}footer.privacy{% endtrans %}</a></li>
