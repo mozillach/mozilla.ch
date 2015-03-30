@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head lang="{{ app.request.locale }}">
-    <base href="{{ app.request.getBaseURL() }}" target="_blank">
+    <base href="{{ app.request.getSchemeAndHttpHost() }}" target="_blank">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta charset="utf-8">
 
@@ -9,6 +9,14 @@
 
     <title>mozilla.ch</title>
     <meta name="description" content="">
+
+    <link rel="canonical" hreflang="{{ app.request.locale }}" href="{{ app.request.getSchemeAndHttpHost() }}{{ app.request.getRequestUri() }}">
+    <link rel="alternate" hreflang="x-default" href="{{ app.request.getSchemeAndHttpHost() }}">
+    <link rel="alternate" hreflang="de-CH" href="{{ app.request.getSchemeAndHttpHost() }}/de">
+    <link rel="alternate" hreflang="en-CH" href="{{ app.request.getSchemeAndHttpHost() }}/en">
+    <link rel="alternate" hreflang="fr-CH" href="{{ app.request.getSchemeAndHttpHost() }}/fr">
+    <link rel="alternate" hreflang="it-CH" href="{{ app.request.getSchemeAndHttpHost() }}/it">
+    <link rel="alternate" hreflang="rm" href="{{ app.request.getSchemeAndHttpHost() }}/rm">
 
     {% stylesheets '../app/Resources/public/less/index.less' filter='lessphp' %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
