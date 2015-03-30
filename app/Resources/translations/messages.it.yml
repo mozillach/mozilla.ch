@@ -1,26 +1,26 @@
 tiles:
-    upcoming: Upcoming Events
-    getinvolved: Get involved
-    pastevents: Past Events
-    follow-twitter: Follow us on Twitter
-    download-firefox: Download Firefox
+    upcoming: Prossimi Eventi
+    getinvolved: Partecipa
+    pastevents: Eventi Passati
+    follow-twitter: Seguici su Twitter
+    download-firefox: Scarica Firefox
     ch-apps: Firefox OS Apps made in Switzerland
-    firefox-os: Learn about Firefox OS
-    webmaker: Make the Web you want
-    firefox-hello: Meet Firefox Hello
-    dev-edition: Introducing Firefox Developer Edition
-    firefox-android: Put your Firefox on your Android
-    marketplace: Get web apps on the Firefox Marketplace
-    gearstore: Officla Mozilla gear is here
-    donation: Donate to Mozilla
-    external-blog-posts: Blogposts
+    firefox-os: Scopri Firefox OS
+    webmaker: Trasforma il web in quello che vuoi
+    firefox-hello: Scopri Firefox Hello
+    dev-edition: Introduzione a Firefox Developer Edition
+    firefox-android: Metti Firefox sul tuo Android
+    marketplace: Scarica le Web App dal Firefox Marketplace
+    gearstore: Abbigliamento Ufficiale Mozilla è qui
+    donation: Dona a Mozilla
+    external-blog-posts: Post del Blog
 header:
-    support: Support
-    mission: Mission
+    support: Supporto
+    mission: Missione
     menu: Menu
 getinvolved:
     title: Get involved
-    description: Mozilla is a global, open community with an active local group here in Switzerland. You are invited to join us! Can you help to localize content for your region and language? Would you like improve Mozilla products? Do you create cool webapps for an open Web Platform? Or would you just like to get in touch with cool people that share your enthusiasm for an open web? Contact us!
+    description: Mozilla è globale, una community aperta con un gruppo locale attivo in Svizzera. Ti invitiamo ad unirti a noi!! Puoi aiutarci nella traduzione della tua lingua? Vuoi migliorare i prodotti Mozilla? Sai realizzare Web App interessanti per una piattaforma web aperta? O preferisci rimanere in contatto con persone spettacolari che condividono il tuo entusiasmo per un web libero? Contattaci!
 l10n:
     title: Localization
     description: Would you like to contribute to Mozilla with your language? Please contact us!
@@ -28,17 +28,17 @@ get-in-touch:
     title: Get in touch
     description: Get in touch with the Swiss community, ask your questions and participate at our events.
 general:
-    donate: Donate
+    donate: Dona
 footer:
-    copyright: Portions of this content are ©1998–2015 by individual mozilla.org contributors. Content available under a <a href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
-    contact: Contact us
-    partner: Partner with Us
-    firefoxaffiliates: Firefox Affiliates
-    contribute: Contribute to this site
+    copyright: Porte di questo contenuto è del ©1998–2015 di contributori individuali dimozilla.org. Contenuto disponibile sotto <a href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>
+    contact: Contattaci
+    partner: Dinveta un Partner
+    firefoxaffiliates: Affiliati Firefox
+    contribute: Contribuisci a questo sito
     privacy: Privacy
-    cookies: Cookies
-    legal: Legal
-    trademark-abuse: Report Trademark Abuse
+    cookies: Cookie
+    legal: termini Legali
+    trademark-abuse: Segnala Abusi del Marchio
     other-languages: Other languages:
     go: Go
     mozilla-ch: Mozilla Switzerland:
