@@ -1,3 +1,4 @@
+{% set facescount = 0 %}
 <!DOCTYPE html>
 <html>
 <head lang="{{ app.request.locale }}">
@@ -12,7 +13,7 @@
 
     <link rel="shortcut icon" sizes="16x16" href="favicon.ico">
 
-    <link rel="canonical" hreflang="{{ app.request.locale }}" href="{{ app.request.getSchemeAndHttpHost() }}{{ app.request.getRequestUri() }}">
+    <link rel="canonical" hreflang="{{ app.request.locale }}" href="{{ app.request.getSchemeAndHttpHost() ~ app.request.getRequestUri() }}">
     <link rel="alternate" hreflang="x-default" href="{{ app.request.getSchemeAndHttpHost() }}">
     <link rel="alternate" hreflang="de-CH" href="{{ app.request.getSchemeAndHttpHost() }}/de">
     <link rel="alternate" hreflang="en-CH" href="{{ app.request.getSchemeAndHttpHost() }}/en">
@@ -68,14 +69,16 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 0 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 1 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape">
                         <a class="panel-link" rel="" href="#">
@@ -85,8 +88,9 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 2 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape firefox-download">
                         <a class="panel-link" rel="external" href="https://download.mozilla.org">
@@ -119,8 +123,9 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 3 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape random">
                         <a class="panel-link" rel="" href="#">
@@ -138,8 +143,9 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 4 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape random">
                         <a class="panel-link" rel="" href="#">
@@ -149,8 +155,9 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 5 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape random">
                         <a class="panel-link" rel="" href="#">
@@ -165,8 +172,9 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 6 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape" id="contribute">
                         <a class="panel-link" href="{{ app.request.locale }}#secondary-links" target="_self">
@@ -176,14 +184,16 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 7 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 8 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape" id="past-events">
                         <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/events/past">
@@ -193,8 +203,9 @@
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
-                            { 'index': 9 }
+                            { 'index': facescount }
                         )) }}
+                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape random">
                         <a class="panel-link" rel="" href="#">
