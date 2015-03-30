@@ -15,6 +15,8 @@ tiles:
     gearstore: Abbigliamento Ufficiale Mozilla è qui
     donation: Dona a Mozilla
     external-blog-posts: Post del Blog
+    help: Help
+    helpurl: http://forum.mozillaitalia.org/
 header:
     support: Supporto
     mission: Missione
@@ -23,6 +25,7 @@ getinvolved:
     title: Get involved
     description: Mozilla è globale, una community aperta con un gruppo locale attivo in Svizzera. Ti invitiamo ad unirti a noi!! Puoi aiutarci nella traduzione della tua lingua? Vuoi migliorare i prodotti Mozilla? Sai realizzare Web App interessanti per una piattaforma web aperta? O preferisci rimanere in contatto con persone spettacolari che condividono il tuo entusiasmo per un web libero? Contattaci!
 l10n:
+    url: http://www.mozillaitalia.org/home/come-iniziare/
     title: Localization
     description: Would you like to contribute to Mozilla with your language? Please contact us!
 get-in-touch:

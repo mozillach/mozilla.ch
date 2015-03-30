@@ -15,6 +15,8 @@ tiles:
     gearstore: Hier gibt es die offiziellen Mozilla-Fanartikel
     donation: Spenden
     external-blog-posts: Blogposts
+    help: Hilfe
+    helpurl: http://mozilla.de/hilfe/
 header:
     support: Support
     mission: Mission
@@ -23,6 +25,7 @@ getinvolved:
     title: Mitmachen
     description: Mozilla ist eine globale, offene Community mit einer aktiven lokalen Gruppe hier in der Schweiz. Du kannst mitmachen! Hast du Lust, Inhalte für deine Region und Sprache zu übersetzen? Willst du helfen, Mozilla Produkte zu verbessern? Erstellst du coole Webapps für eine offene Web Platform? Oder hast du einfach Lust, coole Leute kennen zu lernen, die deine Begeisterung für ein offenes Web teilen? Melde dich!
 l10n:
+    url: https://l10n.mozilla.org/
     title: Lokalisierung
     description: Wir suchen Personen, die Mozilla Produkte auf Deutsch übersetzen. Interessiert? Melde dich bei uns!
 get-in-touch:
