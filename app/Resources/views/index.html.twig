@@ -10,6 +10,8 @@
     <title>mozilla.ch</title>
     <meta name="description" content="">
 
+    <link rel="shortcut icon" sizes="16x16" href="favicon.ico">
+
     <link rel="canonical" hreflang="{{ app.request.locale }}" href="{{ app.request.getSchemeAndHttpHost() }}{{ app.request.getRequestUri() }}">
     <link rel="alternate" hreflang="x-default" href="{{ app.request.getSchemeAndHttpHost() }}">
     <link rel="alternate" hreflang="de-CH" href="{{ app.request.getSchemeAndHttpHost() }}/de">
@@ -31,236 +33,238 @@
     {% endjavascripts %}
 </head>
 <body>
-<header id="masthead">
-    <div class="container">
-        <a href="/en-US/" id="tabzilla" data-infobar="update translation" aria-label="Mozilla links">Mozilla</a>
-        <nav id="nav-main" role="navigation">
-            <span class="toggle" role="button" aria-expanded="false" aria-controls="nav-main-menu" tabindex="0">
-                {% trans %}header.menu{% endtrans %}
-            </span>
-            <ul id="nav-main-menu">
-                <li class="first"><a data-name="donate" href="https://sendto.mozilla.org/page/contribute/">{% trans %}general.donate{% endtrans %}</a></li>
-                <li><a data-name="mission" href="https://www.mozilla.org/mission">{% trans %}header.mission{% endtrans %}</a></li>
-                <li><a data-name="support" href="https://support.mozilla.org/">{% trans %}header.support{% endtrans %}</a></li>
-                <li class="last"><a data-name="community" href="https://www.mozilla.org/">mozilla.org</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<main role="main">
-    <header class="main-header">
+<div id="outer-wrapper">
+    <header id="masthead">
         <div class="container">
-            <h1><img src="images/mozillach_wordmark-white.svg" width="403" alt="Mozilla.ch" height="82"></h1>
+            <a href="/en-US/" id="tabzilla" data-infobar="update translation" aria-label="Mozilla links">Mozilla</a>
+            <nav id="nav-main" role="navigation">
+                <span class="toggle" role="button" aria-expanded="false" aria-controls="nav-main-menu" tabindex="0">
+                    {% trans %}header.menu{% endtrans %}
+                </span>
+                <ul id="nav-main-menu">
+                    <li class="first"><a data-name="donate" href="https://sendto.mozilla.org/page/contribute/">{% trans %}general.donate{% endtrans %}</a></li>
+                    <li><a data-name="mission" href="https://www.mozilla.org/mission">{% trans %}header.mission{% endtrans %}</a></li>
+                    <li><a data-name="support" href="https://support.mozilla.org/">{% trans %}header.support{% endtrans %}</a></li>
+                    <li class="last"><a data-name="community" href="https://www.mozilla.org/">mozilla.org</a></li>
+                </ul>
+            </nav>
         </div>
     </header>
+    <main role="main">
+        <header class="main-header">
+            <div class="container">
+                <h1><img src="images/mozillach_wordmark-white.svg" width="403" alt="Mozilla.ch" height="82"></h1>
+            </div>
+        </header>
 
-    <section class="promo-grid-wrapper">
-        <div class="promo-grid-inner">
-            <ul class="promo-grid">
-                <li class="item promo-tiny twitter">
-                    <a class="panel-link" rel="me" href="https://twitter.com/MozillaCH">
-                        <h2>{% trans %}tiles.follow-twitter{% endtrans %}</h2>
-                    </a>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Campaign</h2>
-                    </a>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape firefox-download">
-                    <a class="panel-link" rel="external" href="https://download.mozilla.org">
-                        <div class="primary">
-                            <h2 class="go">{% trans %}tiles.download-firefox{% endtrans %}</h2>
-                            <img width="176" height="184" src="https://mozorg.cdn.mozilla.net/media/img/home/voices/promos/download-firefox/firefox-logo.d99a8d78a049.png">
-                        </div>
-                    </a>
-                </li>
-                <li class="item promo-tiny">
-                    <a class="panel-link" rel="external" href="{% trans %}tiles.helpurl{% endtrans %}">
-                        <h2>{% trans %}tiles.help{% endtrans %}</h2>
-                    </a>
-                </li>
-                <li class="item promo-tiny">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Mail</h2>
-                    </a>
-                </li>
-                <li class="item promo-large-landscape" id="upcoming-events">
-                    {{ render(controller(
-                        'AppBundle:Default:nextEventTile'
-                    )) }}
-                </li>
-                <li class="item promo-tiny random">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Random</h2>
-                    </a>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape random">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Random</h2>
-                    </a>
-                </li>
-                <li class="item promo-extra-large-portrait no-background">
-                    <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a>
-                    <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
-                        if(!d.getElementById(id)){
-                            js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
-                        }}(document,"script","twitter-wjs");
-                    </script>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape random">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Random</h2>
-                    </a>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape random">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Random</h2>
-                    </a>
-                </li>
-                <li class="item promo-small-landscape random">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Random</h2>
-                    </a>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape" id="contribute">
-                    <a class="panel-link" href="{{ app.request.locale }}#secondary-links" target="_self">
-                        <h2>{% trans %}tiles.getinvolved{% endtrans %}</h2>
-                    </a>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape" id="past-events">
-                    <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/events/past">
-                        <h2>{% trans %}tiles.pastevents{% endtrans %}</h2>
-                    </a>
-                </li>
-                <li class="item promo-face">
-                    {{ render(controller(
-                        'AppBundle:Default:contributorTile'
-                    )) }}
-                </li>
-                <li class="item promo-small-landscape random">
-                    <a class="panel-link" rel="" href="#">
-                        <h2>Random</h2>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-    <section class="module" id="secondary-links">
-        <div class="container">
-            <div class="get-involved">
-                <h2>{% trans %}getinvolved.title{% endtrans %}</h2>
-                <p>{% trans %}getinvolved.description{% endtrans %}</p>
+        <section class="promo-grid-wrapper">
+            <div class="promo-grid-inner">
+                <ul class="promo-grid">
+                    <li class="item promo-tiny twitter">
+                        <a class="panel-link" rel="me" href="https://twitter.com/MozillaCH">
+                            <h2>{% trans %}tiles.follow-twitter{% endtrans %}</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Campaign</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape firefox-download">
+                        <a class="panel-link" rel="external" href="https://download.mozilla.org">
+                            <div class="primary">
+                                <h2 class="go">{% trans %}tiles.download-firefox{% endtrans %}</h2>
+                                <img width="176" height="184" src="https://mozorg.cdn.mozilla.net/media/img/home/voices/promos/download-firefox/firefox-logo.d99a8d78a049.png">
+                            </div>
+                        </a>
+                    </li>
+                    <li class="item promo-tiny">
+                        <a class="panel-link" rel="external" href="{% trans %}tiles.helpurl{% endtrans %}">
+                            <h2>{% trans %}tiles.help{% endtrans %}</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-tiny">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Mail</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-large-landscape" id="upcoming-events">
+                        {{ render(controller(
+                            'AppBundle:Default:nextEventTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-tiny random">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Random</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape random">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Random</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-extra-large-portrait no-background">
+                        <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a>
+                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
+                            if(!d.getElementById(id)){
+                                js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
+                            }}(document,"script","twitter-wjs");
+                        </script>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape random">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Random</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape random">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Random</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-small-landscape random">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Random</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape" id="contribute">
+                        <a class="panel-link" href="{{ app.request.locale }}#secondary-links" target="_self">
+                            <h2>{% trans %}tiles.getinvolved{% endtrans %}</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape" id="past-events">
+                        <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/events/past">
+                            <h2>{% trans %}tiles.pastevents{% endtrans %}</h2>
+                        </a>
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-small-landscape random">
+                        <a class="panel-link" rel="" href="#">
+                            <h2>Random</h2>
+                        </a>
+                    </li>
+                </ul>
             </div>
-            <ul>
-                <li>
-                    <a class="l10n" rel="external" href="{% trans %}l10n.url{% endtrans %}">
-                        <h2>{% trans %}l10n.title{% endtrans %}</h2>
-                        <p>{% trans %}l10n.description{% endtrans %}</p>
-                    </a>
-                </li>
-                <li>
-                    <a class="contact" rel="external" href="https://lists.mozilla.org/listinfo/community-switzerland">
-                        <h2>{% trans %}get-in-touch.title{% endtrans %}</h2>
-                        <p>{% trans %}get-in-touch.description{% endtrans %}</p>
-                    </a>
-                </li>
-            </ul>
-        </div>
-    </section>
-</main>
-<footer id="colophon">
-    <nav class="row">
-        <div class="col col-1">
-            <h1 class="logo"><a href="https://mozilla.org/">Mozilla</a></h1>
-            <p class="license">{{ "footer.copyright"|trans|raw }}</p>
-        </div>
-        <div class="col col-2">
-            <ul class="links-join">
-                <li><a href="https://mozilla.org/contact/spaces/">{% trans %}footer.contact{% endtrans %}</a></li>
-                <li class="wrap"><a href="https://mozilla.org/about/partnerships/">{% trans %}footer.partner{% endtrans %}</a></li>
-                <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/" class="donate">{% trans %}general.donate{% endtrans %}</a></li>
-                <li class="wrap"><a href="https://affiliates.mozilla.org/">{% trans %}footer.firefoxaffiliates{% endtrans %}</a></li>
-                <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org">{% trans %}footer.contribute{% endtrans %}</a></li>
-            </ul>
-            <ul class="links-legal">
-                <li><a href="https://mozilla.org/privacy/">{% trans %}footer.privacy{% endtrans %}</a></li>
-                <li class="wrap"><a href="https://mozilla.org/privacy/websites/#cookies">{% trans %}footer.cookies{% endtrans %}</a></li>
-                <li class="wrap"><a href="https://mozilla.org/about/legal/">{% trans %}footer.legal{% endtrans %}</a></li>
-                <li class="clear"><a href="https://mozilla.org/about/legal/fraud-report/">{% trans %}footer.trademark-abuse{% endtrans %}</a></li>
-            </ul>
-        </div>
-        <div class="col col-3">
-            <ul class="links-social">
-                <li>
-                    {% trans %}footer.mozilla-ch{% endtrans %}
-                    <ul>
-                        <li><a href="https://twitter.com/MozillaCH">Twitter<span> (@MozillaCH)</span></a></li>
-                    </ul>
-                </li>
-            </ul>
-            <div class="lang-switcher">
-                <form id="lang_form">
-                    <label for="language">{% trans %}footer.other-languages{% endtrans %}</label>
-                    <select id="language" name="lang">
-                        <option lang="de-CH" value="de" {% if app.request.locale == "de" %} selected="selected"{% endif %}>Deutsch</option>
-                        <option lang="en" value="en" {% if app.request.locale == "en" %} selected="selected"{% endif %}>English</option>
-                        <option lang="fr-CH" value="fr" {% if app.request.locale == "fr" %} selected="selected"{% endif %}>Français</option>
-                        <option lang="it-CH" value="it" {% if app.request.locale == "it" %} selected="selected"{% endif %}>Italiano</option>
-                        <option lang="rm" value="rm" {% if app.request.locale == "rm" %} selected="selected"{% endif %}>Rumantsch</option>
-                    </select>
-                    <noscript>
-                        <button type="submit">{% trans %}footer.go{% endtrans %}</button>
-                    </noscript>
-                </form>
+        </section>
+        <section class="module" id="secondary-links">
+            <div class="container">
+                <div class="get-involved">
+                    <h2>{% trans %}getinvolved.title{% endtrans %}</h2>
+                    <p>{% trans %}getinvolved.description{% endtrans %}</p>
+                </div>
+                <ul>
+                    <li>
+                        <a class="l10n" rel="external" href="{% trans %}l10n.url{% endtrans %}">
+                            <h2>{% trans %}l10n.title{% endtrans %}</h2>
+                            <p>{% trans %}l10n.description{% endtrans %}</p>
+                        </a>
+                    </li>
+                    <li>
+                        <a class="contact" rel="external" href="https://lists.mozilla.org/listinfo/community-switzerland">
+                            <h2>{% trans %}get-in-touch.title{% endtrans %}</h2>
+                            <p>{% trans %}get-in-touch.description{% endtrans %}</p>
+                        </a>
+                    </li>
+                </ul>
             </div>
-        </div>
-    </nav>
-</footer>
+        </section>
+    </main>
+    <footer id="colophon">
+        <nav class="row">
+            <div class="col col-1">
+                <h1 class="logo"><a href="https://mozilla.org/">Mozilla</a></h1>
+                <p class="license">{{ "footer.copyright"|trans|raw }}</p>
+            </div>
+            <div class="col col-2">
+                <ul class="links-join">
+                    <li><a href="https://mozilla.org/contact/spaces/">{% trans %}footer.contact{% endtrans %}</a></li>
+                    <li class="wrap"><a href="https://mozilla.org/about/partnerships/">{% trans %}footer.partner{% endtrans %}</a></li>
+                    <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/" class="donate">{% trans %}general.donate{% endtrans %}</a></li>
+                    <li class="wrap"><a href="https://affiliates.mozilla.org/">{% trans %}footer.firefoxaffiliates{% endtrans %}</a></li>
+                    <li class="clear"><a href="https://wiki.mozilla.org/Webdev/GetInvolved/mozilla.org">{% trans %}footer.contribute{% endtrans %}</a></li>
+                </ul>
+                <ul class="links-legal">
+                    <li><a href="https://mozilla.org/privacy/">{% trans %}footer.privacy{% endtrans %}</a></li>
+                    <li class="wrap"><a href="https://mozilla.org/privacy/websites/#cookies">{% trans %}footer.cookies{% endtrans %}</a></li>
+                    <li class="wrap"><a href="https://mozilla.org/about/legal/">{% trans %}footer.legal{% endtrans %}</a></li>
+                    <li class="clear"><a href="https://mozilla.org/about/legal/fraud-report/">{% trans %}footer.trademark-abuse{% endtrans %}</a></li>
+                </ul>
+            </div>
+            <div class="col col-3">
+                <ul class="links-social">
+                    <li>
+                        {% trans %}footer.mozilla-ch{% endtrans %}
+                        <ul>
+                            <li><a href="https://twitter.com/MozillaCH">Twitter<span> (@MozillaCH)</span></a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <div class="lang-switcher">
+                    <form id="lang_form">
+                        <label for="language">{% trans %}footer.other-languages{% endtrans %}</label>
+                        <select id="language" name="lang">
+                            <option lang="de-CH" value="de" {% if app.request.locale == "de" %} selected="selected"{% endif %}>Deutsch</option>
+                            <option lang="en" value="en" {% if app.request.locale == "en" %} selected="selected"{% endif %}>English</option>
+                            <option lang="fr-CH" value="fr" {% if app.request.locale == "fr" %} selected="selected"{% endif %}>Français</option>
+                            <option lang="it-CH" value="it" {% if app.request.locale == "it" %} selected="selected"{% endif %}>Italiano</option>
+                            <option lang="rm" value="rm" {% if app.request.locale == "rm" %} selected="selected"{% endif %}>Rumantsch</option>
+                        </select>
+                        <noscript>
+                            <button type="submit">{% trans %}footer.go{% endtrans %}</button>
+                        </noscript>
+                    </form>
+                </div>
+            </div>
+        </nav>
+    </footer>
+</div>
 </body>
 </html>
