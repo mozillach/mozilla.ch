@@ -1,20 +1,24 @@
 <div class="container">
+    {% if event %}
     <div class="inner-container">
         <div class="featured-event">
-            <a class="date-large" href="#" rel="external">
-                <time datetime="">
-                    <span class="date-month">Month</span>
-                    <span class="date-day">99</span>
+            <a class="date-large" href="{{ event.URL }}" rel="external">
+                <time datetime="{{ event.TIMESTAMP|date('Y-m-d\\TH:i:sP') }}">
+                    <span class="date-month">{{ event.TIMESTAMP|localizeddate('long', 'none', app.request.locale, NULL, 'LLL') }}</span>
+                    <span class="date-day">{{ event.TIMESTAMP|date('d') }}</span>
                 </time>
             </a>
             <div class="event-detail">
                 <h3 class="next">{% trans %}tiles.upcoming{% endtrans %}</h3>
-                <a href="#" rel="external">
-                    <h4>Event Name</h4>
+                <a href="{{ event.URL }}" rel="external">
+                        <h4>{{ event.SUMMARY }}</h4>
                 </a>
-                <time class="event-info" datetime="">99. Month 9999</time>
-                <span class="event-info location"><p>Place</p></span>
+                <time class="event-info" datetime="{{ event.TIMESTAMP|date('Y-m-d\\TH:i:sP') }}">{{ event.TIMESTAMP|localizeddate('long', 'none', app.request.locale) }}</time>
+                <span class="event-info location"><p>{{ event.LOCATION }}</p></span>
             </div>
         </div>
     </div>
+    {% else %}
+    <h2>{% trans %}tiles.noupcoming{% endtrans %}</h2>
+    {% endif %}        
 </div>

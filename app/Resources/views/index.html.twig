@@ -93,31 +93,9 @@
                     </a>
                 </li>
                 <li class="item promo-large-landscape" id="upcoming-events">
-                    {#
                     {{ render(controller(
                         'AppBundle:Default:nextEventTile'
                     )) }}
-                    #}
-                    <div class="container">
-                        <div class="inner-container">
-                            <div class="featured-event">
-                                <a class="date-large" href="#" rel="external">
-                                    <time datetime="">
-                                        <span class="date-month">Month</span>
-                                        <span class="date-day">99</span>
-                                    </time>
-                                </a>
-                                <div class="event-detail">
-                                    <h3 class="next">{% trans %}tiles.upcoming{% endtrans %}</h3>
-                                    <a href="#" rel="external">
-                                        <h4>Event Name</h4>
-                                    </a>
-                                    <time class="event-info" datetime="">99. Month 9999</time>
-                                    <span class="event-info location"><p>Place</p></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
                 </li>
                 <li class="item promo-tiny random">
                     <a class="panel-link" rel="" href="#">

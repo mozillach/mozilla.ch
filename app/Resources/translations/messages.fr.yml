@@ -1,5 +1,6 @@
 tiles:
-    upcoming: Prochaines activités
+    upcoming: Prochaine activité
+    noupcoming: Currently no planned events
     getinvolved: Participez
     pastevents: Activités passées
     follow-twitter: Suivez-nous sur twitter

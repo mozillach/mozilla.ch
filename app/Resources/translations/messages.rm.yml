@@ -1,5 +1,6 @@
 tiles:
     upcoming: Proximas occurrenzas
+    noupcoming: Currently no planned events
     getinvolved: Ta participar
     pastevents: Occurrenzas vargadas
     follow-twitter: Ans suonda sin Twitter

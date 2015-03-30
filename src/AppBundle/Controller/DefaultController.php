@@ -65,8 +65,18 @@ class DefaultController extends Controller
 
             $lines = explode("\n", $response->getContent());
 
-            $ical = new ICal($lines);
-            $events = $ical->events();
+            if(count($lines) > 5) {
+                $ical = new ICal($lines);
+                $events = $ical->events();
+                foreach($events as $i => $event) {
+                    $events[$i]['TIMESTAMP'] = $ical->iCalDateToUnixTimestamp($event['DTSTART']);
+                    $events[$i]['LOCATION'] = stripslashes($event['LOCATION']);
+                    $events[$i]['SUMMARY'] = stripslashes($event['SUMMARY']);
+                }
+            }
+            else {
+                $events = array();
+            }
             $this->getCache()->save('mozilla_reps_events', serialize($events), 3600);
         }
 
