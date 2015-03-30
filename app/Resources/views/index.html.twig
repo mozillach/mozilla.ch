@@ -1,6 +1,6 @@
-{% set facescount = 0 %}
+{% set facescount = random(20) %}
 <!DOCTYPE html>
-<html>
+<html lang="{{ app.request.locale }}">
 <head>
     <base href="{{ app.request.getSchemeAndHttpHost() }}" target="_blank">
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
