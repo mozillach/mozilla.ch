@@ -4,3 +4,12 @@ window.addEventListener("load", function() {
         window.location = this.value;
     });
 });
+
+// _gaq shim to make tabzilla language prompt work
+window._gaq = {
+    push: function(callback) {
+        if(typeof(callback) == "function")
+            callback();
+    }
+};
+
