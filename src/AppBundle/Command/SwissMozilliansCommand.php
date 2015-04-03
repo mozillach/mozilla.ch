@@ -2,6 +2,7 @@
 
 namespace AppBundle\Command;
 
+use Guzzle\Service\Client;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
@@ -18,12 +19,12 @@ class SwissMozilliansCommand extends ContainerAwareCommand
 
     protected function execute(InputInterface $input, OutputInterface $output)
     {
-        $buzz = $this->getContainer()->get('buzz');
-        $config = $this->getContainer()->getParameter('mozillians');
-        $mozillianApiUrl = 'https://mozillians.org/api/v1/users/?app_name=' . $config['apiAppName'] . '&app_key=' . $config['apiKey'];
+        /** @var Client $guzzle */
+        $guzzle = $this->getContainer()->get('mozillians.client');
+        $groupNames = $this->getContainer()->getParameter('mozillians.group_names');
 
-        $response = $buzz->get($mozillianApiUrl . '&groups=' . $config['groupNames']);
-        $data = json_decode($response->getContent(), true);
+        $usersResponse = $guzzle->get('users?groups=' . $groupNames)->send();
+        $data = json_decode($usersResponse->getBody(true), true);
 
         $mozillianGravatarUrls = array();
         foreach ($data['objects'] as $mozillian) {

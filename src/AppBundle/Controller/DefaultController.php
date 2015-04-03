@@ -8,6 +8,8 @@ use ICal;
 
 class DefaultController extends Controller
 {
+    private $mozillianGravatarUrls;
+
     /**
      * @Route("/{_locale}", name="homepage")
      */
@@ -20,8 +22,7 @@ class DefaultController extends Controller
 
     public function contributorTileAction($index)
     {
-        //$mozillianGravatarUrls = $this->getMozillianGravatarUrls();
-        $mozillianGravatarUrls = array('foobla', 'barbla');
+        $mozillianGravatarUrls = $this->getMozillianGravatarUrls();
         $index = $index % count($mozillianGravatarUrls);
 
         return $this->render('tiles/contributor.html.twig', array('url' => $mozillianGravatarUrls[$index]));
@@ -36,14 +37,16 @@ class DefaultController extends Controller
 
     private function getMozillianGravatarUrls()
     {
-        if ($cachedGravatarUrls = $this->getCache()->fetch('mozillian_gravatar_urls')) {
+        if (isset($this->mozillianGravatarUrls)) {
+            $mozillianGravatarUrls = $this->mozillianGravatarUrls;
+        } else if ($cachedGravatarUrls = $this->getCache()->fetch('mozillian_gravatar_urls')) {
             $mozillianGravatarUrls = unserialize($cachedGravatarUrls);
         } else {
-            $config = $this->container->getParameter('mozillians');
-            $mozillianApiUrl = 'https://mozillians.org/api/v1/users/?app_name=' . $config['apiAppName'] . '&app_key=' . $config['apiKey'];
+            $guzzle = $this->container->get('mozillians.client');
+            $groupNames = $this->container->getParameter('mozillians.group_names');
 
-            $response = $this->getBuzz()->get($mozillianApiUrl . '&groups=' . $config['groupNames']);
-            $data = json_decode($response->getContent(), true);
+            $usersResponse = $guzzle->get('users?groups=' . $groupNames)->send();
+            $data = json_decode($usersResponse->getBody(true), true);
 
             $mozillianGravatarUrls = array();
             foreach ($data['objects'] as $mozillian) {
@@ -52,6 +55,8 @@ class DefaultController extends Controller
 
             $this->getCache()->save('mozillian_gravatar_urls', serialize($mozillianGravatarUrls), 3600);
         }
+
+        $this->mozillianGravatarUrls = $mozillianGravatarUrls;
 
         return $mozillianGravatarUrls;
     }
@@ -62,9 +67,9 @@ class DefaultController extends Controller
         if ($cachedEvents = $this->getCache()->fetch('mozilla_reps_events')) {
             $events = unserialize($cachedEvents);
         } else {
-            $response = $this->getBuzz()->get('https://reps.mozilla.org/events/period/future/search/switzerland/ical/');
+            $response = $this->container->get('guzzle.client')->get('https://reps.mozilla.org/events/period/future/search/switzerland/ical/')->send();
 
-            $lines = explode("\n", $response->getContent());
+            $lines = explode("\n", $response->getBody(true));
 
             if(count($lines) > 5) {
                 $ical = new ICal($lines);
@@ -87,10 +92,5 @@ class DefaultController extends Controller
     private function getCache()
     {
         return $this->container->get('cache');
-    }
-
-    private function getBuzz()
-    {
-        return $this->container->get('insecurebuzzbrowser');
     }
 }

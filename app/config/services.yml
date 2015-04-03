@@ -11,3 +11,13 @@ services:
         class: Twig_Extensions_Extension_Intl
         tags:
             - { name: twig.extension }
+    mozillians.client:
+        class: %guzzle.client.class%
+        tags:
+            - { name: guzzle.client }
+        arguments: ['https://mozillians.org/api/v1']
+        calls:
+            - [setDefaultOption, [query, {app_name: '%mozillians.api_app_name%', app_key: '%mozillians.api_key%'}]]
+            - [setUserAgent, [mozilla.ch, true]]
+
+
