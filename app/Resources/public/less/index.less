@@ -94,10 +94,17 @@ body {
 }
 
 .promo-small-landscape.dev-edition {
-    background-image: url("/images/firefox-developer-logo-wordmark.jpg");
-    background-size: auto 100%;
-    background-repeat: no-repeat;
-    background-position: center;
+    .panel-link {
+        position: absolute;
+    }
+    .primary {
+        background-image: url("/images/firefox-developer-logo-wordmark.jpg");
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+        height: 100%;
+        width: 100%;
+    }
 }
 
 .face {
