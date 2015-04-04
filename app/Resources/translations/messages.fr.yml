@@ -1,23 +1,23 @@
 tiles:
     upcoming: Prochaine activité
-    noupcoming: Currently no planned events
+    noupcoming: Aucun événement à venir
     getinvolved: Participez
     pastevents: Activités passées
-    follow-twitter: Suivez-nous sur twitter
+    follow-twitter: Suivez-nous sur Twitter
     download-firefox: Téléchargez Firefox
     ch-apps: Firefox OS applications faites en Suisse
     firefox-os: Découvrez Firefox OS
-    webmaker: Bâtissez le Web que vous voulez
+    webmaker: Bâtissez le Web que vous désirez
     campaign: Découvrez Firefox Hello
     dev-edition: Découvrez Firefox Developer Edition
-    firefox-android: Put your Firefox on your Android
-    marketplace: Obtenez applications sur le Firefox Marketplace
+    firefox-android: Ajouter votre Firefox à votre Android
+    marketplace: Obtenez des applications sur le Firefox Marketplace
     gearstore: Les produits dérivés officiels de Mozilla sont disponibles
-    donation: Faire un don
-    external-blog-posts: Blogposts
-    help: Help
+    donation: Faites un don
+    external-blog-posts: Messages sur le blog
+    help: Aide
     helpurl: https://support.mozilla.org
-    privacy: Value your privacy!
+    privacy: Donnez de la valeur à votre vie privée!
     mail: Contact
 header:
     support: Support
@@ -29,10 +29,10 @@ getinvolved:
 l10n:
     url: http://mozfr.org/participer
     title: Contribuer dans votre langue
-    description: Souhaitez-vous contribuer dans votre langue? Si oui, se il vous plaît contactez-nous et nous vous aiderons à sortir!
+    description: Souhaitez-vous contribuer dans votre langue? Si oui, contactez-nous et nous vous aiderons!
 get-in-touch:
     title: Contactez-nous
-    description: ~~Get in touch with the Swiss community, ask your questions and participate at our events.~~
+    description: Restez en contact avec la communauté suisse, posez vos questions et prenez part à nos événements.
 general:
     donate: Faire un don
 footer:
@@ -43,8 +43,8 @@ footer:
     contribute: Contribuer à cette page
     privacy: Vie privée
     cookies: Cookies
-    legal: Legal
+    legal: Mentions légales
     trademark-abuse: Signaler un abus de marque déposée
     other-languages: Autres langues:
-    go: Go
+    go: Aller
     mozilla-ch: Mozilla Suisse:
