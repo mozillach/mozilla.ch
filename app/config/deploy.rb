@@ -3,7 +3,7 @@ set :domain,      "colinfrei.com"
 set :deploy_to,   "/home/colinfre/public_html/mozilla-ch"
 set :app_path,    "app"
 
-set :repository,  "git@github.com:mozillacommunitych/colins-mozillach-playground.git"
+set :repository,  "git@github.com:mozillacommunitych/mozilla.ch.git"
 set :scm,         :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
 
