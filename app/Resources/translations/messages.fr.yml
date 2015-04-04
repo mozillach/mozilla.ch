@@ -18,6 +18,7 @@ tiles:
     help: Help
     helpurl: https://support.mozilla.org
     privacy: Value your privacy!
+    mail: Contact
 header:
     support: Support
     mission: Mission
