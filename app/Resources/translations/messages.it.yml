@@ -17,6 +17,7 @@ tiles:
     external-blog-posts: Post del Blog
     help: Help
     helpurl: http://forum.mozillaitalia.org/
+    privacy: Platzhalter
 header:
     support: Supporto
     mission: Missione

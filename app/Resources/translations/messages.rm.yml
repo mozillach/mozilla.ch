@@ -17,6 +17,7 @@ tiles:
     external-blog-posts: Posts dal blog
     help: Agid
     helpurl: https://support.mozilla.org/
+    privacy: Platzhalter
 header:
     support: Agid
     mission: Missiun

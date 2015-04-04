@@ -17,6 +17,7 @@ tiles:
     external-blog-posts: Blogposts
     help: Help
     helpurl: https://support.mozilla.org
+    privacy: Platzhalter
 header:
     support: Support
     mission: Mission
