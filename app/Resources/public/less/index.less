@@ -173,8 +173,27 @@ body {
     }
 }
 
-.help a.panel-link {
+.promo-tiny.help {
     background-color: #F37C00;
+}
+
+.promo-tiny.help h2 {
+    padding-top: 60px;
+    text-align: center;
+
+    &::before {
+        position: absolute;
+        top: 15px;
+        left: 50%;
+        width: 38px;
+        height: 38px;
+        margin-left: -20px;
+        font-size: 1.875rem;
+        font-weight: bold;
+        border: 2px solid;
+        border-radius: 100%;
+        content: "?";
+    }
 }
 
 @media only screen and (max-width: (@widthSquareGrid_6 - 1)) {
