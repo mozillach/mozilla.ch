@@ -2,6 +2,8 @@
 
 namespace AppBundle\Controller;
 
+use Guzzle\Http\Client;
+use Guzzle\Http\Exception\ClientErrorResponseException;
 use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use ICal;
@@ -22,10 +24,16 @@ class DefaultController extends Controller
 
     public function contributorTileAction($index)
     {
-        $mozillianGravatarUrls = $this->getMozillianGravatarUrls();
-        $index = $index % count($mozillianGravatarUrls);
+        $url = '';
 
-        return $this->render('tiles/contributor.html.twig', array('url' => $mozillianGravatarUrls[$index]));
+        $mozillianGravatarUrls = $this->getMozillianGravatarUrls();
+        if (count($mozillianGravatarUrls) > 0) {
+            $index = $index % count($mozillianGravatarUrls);
+
+            $url = $mozillianGravatarUrls[$index];
+        }
+
+        return $this->render('tiles/contributor.html.twig', array('url' => $url));
     }
 
     public function nextEventTileAction()
@@ -42,10 +50,16 @@ class DefaultController extends Controller
         } else if ($cachedGravatarUrls = $this->getCache()->fetch('mozillian_gravatar_urls')) {
             $mozillianGravatarUrls = unserialize($cachedGravatarUrls);
         } else {
+            /** @var Client $guzzle */
             $guzzle = $this->container->get('mozillians.client');
-            $groupNames = $this->container->getParameter('mozillians.group_names');
 
-            $usersResponse = $guzzle->get('users?groups=' . $groupNames)->send();
+            $groupNames = $this->container->getParameter('mozillians.group_names');
+            try {
+                $usersResponse = $guzzle->get('users?groups=' . $groupNames)->send();
+            } catch(ClientErrorResponseException $e) {
+                return array();
+            }
+
             $data = json_decode($usersResponse->getBody(true), true);
 
             $mozillianGravatarUrls = array();
