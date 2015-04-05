@@ -43,6 +43,16 @@ class DefaultController extends Controller
         return $this->render('tiles/upcoming_event.html.twig', array('event' => reset($events)));
     }
 
+    private function checkGravatarExistence($hash)
+    {
+        try {
+            $this->container->get('guzzle.client')->get('https://secure.gravatar.com/avatar/'.$hash.'?r=g&s=1&d=404')->send();
+        } catch(ClientErrorResponseException $e) {
+            return false;
+        }
+        return true;
+    }
+
     private function getMozillianGravatarUrls()
     {
         if (isset($this->mozillianGravatarUrls)) {
@@ -64,7 +74,10 @@ class DefaultController extends Controller
 
             $mozillianGravatarUrls = array();
             foreach ($data['objects'] as $mozillian) {
-                $mozillianGravatarUrls[] = md5(strtolower(trim($mozillian['email'])));
+                $hash = md5(strtolower(trim($mozillian['email'])));
+
+                if($this->checkGravatarExistence($hash))
+                    $mozillianGravatarUrls[] = $hash;
             }
 
             $this->getCache()->save('mozillian_gravatar_urls', serialize($mozillianGravatarUrls), 3600);
