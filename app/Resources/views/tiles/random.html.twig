@@ -1,0 +1,71 @@
+{% macro rendertile() %}
+    {% set tiles = gettiles() %}
+    {% if tiles|length > 0 %}
+        {% set index = random(tiles) %}
+        {{ rendertile(index) }}
+        {% if index == 0 %}
+        <li class="item promo-small-landscape ch-apps random">
+            <a class="panel-link" rel="" href="http://marketplace.firefox.com">
+                <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
+            </a>
+        </li>
+        {% elseif index == 1 %}
+        <li class="item promo-small-landscape independent random">
+            <a class="panel-link" rel="" href="https://www.mozilla.org/firefox/independent/">
+                <h2>{% trans %}tiles.independent{% endtrans %}</h2>
+            </a>
+        </li>
+        {% elseif index == 2 %}
+        <li class="item promo-small-landscape privacy random">
+            <a class="panel-link" rel="external" href="https://www.mozilla.org/privacy/tips/">
+                <h2>{% trans %}tiles.privacy{% endtrans %}</h2>
+            </a>
+        </li>
+        {% elseif index == 3 %}
+        <li class="item promo-small-landscape dev-edition random">
+            <a class="panel-link" href="https://www.mozilla.org/firefox/developer/" rel="external"></a>
+            <div class="primary"></div>
+        </li>
+        {% elseif index == 4 %}
+        <li class="item promo-small-landscape gear random">
+            <a class="panel-link" rel="external" href="https://gear.mozilla.org/">
+                <h2>{% trans %}tiles.gearstore{% endtrans %}</h2>
+            </a>
+        </li>
+        {% endif %}
+    {% else %}
+    <li class="item promo-small-landscape random">
+        <a class="panel-link" rel="" href="#">
+            <h2>Random</h2>
+        </a>
+    </li>
+    {% endif %}
+{% endmacro %}
+
+{# Only one tiny tile is rendered at any time, so we don't have to track these #}
+{% macro rendertinytile() %}
+    {% set tiles = [0, 1, 2, 3] %}
+    {% set index = random(tiles) %}
+    {% if index == 0 %}
+    <li class="item promo-tiny firefox-android random">
+        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/android/">
+        </a>
+    </li>
+    {% elseif index == 1 %}
+    <li class="item promo-tiny appmaker random">
+        <a class="panel-link" rel="external" href="https://webmaker.org/appmaker">
+        </a>
+    </li>
+    {% elseif index == 2 %}
+    <li class="item promo-tiny firefox-os random">
+        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/os/">
+        </a>
+    </li>
+    {% elseif index == 3 %}
+    <li class="item promo-tiny marketplace random">
+        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/android/">
+        </a>
+    </li>
+    {% endif %}
+{% endmacro %}
+

@@ -11,6 +11,11 @@ services:
         class: Twig_Extensions_Extension_Intl
         tags:
             - { name: twig.extension }
+    app.twig_extension:
+        class: AppBundle\Twig\TilesTracker
+        public: false
+        tags:
+            - { name: twig.extension }
     mozillians.client:
         class: %guzzle.client.class%
         tags:

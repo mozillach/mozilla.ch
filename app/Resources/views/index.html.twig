@@ -1,3 +1,5 @@
+{{ settiles([0, 0, 1, 2, 3, 4]) }}
+{% import "tiles/random.html.twig" as random %}
 {% set facescount = random(20) %}
 <!DOCTYPE html>
 <html lang="{{ app.request.locale }}">
@@ -116,24 +118,7 @@
                             'AppBundle:Default:nextEventTile'
                         )) }}
                     </li>
-                    <li class="item promo-tiny firefox-android random">
-                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/android/">
-                        </a>
-                    </li>
-                    <!--
-                    <li class="item promo-tiny appmaker random">
-                        <a class="panel-link" rel="external" href="https://webmaker.org/appmaker">
-                        </a>
-                    </li>
-                    <li class="item promo-tiny firefox-os random">
-                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/os/">
-                        </a>
-                    </li>
-                    <li class="item promo-tiny marketplace random">
-                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/android/">
-                        </a>
-                    </li>
-                    -->
+                    {{ random.rendertinytile() }}
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
@@ -141,10 +126,7 @@
                         )) }}
                         {% set facescount = facescount + 1 %}
                     </li>
-                    <li class="item promo-small-landscape dev-edition random">
-                        <a class="panel-link" href="https://www.mozilla.org/firefox/developer/" rel="external"></a>
-                        <div class="primary"></div>
-                    </li>
+                    {{ random.rendertile() }}
                     <li class="item promo-extra-large-portrait no-background">
                         <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960">Tweets by @MozillaCH</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';
@@ -160,21 +142,7 @@
                         )) }}
                         {% set facescount = facescount + 1 %}
                     </li>
-                    <li class="item promo-small-landscape random">
-                        <a class="panel-link" rel="" href="#">
-                            <h2>Random</h2>
-                        </a>
-                    </li>
-                    <!--<li class="item promo-small-landscape ch-apps">
-                        <a class="panel-link" rel="" href="http://marketplace.firefox.com">
-                            <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
-                        </a>
-                    </li>-->
-                    <!--<li class="item promo-small-landscape independent">
-                        <a class="panel-link" rel="" href="https://www.mozilla.org/firefox/independent/">
-                            <h2>{% trans %}tiles.independent{% endtrans %}</h2>
-                        </a>
-                    </li>-->
+                    {{ random.rendertile() }}
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
@@ -182,21 +150,8 @@
                         )) }}
                         {% set facescount = facescount + 1 %}
                     </li>
-                    <li class="item promo-small-landscape random">
-                        <a class="panel-link" rel="" href="#">
-                            <h2>Random</h2>
-                        </a>
-                    </li>
-                    <!--<li class="item promo-small-landscape gear random">
-                        <a class="panel-link" rel="external" href="https://gear.mozilla.org/">
-                            <h2>{% trans %}tiles.gearstore{% endtrans %}</h2>
-                        </a>
-                    </li>-->
-                    <li class="item promo-small-landscape privacy random">
-                        <a class="panel-link" rel="external" href="https://www.mozilla.org/privacy/tips/">
-                            <h2>{% trans %}tiles.privacy{% endtrans %}</h2>
-                        </a>
-                    </li>
+                    {{ random.rendertile() }}
+                    {{ random.rendertile() }}
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
@@ -235,11 +190,7 @@
                         )) }}
                         {% set facescount = facescount + 1 %}
                     </li>
-                    <li class="item promo-small-landscape random">
-                        <a class="panel-link" rel="" href="#">
-                            <h2>Random</h2>
-                        </a>
-                    </li>
+                    {{ random.rendertile() }}
                 </ul>
             </div>
         </section>
