@@ -18,7 +18,6 @@ body {
     -webkit-hyphens: auto;
     -ms-hyphens: auto;
     hyphens: auto;
-    border-top: 2px solid white;
 }
 
 .promo-grid-inner {
@@ -388,8 +387,12 @@ html[lang|="en"] .promo-small-landscape.privacy {
     display: inline-block;
 }
 
-#masthead .toggle {
-    background: no-repeat center top url("https://mozorg.cdn.mozilla.net/media/img/sandstone/icn-menu.png");
+#masthead {    
+    border-top: 2px solid white;
+
+    .toggle {
+        background: no-repeat center top url("https://mozorg.cdn.mozilla.net/media/img/sandstone/icn-menu.png");
+    }
 }
 
 #nav-main-menu::before {
