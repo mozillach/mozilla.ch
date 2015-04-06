@@ -7,7 +7,6 @@
     font-style: normal;
 }
 
-@import "standalone/reset.less";
 @import "standalone/sandstone.less";
 @import "standalone/sandstone-resp.less";
 
@@ -24,6 +23,18 @@ body {
 
 .promo-grid-inner {
     padding-left: 20px;
+}
+
+@media only screen and (max-width:339px) {
+    .promo-grid-inner {
+        padding-left: 10px;
+    }
+}
+
+@media only screen and (max-width:319px) {
+    .promo-grid-inner {
+        padding-left: 0;
+    }
 }
 
 .promo-grid .item {
@@ -102,7 +113,7 @@ body {
         position: absolute;
     }
     .primary {
-        background-image: url("/images/firefox-developer-logo-wordmark.jpg");
+        background-image: url("/images/firefox-dev-edition.svg");
         background-size: cover;
         background-repeat: no-repeat;
         background-position: center;
@@ -253,7 +264,7 @@ html[lang|="en"] .promo-small-landscape.privacy {
 }
 
 .promo-tiny.marketplace {
-    background-image: url("/images/firefox-marketplace.png");
+    background-image: url("/images/firefox-marketplace.svg");
     background-size: auto 100%;
     background-position: center;
     background-color: rgb(149, 54, 140);
@@ -273,14 +284,14 @@ html[lang|="en"] .promo-small-landscape.privacy {
 }
 
 .promo-tiny.firefox-os {
-    background-image: url("/images/firefox-os.png");
+    background-image: url("/images/firefox-os.svg");
     background-size: auto 100%;
     background-position: center;
     background-color: rgb(51, 0, 0);
 }
 
 .promo-tiny.appmaker {
-    background-image: url("/images/mozilla-webmaker.png");
+    background-image: url("/images/mozilla-webmaker.svg");
     background-size: auto 100%;
     background-position: center;
     background-color: rgb(94, 107, 161);
@@ -318,6 +329,9 @@ html[lang|="en"] .promo-small-landscape.privacy {
 
     h2 {
         font-size: 1.8em;
+        text-shadow: 0 0 5px #0064AC,
+                     0 0 3px #0064AC,
+                     0 0 7px #0064AC;
     }
 }
 
@@ -346,12 +360,12 @@ html[lang|="en"] .promo-small-landscape.privacy {
 }
 
 #secondary-links a.contact h2::before {
-    background-image: url("/images/mail_icon.svg");
+    background: url("/images/mail_icon.svg") no-repeat center top;
     background-size: auto 84px;
 }
 
 #secondary-links a.l10n h2::before {
-    background-image: url("/images/group.svg");
+    background: url("/images/group.svg") no-repeat center top;
     background-size: auto 84px;
 }
 
@@ -359,7 +373,7 @@ html[lang|="en"] .promo-small-landscape.privacy {
     display: block;
     width: 88px;
     height: 24px;
-    background-image: url("/images/footer-mozilla.png");
+    background-image: url("/images/footer-mozilla.svg");
     background-size: auto 24px;
     .image-replaced();
 }
@@ -375,4 +389,3 @@ html[lang|="en"] .promo-small-landscape.privacy {
 #nav-main-menu::before {
     background: transparent url("https://mozorg.cdn.mozilla.net/media/img/sandstone/menu-point.png") no-repeat scroll;
 }
-
