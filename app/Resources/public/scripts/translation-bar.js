@@ -1,4 +1,5 @@
 window.addEventListener("load", function() {
+    // Based on the tabzilla Infobar.transalation (https://github.com/freaktechnik/bedrock/blob/master/bedrock/tabzilla/templates/tabzilla/tabzilla.js#L381)
     var transbar = new window.Tabzilla.infobar('transbar', 'Translation Bar');
 
     var userLangs = navigator.languages;
