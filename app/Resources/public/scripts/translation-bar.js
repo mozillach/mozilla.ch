@@ -5,11 +5,10 @@ window.addEventListener("load", function() {
     var pageLang = document.documentElement.lang;
 
     if (transbar.disabled || !userLangs || !pageLang) {
-        console.log("Nothing to do here");
         return false;
     }
 
-    // Normalize the user language in the form of ab or ab
+    // Normalize the user language in the form of ab
     var normalize = function (lang) {
         return lang.replace(/^(\w+)(?:-\w+)?$/, function (m, p1) {
             return p1.toLowerCase();
@@ -23,10 +22,10 @@ window.addEventListener("load", function() {
     // If the page language is the user's primary language, there is nothing
     // to do here
     if (pageLang === userLangs[0]) {
-        console.log("Already on primary lang");
         return false;
     }
 
+    // Get the available translation from the page
     var availableLangs = [];
     var $links = $('link[hreflang]');
 
@@ -50,11 +49,9 @@ window.addEventListener("load", function() {
         }
     });
 
-    // If the page language is one of the user's secondary languages and no
-    // other higher-priority language cannot be found in the translations,
-    // there is nothing to do
+    // If the page language is one of the user's secondary languages or no
+    // other language can be found in the translations, there is nothing to do
     if(offeredLang == 'self' || !offeredLang) {
-        console.log("There's no better lang");
         return false;
     }
 
