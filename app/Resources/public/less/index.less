@@ -344,12 +344,28 @@ html[lang|="en"] .promo-small-landscape.privacy {
 
 #secondary-links {
     background-color: #F6F4EC;
-}
 
-#secondary-links .get-involved h2 {
-    font-size: 3.375rem;
-    text-align: center;
-    letter-spacing: -1px;
+    h2::before {
+        background: none;
+    }
+    
+    .get-involved h2 {
+        font-size: 3.375rem;
+        text-align: center;
+        letter-spacing: -1px;
+    }
+
+    a {
+        &.contact h2::before {
+           background: url("/images/mail_icon.svg") no-repeat center top;
+           background-size: auto 84px;
+        }
+
+        &.l10n h2::before {
+            background: url("/images/group.svg") no-repeat center top;
+            background-size: auto 84px;
+        }
+    }
 }
 
 @media only screen and (min-width: (@widthSquareGrid_4)) {
@@ -357,16 +373,6 @@ html[lang|="en"] .promo-small-landscape.privacy {
         float: left;
         width: 50%;
     }
-}
-
-#secondary-links a.contact h2::before {
-    background: url("/images/mail_icon.svg") no-repeat center top;
-    background-size: auto 84px;
-}
-
-#secondary-links a.l10n h2::before {
-    background: url("/images/group.svg") no-repeat center top;
-    background-size: auto 84px;
 }
 
 #colophon .logo a {

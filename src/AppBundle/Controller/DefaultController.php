@@ -17,8 +17,6 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        //$this->nextEventTileAction();
-
         return $this->render('index.html.twig');
     }
 
@@ -94,7 +92,7 @@ class DefaultController extends Controller
         if ($cachedEvents = $this->getCache()->fetch('mozilla_reps_events')) {
             $events = unserialize($cachedEvents);
         } else {
-            $response = $this->container->get('guzzle.client')->get('https://reps.mozilla.org/events/period/future/search/switzerland/ical/')->send();
+            $response = $this->container->get('mozilla_reps.client')->get('events/period/future/search/switzerland/ical/')->send();
 
             $lines = explode("\n", $response->getBody(true));
 

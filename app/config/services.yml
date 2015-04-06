@@ -24,5 +24,13 @@ services:
         calls:
             - [setDefaultOption, [query, {app_name: '%mozillians.api_app_name%', app_key: '%mozillians.api_key%'}]]
             - [setUserAgent, [mozilla.ch, true]]
+    mozilla_reps.client:
+        class: %guzzle.client.class%
+        tags:
+            - { name: guzzle.client }
+        arguments: ['https://reps.mozilla.org']
+        calls:
+            - [setUserAgent, [mozilla.ch, true]]
+            - [setSslVerification, [false]]
 
 
