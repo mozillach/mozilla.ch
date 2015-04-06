@@ -16,11 +16,11 @@
 
     <link rel="canonical" hreflang="{{ app.request.locale }}" href="{{ app.request.getSchemeAndHttpHost() ~ app.request.getRequestUri() }}">
     <link rel="alternate" hreflang="x-default" href="{{ app.request.getSchemeAndHttpHost() }}">
-    <link rel="alternate" hreflang="de-CH" href="{{ app.request.getSchemeAndHttpHost() }}/de">
-    <link rel="alternate" hreflang="en-CH" href="{{ app.request.getSchemeAndHttpHost() }}/en">
-    <link rel="alternate" hreflang="fr-CH" href="{{ app.request.getSchemeAndHttpHost() }}/fr">
-    <link rel="alternate" hreflang="it-CH" href="{{ app.request.getSchemeAndHttpHost() }}/it">
-    <link rel="alternate" hreflang="rm" href="{{ app.request.getSchemeAndHttpHost() }}/rm">
+    <link rel="alternate" hreflang="de-CH" href="{{ app.request.getSchemeAndHttpHost() }}/de" title="Deutsch">
+    <link rel="alternate" hreflang="en-CH" href="{{ app.request.getSchemeAndHttpHost() }}/en" title="English">
+    <link rel="alternate" hreflang="fr-CH" href="{{ app.request.getSchemeAndHttpHost() }}/fr" title="Français">
+    <link rel="alternate" hreflang="it-CH" href="{{ app.request.getSchemeAndHttpHost() }}/it" title="Italiano">
+    <link rel="alternate" hreflang="rm" href="{{ app.request.getSchemeAndHttpHost() }}/rm" title="Rumantsch">
 
     {% stylesheets '../app/Resources/public/less/index.less' filter='lessphp' %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
