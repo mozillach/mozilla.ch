@@ -46,6 +46,7 @@ body {
     background-size: cover;
 }
 
+/* Bypass the hover state via js for large tiles */
 .promo-large-landscape,
 .promo-large-portrait {
     a.panel-link {
@@ -55,6 +56,10 @@ body {
             border: 5px solid rgba(0, 0, 0, 0.1);
             -webkit-transition: border .3s ease-in-out, visibility 0s 0s ease-in-out;
             transition: border .3s ease-in-out, visibility 0s 0s ease-in-out;
+            
+            h2 {
+                text-decoration: underline;
+            }
         }
     }
 }
@@ -171,7 +176,7 @@ body {
 }
 
 .past-events a.panel-link {
-    background-color: #1D3F58;
+    background-color: #00AF84;
 
     &::before {
         position: absolute;
