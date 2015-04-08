@@ -20,6 +20,8 @@ body {
     hyphens: auto;
 }
 
+/* Adjustments to the classes from the home-promo styles */
+
 .promo-grid-inner {
     padding-left: 20px;
 }
@@ -38,22 +40,34 @@ body {
 
 .promo-grid .item {
     position: relative;
-    float: left;
 }
 
-.item.no-background {
-    background: none;
+.face {
+    background-size: cover;
 }
 
-.promo-extra-large-portrait {
-    position: relative;
-    width: 300px;
-    height: 620px;
+.promo-large-landscape,
+.promo-large-portrait {
+    a.panel-link {
+        visibility: visible;
 
-    h3 {
-        padding: (@baseLine * 3) @baseLine 0 @baseLine;
+        &:hover, &:active, &:focus {
+            border: 5px solid rgba(0, 0, 0, 0.1);
+            -webkit-transition: border .3s ease-in-out, visibility 0s 0s ease-in-out;
+            transition: border .3s ease-in-out, visibility 0s 0s ease-in-out;
+        }
     }
 }
+
+@media only screen and (max-width: (@widthSquareGrid_6 - 1)) {
+    .promo-grid .item.random {
+        display: none;
+        visibility: hidden;
+    }
+}
+
+
+/* 1x1 tile for non-faces */
 
 .promo-tiny {
     position: relative;
@@ -89,13 +103,10 @@ body {
     }
 }
 
-.promo-tiny.twitter {
-    background-color: #55ACEE;
-    background-image: url("/images/twitter_logo_white.svg");
-    background-size: 50%;
-    background-position: center 85%;
-    background-repeat: no-repeat;
-    text-align: center;
+/* Specific tile contents */
+
+.item.no-background {
+    background: none;
 }
 
 .promo-small-landscape.firefox-download .primary {
@@ -121,22 +132,8 @@ body {
     }
 }
 
-.face {
-    background-size: cover;
-}
-
-.promo-large-landscape,
-.promo-large-portrait {
-    a.panel-link {
-        visibility: visible;
-
-        &:hover, &:active, &:focus {
-            border: 5px solid rgba(0, 0, 0, 0.1);
-            -webkit-transition: border .3s ease-in-out, visibility 0s 0s ease-in-out;
-            transition: border .3s ease-in-out, visibility 0s 0s ease-in-out;
-        }
-    }
-}
+/* The upcoming events tile uses the event structure from mozilla.org. However
+   those styles are not optimized for being tile content. */
 
 #upcoming-events .container {
     margin-left: 40px;
@@ -192,29 +189,6 @@ body {
     }
 }
 
-.promo-tiny.help {
-    background-color: #F37C00;
-}
-
-.promo-tiny.help h2 {
-    padding-top: 90px;
-    text-align: center;
-
-    &::before {
-        position: absolute;
-        top: 10px;
-        left: 50%;
-        width: 70px;
-        height: 70px;
-        margin-left: -35px;
-        font-size: 3.3rem;
-        font-weight: bold;
-        border: 2px solid;
-        border-radius: 100%;
-        content: "?";
-    }
-}
-
 .promo-small-landscape.privacy {
     background-image: url("/images/privacy.png");
     background-position: 12px center;
@@ -232,66 +206,45 @@ html[lang|="en"] .promo-small-landscape.privacy {
     }
 }
 
-.promo-small-landscape.campaign {
+.promo-large-portrait.campaign {
     background-color: #00A9DC;
     background-image: url("/images/hello.svg");
-    background-size: 20%;
+    .background-size(20%);
     background-position: center 85%;
     background-repeat: no-repeat;
     text-align: center;
     font-size: 1.3em;
 }
 
-.promo-small-landscape.contribute {
-    background-color: #00AF84;
-    text-align: center;
-
-    a.panel-link {
-        vertical-align: middle;
-
-        h2 {
-            line-height: 130px;
-            font-size: 2.5em;
-        }
-    }
+.promo-large-landscape.ch-apps {
+    background-color: #FF0000;
 }
+
+/* Content for the random tiles */
 
 .promo-tiny.firefox-android {
     background-image: url("/images/FFx-forAndroid.png");
-    background-size: auto 125%;
+    .background-size(auto 125%);
     background-position: center;
 }
 
 .promo-tiny.marketplace {
     background-image: url("/images/firefox-marketplace.svg");
-    background-size: auto 100%;
+    .background-size(auto 100%);
     background-position: center;
     background-color: rgb(149, 54, 140);
 }
 
-.promo-tiny.mail {
-    background-image: url("/images/mail_icon.svg");
-    background-size: auto 84px;
-    background-position: center 25%;
-    background-repeat: no-repeat;
-    background-color: rgb(210, 180, 140);
-
-    h2 {
-        text-align: center;
-        padding-top: 90px;
-    }
-}
-
 .promo-tiny.firefox-os {
     background-image: url("/images/firefox-os.svg");
-    background-size: auto 100%;
+    .background-size(auto 100%);
     background-position: center;
     background-color: rgb(51, 0, 0);
 }
 
 .promo-tiny.appmaker {
     background-image: url("/images/mozilla-webmaker.svg");
-    background-size: auto 100%;
+    .background-size(auto 100%);
     background-position: center;
     background-color: rgb(94, 107, 161);
 }
@@ -322,24 +275,7 @@ html[lang|="en"] .promo-small-landscape.privacy {
     }
 }
 
-.promo-small-landscape.ch-apps {
-    background-image: url("/images/ffos_apps.png");
-    background-repeat: no-repeat;
-
-    h2 {
-        font-size: 1.8em;
-        text-shadow: 0 0 5px #0064AC,
-                     0 0 3px #0064AC,
-                     0 0 7px #0064AC;
-    }
-}
-
-@media only screen and (max-width: (@widthSquareGrid_6 - 1)) {
-    .promo-grid .item.random {
-        display: none;
-        visibility: hidden;
-    }
-}
+/* Get involved content section styles */
 
 #secondary-links {
     background-color: #F6F4EC;
@@ -357,12 +293,12 @@ html[lang|="en"] .promo-small-landscape.privacy {
     a {
         &.contact h2::before {
            background: url("/images/mail_icon.svg") no-repeat center top;
-           background-size: auto 84px;
+           .background-size(auto 84px);
         }
 
         &.l10n h2::before {
             background: url("/images/group.svg") no-repeat center top;
-            background-size: auto 84px;
+            .background-size(auto 84px);
         }
     }
 }
@@ -373,6 +309,8 @@ html[lang|="en"] .promo-small-landscape.privacy {
         width: 50%;
     }
 }
+
+/* Footer and header styles (mainly overrides) */
 
 #colophon .logo a {
     display: block;

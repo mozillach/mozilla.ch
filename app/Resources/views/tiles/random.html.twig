@@ -3,15 +3,9 @@
     {% if tiles|length > 0 %}
         {% set index = random(tiles) %}
         {{ rendertile(index) }}
-        {% if index == 0 %}
-        <li class="item promo-small-landscape ch-apps random">
-            <a class="panel-link" rel="" href="http://marketplace.firefox.com">
-                <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
-            </a>
-        </li>
-        {% elseif index == 1 %}
+        {% if index == 1 %}
         <li class="item promo-small-landscape independent random">
-            <a class="panel-link" rel="" href="https://www.mozilla.org/firefox/independent/">
+            <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/independent/">
                 <h2>{% trans %}tiles.independent{% endtrans %}</h2>
             </a>
         </li>
@@ -23,7 +17,7 @@
         </li>
         {% elseif index == 3 %}
         <li class="item promo-small-landscape dev-edition random">
-            <a class="panel-link" href="https://www.mozilla.org/firefox/developer/" rel="external"></a>
+            <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/developer/"></a>
             <div class="primary"></div>
         </li>
         {% elseif index == 4 %}

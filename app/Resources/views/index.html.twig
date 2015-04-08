@@ -1,4 +1,4 @@
-{{ settiles([0, 0, 1, 2, 3, 4]) }}
+{{ settiles([1, 2, 3, 4]) }}
 {% import "tiles/random.html.twig" as random %}
 {% set facescount = random(20) %}
 <!DOCTYPE html>
@@ -63,36 +63,10 @@
         <section class="promo-grid-wrapper">
             <div class="promo-grid-inner">
                 <ul class="promo-grid">
-                    <li class="item promo-tiny random twitter">
-                        <a class="panel-link" rel="me" href="https://twitter.com/MozillaCH">
-                            <h2>{% trans %}tiles.follow-twitter{% endtrans %}</h2>
-                        </a>
-                    </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
-                    </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
-                    </li>
-                    <li class="item promo-small-landscape campaign">
+                    <li class="item promo-large-portrait campaign">
                         <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/hello">
                             <h2>{% trans %}tiles.campaign{% endtrans %}</h2>
                         </a>
-                    </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape firefox-download">
                         <a class="panel-link" rel="external" href="https://download.mozilla.org">
@@ -102,22 +76,6 @@
                             </div>
                         </a>
                     </li>
-                    <li class="item promo-tiny help">
-                        <a class="panel-link" rel="external" href="{% trans %}tiles.helpurl{% endtrans %}">
-                            <h2>{% trans %}tiles.help{% endtrans %}</h2>
-                        </a>
-                    </li>
-                    <li class="item promo-tiny mail">
-                        <a class="panel-link" rel="" href="mailto:info@mozilla.ch">
-                            <h2>{% trans %}tiles.mail{% endtrans %}</h2>
-                        </a>
-                    </li>
-                    <li class="item promo-large-landscape" id="upcoming-events">
-                        {{ render(controller(
-                            'AppBundle:Default:nextEventTile'
-                        )) }}
-                    </li>
-                    {{ random.rendertinytile() }}
                     <li class="item promo-face">
                         {{ render(controller(
                             'AppBundle:Default:contributorTile',
@@ -125,8 +83,19 @@
                         )) }}
                         {% set facescount = facescount + 1 %}
                     </li>
-                    {{ random.rendertile() }}
-                    <li class="item promo-extra-large-portrait no-background">
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile',
+                            { 'index': facescount }
+                        )) }}
+                        {% set facescount = facescount + 1 %}
+                    </li>
+                    <li class="item promo-large-landscape" id="upcoming-events">
+                        {{ render(controller(
+                            'AppBundle:Default:nextEventTile'
+                        )) }}
+                    </li>
+                    <li class="item promo-large-portrait no-background">
                         <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960" data-chrome="noheader nofooter">Tweets by @MozillaCH</a>
                         <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
                             if(!d.getElementById(id)){
@@ -134,48 +103,11 @@
                             }}(document,"script","twitter-wjs");
                         </script>
                     </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
-                    </li>
-                    {{ random.rendertile() }}
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
-                    </li>
-                    {{ random.rendertile() }}
-                    {{ random.rendertile() }}
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
-                    </li>
-                    <li class="item promo-small-landscape contribute">
-                        <a class="panel-link" href="{{ app.request.locale }}#secondary-links" target="_self">
-                            <h2>{% trans %}tiles.getinvolved{% endtrans %}</h2>
+                    {{ random.rendertinytile() }}
+                    <li class="item promo-large-landscape ch-apps random">
+                        <a class="panel-link" rel="external" href="http://marketplace.firefox.com/feed/collection/switzerland">
+                            <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
                         </a>
-                    </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
-                    </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
                     </li>
                     <li class="item promo-small-landscape past-events">
                         <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/events/past">
@@ -189,6 +121,20 @@
                         )) }}
                         {% set facescount = facescount + 1 %}
                     </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile',
+                            { 'index': facescount }
+                        )) }}
+                        {% set facescount = facescount + 1 %}
+                    </li>
+                    <li class="item promo-face">
+                        {{ render(controller(
+                            'AppBundle:Default:contributorTile',
+                            { 'index': facescount }
+                        )) }}
+                        {% set facescount = facescount + 1 %}
+                    </li>                    
                     {{ random.rendertile() }}
                 </ul>
             </div>
