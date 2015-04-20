@@ -104,8 +104,8 @@
                         </script>
                     </li>
                     {{ random.rendertinytile() }}
-                    <li class="item promo-large-landscape ch-apps random">
-                        <a class="panel-link" rel="external" href="http://marketplace.firefox.com/feed/collection/switzerland">
+                    <li class="item promo-large-landscape ch-apps">
+                        <a class="panel-link" href="{{ app.request.locale }}#overlay" target="_self">
                             <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
                         </a>
                     </li>
@@ -210,5 +210,17 @@
             </div>
         </nav>
     </footer>
+    <div id="overlay" hidden>
+        <dialog>
+            <a id="close_overlay" href="{{ app.request.locale }}#" target="_self">Close</a>
+            <ul>
+                <li>Grrd's 4 in a row</li>
+                <li>Grrd's Puzzle</li>
+                <li>Swiss Public Transport</li>
+                <li>SRF, SFR, FFS</li>
+                <li>Not Mines (yet)</li>
+            </ul>
+        </dialog>
+    </div>
 </body>
 </html>
