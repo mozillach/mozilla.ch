@@ -3,8 +3,9 @@ window.addEventListener("load", function() {
     document.querySelector(".ch-apps a").addEventListener("click", function(e) {
         e.preventDefault();
         overlay.show();
-    });
-    document.getElementById("close_overlay").addEventListener("click", function(e) {
+    }, true);
+    document.getElementById("close_overlay").addEventListener("mouseup", function(e) {
+        e.preventDefault();
         overlay.hide();
-    });
+    }, true);
 });
