@@ -32,5 +32,11 @@ services:
         calls:
             - [setUserAgent, [mozilla.ch, true]]
             - [setSslVerification, [false]]
-
+    firefox_marketplace.client:
+        class: %guzzle.client.class%
+        tags:
+            - { name: guzzle.client }
+        arguments: ['https://marketplace.firefox.com/api/v2/']
+        calls:
+            - [setUserAgent, [mozilla.ch, true]]
 

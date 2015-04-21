@@ -105,7 +105,7 @@
                     </li>
                     {{ random.rendertinytile() }}
                     <li class="item promo-large-landscape ch-apps">
-                        <a class="panel-link" href="{{ app.request.locale }}#overlay" target="_self">
+                        <a class="panel-link" href="javascript:void" target="_self">
                             <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
                         </a>
                     </li>
@@ -212,13 +212,28 @@
     </footer>
     <div id="overlay" hidden>
         <dialog>
-            <a id="close_overlay" href="{{ app.request.locale }}#" target="_self">Close</a>
+            <a id="close_overlay" href="javascript:void" target="_self">x</a>
             <ul>
-                <li>Grrd's 4 in a row</li>
-                <li>Grrd's Puzzle</li>
-                <li>Swiss Public Transport</li>
-                <li>SRF, SFR, FFS</li>
-                <li>Not Mines (yet)</li>
+                {{ render(controller(
+                    'AppBundle:Default:marketplaceApp',
+                    { 'id': 'grrds-puzzle-1' }
+                )) }}
+                {{ render(controller(
+                    'AppBundle:Default:marketplaceApp',
+                    { 'id': 'grrds-4-in-a-row' }
+                )) }}
+                {{ render(controller(
+                    'AppBundle:Default:marketplaceApp',
+                    { 'id': 'grrds-4-in-a-row-1' }
+                )) }}
+                {{ render(controller(
+                    'AppBundle:Default:marketplaceApp',
+                    { 'id': 'srfpods' }
+                )) }}
+                {{ render(controller(
+                    'AppBundle:Default:marketplaceApp',
+                    { 'id': 'takemeto' }
+                )) }}
             </ul>
         </dialog>
     </div>

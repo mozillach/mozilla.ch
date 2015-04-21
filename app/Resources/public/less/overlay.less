@@ -4,8 +4,6 @@
 }
 
 .so-backdrop {
-    height: 100%;
-    width: 100%;
     position: fixed;
     top: 0;
     left: 0;
@@ -13,13 +11,67 @@
     bottom: 0;
     background: rgba(0, 0, 0, 0.7);
 
-    dialog,
-    [role='dialog'] {
+    dialog {
         position: relative;
         display: block;
-        background: white;
-        padding: 1em;
-        margin: 1em auto;
+        margin: 3em auto;
         max-width: 90%;
+        height: 90%;
+
+        ul {
+            background: white;
+            padding: 1em;
+            height: 90%;
+            overflow: scroll;
+        }
+    }
+}
+
+#close_overlay {
+    font-size: 16px;
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 2em;
+    width: 2em;
+    display: block;
+    margin: -1em;
+    background-color: black;
+    color: white;
+    text-decoration: none;
+    border-radius: 1em;
+    text-align: center;
+    line-height: 22px;
+    box-sizing: border-box;
+    border: 5px solid transparent;
+
+    &:hover {
+        border: 5px solid rgba(255, 255, 255, 0.1);
+    }
+}
+
+.marketplace-app {
+    list-style-type: none;
+    padding: 1em;
+    margin: 0;
+    border-bottom: 1px solid black;
+
+    img {
+        float: left;
+        height: 64px;
+        width: 64px;
+        margin-right: 1em;
+    }
+
+    a {
+        color: initial;
+
+        h1 {
+            color: initial;
+        }
+    }
+
+    &:last-child {
+        border-bottom: none;
     }
 }
