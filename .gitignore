@@ -17,6 +17,8 @@
 .idea
 *~
 
+/.vagrant/
+
 # Don't include the build main.css file.
 resources/main.css
 
