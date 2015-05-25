@@ -1,8 +1,8 @@
 tiles:
     upcoming: Prossimi Eventi
-    noupcoming: Currently no planned events
+    noupcoming: Nessun evento in programma
     getinvolved: Partecipa
-    pastevents: Eventi Passati
+    pastevents: Eventi Precedenti
     follow-twitter: Seguici su Twitter
     download-firefox: Scarica Firefox
     ch-apps: Firefox OS Apps made in Switzerland
@@ -15,37 +15,37 @@ tiles:
     gearstore: Abbigliamento Ufficiale Mozilla è qui
     donation: Dona a Mozilla
     external-blog-posts: Post del Blog
-    help: Help
+    help: Aiuto
     helpurl: http://forum.mozillaitalia.org/
-    privacy: Value your privacy!
-    mail: Contact
-    independent: Choose Independent
+    privacy: Dai un valore alla tua privacy!
+    mail: Contatti
+    independent: Scegli liberamente
 header:
     support: Supporto
     mission: Missione
     menu: Menu
 getinvolved:
-    title: Get involved
-    description: Mozilla è globale, una community aperta con un gruppo locale attivo in Svizzera. Ti invitiamo ad unirti a noi!! Puoi aiutarci nella traduzione della tua lingua? Vuoi migliorare i prodotti Mozilla? Sai realizzare Web App interessanti per una piattaforma web aperta? O preferisci rimanere in contatto con persone spettacolari che condividono il tuo entusiasmo per un web libero? Contattaci!
+    title: Fatti coinvolgere
+    description: Mozilla è globale, una community aperta con un gruppo locale attivo in Svizzera. Ti invitiamo ad unirti a noi!! Vuoi aiutarci nella traduzione della tua lingua? Vuoi migliorare i prodotti Mozilla? Sai realizzare Web App interessanti per una piattaforma web aperta? O preferisci rimanere in contatto con persone spettacolari che condividono il tuo entusiasmo per un web libero? Contattaci!
 l10n:
     url: http://www.mozillaitalia.org/home/come-iniziare/
-    title: Localization
-    description: Would you like to contribute to Mozilla with your language? Please contact us!
+    title: Traduzione
+    description: Vuoi contribuire in Mozilla per la tua lingua? Contattaci!
 get-in-touch:
-    title: Get in touch
-    description: Get in touch with the Swiss community, ask your questions and participate at our events.
+    title: Rimani aggiornato
+    description: Rimani aggiornato con la comunità svizzera, fai domande e partecipa agli eventi.
 general:
     donate: Dona
 footer:
-    copyright: Porte di questo contenuto è del ©1998–2015 di contributori individuali dimozilla.org. Contenuto disponibile sotto <a href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>
+    copyright: Parte di questo contenuto è del ©1998–2015 di contributori individuali dimozilla.org. Contenuto disponibile sotto <a href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>
     contact: Contattaci
-    partner: Dinveta un Partner
+    partner: Diventa un Partner
     firefoxaffiliates: Affiliati Firefox
     contribute: Contribuisci a questo sito
     privacy: Privacy
     cookies: Cookie
     legal: termini Legali
     trademark-abuse: Segnala Abusi del Marchio
-    other-languages: Other languages:
-    go: Go
+    other-languages: Altre lingue:
+    go: Vai
     mozilla-ch: Mozilla Switzerland:
