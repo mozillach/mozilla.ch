@@ -22,16 +22,16 @@ class DefaultController extends Controller
 
     public function contributorTileAction($index)
     {
-        $url = '';
+        $data = array('photo_url' => '', 'href' => '');
 
         $mozillianData = $this->getMozillianData();
         if (count($mozillianData) > 0) {
             $index = $index % count($mozillianData);
 
-            $url = $mozillianData[$index]['photo_url'];
+            $data = $mozillianData[$index];
         }
 
-        return $this->render('tiles/contributor.html.twig', array('url' => $url));
+        return $this->render('tiles/contributor.html.twig', array('photo_url' => $data['photo_url'], 'href' => $data['href']));
     }
 
     public function nextEventTileAction()
@@ -78,9 +78,10 @@ class DefaultController extends Controller
                     'href' => ''
                 );
 
-                if ($this->isFieldVisible($userData, 'photo')) {
-                    $mozillian['photo_url'] = $userData['photo']['150x150'];
+                if (!$this->isFieldVisible($userData, 'photo') || !isset($userData['photo']['150x150'])) {
+                    continue;
                 }
+                $mozillian['photo_url'] = $userData['photo']['150x150'];
 
                 if ($this->isFieldVisible($userData, 'story_link') && $userData['story_link']['value'] != '') {
                     $mozillian['href'] = $userData['story_link']['value'];
