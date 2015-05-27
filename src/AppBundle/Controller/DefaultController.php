@@ -10,7 +10,7 @@ use ICal;
 
 class DefaultController extends Controller
 {
-    private $mozillianGravatarUrls;
+    private $mozillianData;
 
     /**
      * @Route("/{_locale}", name="homepage")
@@ -24,11 +24,11 @@ class DefaultController extends Controller
     {
         $url = '';
 
-        $mozillianGravatarUrls = $this->getMozillianGravatarUrls();
-        if (count($mozillianGravatarUrls) > 0) {
-            $index = $index % count($mozillianGravatarUrls);
+        $mozillianData = $this->getMozillianData();
+        if (count($mozillianData) > 0) {
+            $index = $index % count($mozillianData);
 
-            $url = $mozillianGravatarUrls[$index];
+            $url = $mozillianData[$index]['photo_url'];
         }
 
         return $this->render('tiles/contributor.html.twig', array('url' => $url));
@@ -48,49 +48,55 @@ class DefaultController extends Controller
         return $this->render('marketplace_app.html.twig', array('application' => $app));
     }
 
-    private function checkGravatarExistence($hash)
+    private function getMozillianData()
     {
-        try {
-            $this->container->get('guzzle.client')->get('https://secure.gravatar.com/avatar/'.$hash.'?r=g&s=1&d=404')->send();
-        } catch(ClientErrorResponseException $e) {
-            return false;
-        }
-        return true;
-    }
-
-    private function getMozillianGravatarUrls()
-    {
-        if (isset($this->mozillianGravatarUrls)) {
-            $mozillianGravatarUrls = $this->mozillianGravatarUrls;
-        } else if ($cachedGravatarUrls = $this->getCache()->fetch('mozillian_gravatar_urls')) {
-            $mozillianGravatarUrls = unserialize($cachedGravatarUrls);
+        if (isset($this->mozillianData)) {
+            $mozillianData = $this->mozillianData;
+        } else if ($cachedMozillianData = $this->getCache()->fetch('mozillian_data')) {
+            $mozillianData = unserialize($cachedMozillianData);
         } else {
+
+
             /** @var Client $guzzle */
             $guzzle = $this->container->get('mozillians.client');
-
             $groupNames = $this->container->getParameter('mozillians.group_names');
-            try {
-                $usersResponse = $guzzle->get('users?groups=' . $groupNames)->send();
-            } catch(ClientErrorResponseException $e) {
-                return array();
-            }
 
+            $usersResponse = $guzzle->get('api/v2/users?group=' . $groupNames)->send();
             $data = json_decode($usersResponse->getBody(true), true);
 
-            $mozillianGravatarUrls = array();
-            foreach ($data['objects'] as $mozillian) {
-                $hash = md5(strtolower(trim($mozillian['email'])));
+            $mozillianData = array();
+            foreach ($data['results'] as $user) {
+                // get data for each user
+                $userData = json_decode($guzzle->get($user['_url'])->send()->getBody(true), true);
 
-                if($this->checkGravatarExistence($hash))
-                    $mozillianGravatarUrls[] = $hash;
+                if (!$userData['is_public']) {
+                    continue;
+                }
+
+                $mozillian = array(
+                    'photo_url' => '',
+                    'href' => ''
+                );
+
+                if ($this->isFieldVisible($userData, 'photo')) {
+                    $mozillian['photo_url'] = $userData['photo']['150x150'];
+                }
+
+                if ($this->isFieldVisible($userData, 'story_link') && $userData['story_link']['value'] != '') {
+                    $mozillian['href'] = $userData['story_link']['value'];
+                } else {
+                    $mozillian['href'] = $userData['url'];
+                }
+
+                $mozillianData[] = $mozillian;
             }
 
-            $this->getCache()->save('mozillian_gravatar_urls', serialize($mozillianGravatarUrls), 3600);
+            $this->getCache()->save('mozillian_data', serialize($mozillianData), 3600);
         }
 
-        $this->mozillianGravatarUrls = $mozillianGravatarUrls;
+        $this->mozillianData = $mozillianData;
 
-        return $mozillianGravatarUrls;
+        return $mozillianData;
     }
 
 
@@ -141,5 +147,18 @@ class DefaultController extends Controller
     private function getCache()
     {
         return $this->container->get('cache');
+    }
+
+    private function isFieldVisible(array $userData, $fieldName, $visibility = 'Public')
+    {
+        if (!in_array($visibility, array('Public', 'Privileged', 'Mozillians'))) {
+            throw new \LogicException('Invalid visibility passed to isFieldVisible method: ' . $visibility);
+        }
+
+        if ($userData[$fieldName]['privacy'] === $visibility) {
+            return true;
+        }
+
+        return false;
     }
 }

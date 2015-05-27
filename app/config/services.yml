@@ -20,9 +20,9 @@ services:
         class: %guzzle.client.class%
         tags:
             - { name: guzzle.client }
-        arguments: ['https://mozillians.org/api/v1']
+        arguments: ['https://mozillians.org']
         calls:
-            - [setDefaultOption, [query, {app_name: '%mozillians.api_app_name%', app_key: '%mozillians.api_key%'}]]
+            - [setDefaultOption, [query, {api-key: '%mozillians.api_key%'}]]
             - [setUserAgent, [mozilla.ch, true]]
     mozilla_reps.client:
         class: %guzzle.client.class%
