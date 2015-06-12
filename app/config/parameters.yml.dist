@@ -19,6 +19,5 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    mozillians.api_app_name:
     mozillians.api_key:
     mozillians.group_names: switzerland
