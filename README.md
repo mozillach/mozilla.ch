@@ -8,6 +8,6 @@ This is the official repository for the mozilla.ch website.
 3. Start server: ```php app/console server:run ```
 
 ### API Keys
-For the Mozillian faces you need a mozillians API key. You can generate one [here](https://mozillians.org/en-US/apikeys/). Set the key as the value for `mozillians.api_key` in [app/config/parameters.yml](/app/config/parameters.yml).
+For the Mozillian faces you need a mozillians API key. You can generate one [here](https://mozillians.org/en-US/apikeys/). Set the key as the value for `mozillians.api_key` in [app/config/parameters.yml](/app/config/parameters.yml) (doesn't exist in the repo, it's generated with composer).
 
 All other used APIs don't need a key for the used scopes.
