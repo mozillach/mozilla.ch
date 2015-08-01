@@ -10,12 +10,10 @@
         </h1>
         <address>{{ application.author|e('html') }}</address>
     </a>
-    <p>
     {% if attribute(application.description, app.request.locale) is defined %}
         {{ application.description[app.request.locale]|raw|nl2br }}
     {% else %}
         {{ application.description[application.default_locale]|raw|nl2br }}
     {% endif %}
-    </p>
 
 </li>
