@@ -19,7 +19,8 @@ tiles:
     helpurl: https://support.mozilla.org/
     privacy: Stima tia sfera privata!
     mail: Contact
-    ndg: Nein zum Überwachungsstaat
+    ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
+    ndgurl: https://www.nachrichtendienstgesetz.ch/
     independent: Tscherna l'independenza
 header:
     support: Agid

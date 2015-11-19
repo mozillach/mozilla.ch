@@ -19,7 +19,8 @@ tiles:
     helpurl: http://mozilla.de/hilfe/
     privacy: Schütze deine Privatsphäre!
     mail: Kontakt
-    ndg: Nein zum Überwachungsstaat
+    ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
+    ndgurl: https://www.nachrichtendienstgesetz.ch/
     independent: Choose Independent
 header:
     support: Support

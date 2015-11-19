@@ -19,7 +19,8 @@ tiles:
     helpurl: https://support.mozilla.org
     privacy: Donnez de la valeur à votre vie privée!
     mail: Contact
-    ndg: Nein zum Überwachungsstaat
+    ndg: NON à l’extension de la surveillance
+    ndgurl: https://www.lrens.ch/
     independent: Choississez l'Indépendance
 header:
     support: Support

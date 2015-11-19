@@ -19,7 +19,8 @@ tiles:
     helpurl: http://forum.mozillaitalia.org/
     privacy: Dai un valore alla tua privacy!
     mail: Contatti
-    ndg: Nein zum Überwachungsstaat
+    ndg: NO allo stato di sorveglianza
+    ndgurl: https://www.nachrichtendienstgesetz.ch/
     independent: Scegli liberamente
 header:
     support: Supporto
