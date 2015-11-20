@@ -20,6 +20,8 @@ tiles:
     privacy: Value your privacy!
     mail: Contact
     ndg: Nein zum Überwachungsstaat
+    ndgurl: https://www.nachrichtendienstgesetz.ch/
+    ndgdesc: Platzhalter HIER UNTERSCHREIBEN
     independent: Choose Independent
 header:
     support: Support

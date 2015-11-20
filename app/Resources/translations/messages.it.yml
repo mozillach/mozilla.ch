@@ -21,6 +21,7 @@ tiles:
     mail: Contatti
     ndg: NO allo stato di sorveglianza
     ndgurl: https://www.nachrichtendienstgesetz.ch/
+    ndgdesc: Platzhalter HIER UNTERSCHREIBEN
     independent: Scegli liberamente
 header:
     support: Supporto

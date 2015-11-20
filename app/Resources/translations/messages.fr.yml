@@ -21,6 +21,7 @@ tiles:
     mail: Contact
     ndg: NON à l’extension de la surveillance
     ndgurl: https://www.lrens.ch/
+    ndgdesc: Platzhalter HIER UNTERSCHREIBEN
     independent: Choississez l'Indépendance
 header:
     support: Support

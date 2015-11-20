@@ -21,6 +21,7 @@ tiles:
     mail: Kontakt
     ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
     ndgurl: https://www.nachrichtendienstgesetz.ch/
+    ndgdesc: Platzhalter HIER UNTERSCHREIBEN
     independent: Choose Independent
 header:
     support: Support
