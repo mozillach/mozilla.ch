@@ -245,7 +245,13 @@
         <dialog>
             <a id="close_ndg-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
             <div id="ndg">
-                <p>{% trans %}tiles.ndgdesc{% endtrans %}</p>
+                <blockquote>{% trans %}ndg.quote{% endtrans %}
+                <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}ndg.manifesto{% endtrans %}</a></cite></blockquote>
+                <p>{% trans %}ndg.desc{% endtrans %}</p>
+		<ul>
+			<li><a href="{% trans %}ndg.url{% endtrans %}" rel="external">{% trans %}ndg.url{% endtrans %}</a></li>
+			<li><a href="https://ndg-referendum.ch/" rel="external">https://ndg-referendum.ch/</a></li>
+		</ul>
             </div>
         </dialog>
     </div>

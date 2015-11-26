@@ -20,8 +20,6 @@ tiles:
     privacy: Schütze deine Privatsphäre!
     mail: Kontakt
     ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
-    ndgurl: https://www.nachrichtendienstgesetz.ch/
-    ndgdesc: Platzhalter HIER UNTERSCHREIBEN
     independent: Choose Independent
 header:
     support: Support
@@ -52,3 +50,8 @@ footer:
     other-languages: Andere Sprachen:
     go: Los
     mozilla-ch: Mozilla Schweiz:
+ndg:
+    url: https://www.nachrichtendienstgesetz.ch/
+    quote: Die Sicherheit und der Schutz der Daten einer Person im Internet sind von grundlegender Bedeutung und dürfen nicht als optional betrachtet werden.
+    manifesto: Mozilla Manifesto
+    desc: Mozilla steht für die Privatsphäre aller Internet-Benutzer ein. Dies ist tief in unserem Manifesto verankert. Nach diversen Privatsphäre-Initiativen in den USA, Indien, Frankreich und Deutschland, gilt es nun das Referendum gegen die Nachrichtendienst-Gesetz-Reform zu unterstützen. Die Schweizer Mozilla-Community bittet daher alle Internetbenutzer sich über die geplante Reform zu informieren und den Referendumsbogen zu unterschreiben. Weitere Informationen sowie den Referendungsbogen findest du auf den untenstehenden Webseiten.

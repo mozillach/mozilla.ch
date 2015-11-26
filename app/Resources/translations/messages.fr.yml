@@ -20,8 +20,6 @@ tiles:
     privacy: Donnez de la valeur à votre vie privée!
     mail: Contact
     ndg: NON à l’extension de la surveillance
-    ndgurl: https://www.lrens.ch/
-    ndgdesc: Platzhalter HIER UNTERSCHREIBEN
     independent: Choississez l'Indépendance
 header:
     support: Support
@@ -52,3 +50,8 @@ footer:
     other-languages: Autres langues:
     go: Aller
     mozilla-ch: Mozilla Suisse:
+ndg:
+    url: https://www.lrens.ch/
+    quote: La sécurité des personnes sur Internet est fondamentale et ne doit pas être facultative.
+    manifesto: Le Manifeste Mozilla
+    desc: Mozilla cares about the privacy of all internet users. This is based on our manifesto. After multiple privacy initiatives in the US, India, France and Germany, it's time to support the referendum against the planned intelligence service law reform. The Swiss Mozilla community therefore asks every internet user to inform yourself about the reform and sign the referendum sheet. You can find more information and the signature form on the websites below (unfortunately the information is only available in German and French).
