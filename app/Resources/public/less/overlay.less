@@ -22,7 +22,7 @@
             background: white;
             padding: 1em;
             height: 90%;
-            overflow: scroll;
+            overflow: auto;
         }
     }
 }
@@ -46,6 +46,8 @@
     border: 5px solid transparent;
 
     &:hover {
+        color: white;
+        text-decoration: none;
         border: 5px solid rgba(255, 255, 255, 0.1);
     }
 }
@@ -83,8 +85,8 @@
 
 #ndg {
     background-color: white;
-    overflow: scroll;
-    height: 90%;
+    overflow: auto;
+    max-height: calc(100vh - 140px);
     padding: 2em;
     line-height: 1.5;
 
