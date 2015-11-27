@@ -185,10 +185,11 @@
             </div>
             <div class="col col-3">
                 <ul class="links-social">
-                    <li>
+                    <li itemscope itemtype="http://schema.org/Organization">
+                        <link itemprop="url" href="http://mozilla.ch">
                         {% trans %}footer.mozilla-ch{% endtrans %}
                         <ul>
-                            <li><a href="https://twitter.com/MozillaCH">Twitter<span> (@MozillaCH)</span></a></li>
+                            <li><a itemprop="sameAs" rel="me" href="https://twitter.com/MozillaCH">Twitter<span> (@MozillaCH)</span></a></li>
                         </ul>
                     </li>
                 </ul>
