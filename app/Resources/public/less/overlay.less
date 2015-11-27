@@ -82,36 +82,39 @@
 }
 
 #ndg {
-	background-color: white;
-	overflow: scroll;
-	height: 90%;
-	padding: 2em;
-	line-height: 1.5;
+    background-color: white;
+    overflow: scroll;
+    height: 90%;
+    padding: 2em;
+    line-height: 1.5;
 
-	blockquote {
-		margin-bottom: 2em;
-		padding: 1em;
-		background-color: rgb(246, 244, 236);
-		font-style: italic;
-		font-size: 1.2em;
-		font-family: serif;
+    blockquote {
+        margin-bottom: 2em;
+        padding: 1em;
+        background-color: rgb(246, 244, 236);
+        font-style: italic;
+        font-size: 1.2em;
+        font-family: serif;
 
-		&:before {
-			content: open-quote;
-			font-size: 3em;
-			color: rgb(86, 90, 92);
-		}
+        &:before {
+            content: open-quote;
+            font-size: 3em;
+            color: rgb(86, 90, 92);
+        }
 
-		cite {
-			display: block;
+        cite {
+            display: block;
 
-			&:before {
-				content: "\2014 \2009";
-			}
-		}
-	}
+            &:before {
+                content: "\2014 \2009";
+            }
+        }
+    }
 
-	ul {
-		list-style-type: disclosure-closed;
-	}
+    p {
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
+    }
 }
