@@ -84,4 +84,32 @@
 #ndg {
 	background-color: white;
 	padding: 1em;
+	line-height: 1.5;
+
+	blockquote {
+		margin: 1em;
+		padding: 1em;
+		background-color: rgb(246, 244, 236);
+		font-style: italic;
+		font-size: 1.2em;
+		font-family: serif;
+
+		&:before {
+			content: open-quote;
+			font-size: 3em;
+			color: rgb(86, 90, 92);
+		}
+
+		cite {
+			display: block;
+
+			&:before {
+				content: "\2014 \2009";
+			}
+		}
+	}
+
+	ul {
+		list-style-type: disclosure-closed;
+	}
 }
