@@ -354,3 +354,35 @@ html[lang|="en"] .promo-small-landscape.privacy {
 #nav-main-menu::before {
     background: transparent url("https://mozorg.cdn.mozilla.net/media/img/sandstone/menu-point.png") no-repeat scroll;
 }
+
+.flexbox {
+	display: -webkit-box;
+	display: -webkit-flex;
+	display: -ms-flexbox;
+	display: -moz-box;
+	display: flex;
+	-webkit-box-pack: center;
+	-webkit-justify-content: center;
+	-ms-flex-pack: center;
+	-moz-box-pack: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	flex-wrap: wrap;
+}
+
+.ndgbox a {
+	display: block;
+	padding: 1em;
+	margin: 2em;
+	font-size: 18px;
+	border-radius: 6px;
+	color: rgb(255, 255, 255);
+	background-color: rgb(39, 174, 96);
+	border-color: rgb(34, 153, 85);
+
+	&:hover {
+		background-color: rgb(30, 132, 73);
+		border-color: rgb(23, 103, 57);
+	}
+}
