@@ -19,6 +19,7 @@ tiles:
     helpurl: https://support.mozilla.org
     privacy: Donnez de la valeur à votre vie privée!
     mail: Contact
+    ndg: NON à l’extension de la surveillance
     independent: Choississez l'Indépendance
 header:
     support: Support
@@ -49,3 +50,9 @@ footer:
     other-languages: Autres langues:
     go: Aller
     mozilla-ch: Mozilla Suisse:
+ndg:
+    url: https://www.lrens.ch/
+    url2: https://lrens-referendum.ch/
+    quote: La sécurité des personnes sur Internet est fondamentale et ne doit pas être facultative.
+    manifesto: Le manifeste Mozilla
+    desc: Mozilla se soucie de la vie priveée de tous les utilisateurs d'Internet. Ceci est une conséquence de notre manifeste. Après de multiples initiatives en relation avec la vie privée aux USA, en Inde, en France et en Allemagne, il est temps de supporter le référendum contre la réforme de la loi sur les services de renseignement. La communauté Mozilla suisse propose à chaque utilisateur d'Internet de s'informer sur la réforme et de signer la feuille du référendum. Vous trouverez plus d'information ainsi que le formulaire de signature sur les sites ci-dessous (en français et en allemand).

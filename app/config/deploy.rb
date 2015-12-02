@@ -1,7 +1,8 @@
 set :application, "Mozilla.ch"
-set :domain,      "colinfrei.com"
-set :deploy_to,   "/home/colinfre/public_html/mozilla-ch"
+set :domain,      "mozilla.ch"
+set :deploy_to,   "/var/www/mozillach" 
 set :app_path,    "app"
+set :user,        "michael"
 
 set :repository,  "git@github.com:mozillacommunitych/mozilla.ch.git"
 set :scm,         :git

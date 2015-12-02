@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="-8 -8 16 16" version="1.1">
+
+  <title>Mail</title>
+
+  <path id="mail"
+        d="m-7,-5 h14 v10 h-14 z l6,6 q1,1 2,0
+           l6,-6 m-14,10 l5,-5 m4,0 l5,5"
+        fill="none" stroke="#c33" />
+
+</svg>
+

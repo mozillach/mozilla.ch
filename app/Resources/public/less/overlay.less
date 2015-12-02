@@ -22,12 +22,12 @@
             background: white;
             padding: 1em;
             height: 90%;
-            overflow: scroll;
+            overflow: auto;
         }
     }
 }
 
-#close_overlay {
+.close-overlay {
     font-size: 16px;
     position: absolute;
     right: 0;
@@ -46,6 +46,8 @@
     border: 5px solid transparent;
 
     &:hover {
+        color: white;
+        text-decoration: none;
         border: 5px solid rgba(255, 255, 255, 0.1);
     }
 }
@@ -78,5 +80,44 @@
 
     &:last-child {
         border-bottom: none;
+    }
+}
+
+#ndg {
+    background-color: white;
+    overflow: auto;
+    max-height: -webkit-calc(~"100vh - 140px");
+    max-height: calc(~"100vh - 140px");
+    padding: 2em;
+    line-height: 1.5;
+
+    blockquote {
+        margin-bottom: 2em;
+        padding: 1em;
+        background-color: rgb(246, 244, 236);
+        font-style: italic;
+        font-size: 1.2em;
+        font-family: serif;
+
+        &:before {
+            content: open-quote;
+            font-size: 3em;
+            color: rgb(86, 90, 92);
+        }
+
+        cite {
+            display: block;
+
+            &:before {
+                content: "\2014 \2009";
+            }
+        }
+    }
+
+    p {
+        -moz-hyphens: auto;
+        -webkit-hyphens: auto;
+        -ms-hyphens: auto;
+        hyphens: auto;
     }
 }

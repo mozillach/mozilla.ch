@@ -19,6 +19,7 @@ tiles:
     helpurl: http://forum.mozillaitalia.org/
     privacy: Dai un valore alla tua privacy!
     mail: Contatti
+    ndg: NO allo stato di sorveglianza
     independent: Scegli liberamente
 header:
     support: Supporto
@@ -49,3 +50,9 @@ footer:
     other-languages: Altre lingue:
     go: Vai
     mozilla-ch: Mozilla Switzerland:
+ndg:
+    url: https://www.nachrichtendienstgesetz.ch/
+    url2: https://ndg-referendum.ch/
+    quote: La sicurezza e la privacy di ogni persona su Internet sono prerogative fondamentali e non devono essere considerate facoltative.
+    manifesto: Il manifesto di Mozilla
+    desc: Mozilla tutela la privacy di ogni persona su internet. Questo é definito nel nostro manifesto. Dopo molte iniziative sulla privacy in USA, India, Francia e Germania, ora é il momento di sostenere il referendum contro una riforma della legge sullo spionaggio. La community Svizzera di Mozilla chiede ad ogni utente di internet di informarsi sulla riforma e firmare il referendum. Puoi trovare maggiori informazioni ed il modulo per partecipare sul sito sottostante (sfortunatamente le informazioni sono in Tedesco e Francese).

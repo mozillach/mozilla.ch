@@ -63,9 +63,9 @@
         <section class="promo-grid-wrapper">
             <div class="promo-grid-inner">
                 <ul class="promo-grid">
-                    <li class="item promo-large-portrait campaign">
-                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/hello">
-                            <h2>{% trans %}tiles.campaign{% endtrans %}</h2>
+                    <li class="item promo-large-portrait ndg">
+                        <a class="panel-link" href="javascript:void" target="_self">
+                            <h2>{% trans %}tiles.ndg{% endtrans %}</h2>
                         </a>
                     </li>
                     <li class="item promo-small-landscape firefox-download">
@@ -185,10 +185,11 @@
             </div>
             <div class="col col-3">
                 <ul class="links-social">
-                    <li>
+                    <li itemscope itemtype="http://schema.org/Organization">
+                        <link itemprop="url" href="http://mozilla.ch">
                         {% trans %}footer.mozilla-ch{% endtrans %}
                         <ul>
-                            <li><a href="https://twitter.com/MozillaCH">Twitter<span> (@MozillaCH)</span></a></li>
+                            <li><a itemprop="sameAs" rel="me" href="https://twitter.com/MozillaCH">Twitter<span> (@MozillaCH)</span></a></li>
                         </ul>
                     </li>
                 </ul>
@@ -212,8 +213,8 @@
     </footer>
     <div id="overlay" hidden>
         <dialog>
-            <a id="close_overlay" href="javascript:void" target="_self">x</a>
-            <ul>
+            <a id="close_overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
+            <ul id="ch_apps">
                 {{ render(controller(
                     'AppBundle:Default:marketplaceApp',
                     { 'id': 'grrds-puzzle-1' }
@@ -239,6 +240,20 @@
                     { 'id': 'mines' }
                 )) }}
             </ul>
+        </dialog>
+    </div>
+    <div id="ndg-overlay" hidden>
+        <dialog>
+            <a id="close_ndg-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
+            <div id="ndg">
+                <blockquote>{% trans %}ndg.quote{% endtrans %}
+                <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}ndg.manifesto{% endtrans %}</a></cite></blockquote>
+                <p>{% trans %}ndg.desc{% endtrans %}</p>
+		<div class="ndgbox">
+			<a href="{% trans %}ndg.url{% endtrans %}" rel="external">{% trans %}ndg.url{% endtrans %}</a>
+			<a href="{% trans %}ndg.url2{% endtrans %}" rel="external">{% trans %}ndg.url2{% endtrans %}</a>
+		</div>
+            </div>
         </dialog>
     </div>
 </body>
