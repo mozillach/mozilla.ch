@@ -13,7 +13,9 @@ class DefaultController extends Controller
     private $mozillianData;
 
     /**
-     * @Route("/{_locale}", name="homepage")
+     * @Route("/{_locale}", name="homepage", requirements={
+           "_locale": "(de|en|fr|it|rm)"
+       })
      */
     public function indexAction()
     {
