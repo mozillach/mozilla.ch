@@ -38,7 +38,7 @@
 
 {# Only one tiny tile is rendered at any time, so we don't have to track these #}
 {% macro rendertinytile() %}
-    {% set tiles = [0, 1, 2, 3] %}
+    {% set tiles = [0, 1, 2, 3, 4] %}
     {% set index = random(tiles) %}
     {% if index == 0 %}
     <li class="item promo-tiny firefox-android random">
@@ -58,6 +58,11 @@
     {% elseif index == 3 %}
     <li class="item promo-tiny marketplace random">
         <a class="panel-link" rel="external" href="https://marketplace.firefox.com/">
+        </a>
+    </li>
+    {% elseif index == 4 %}
+    <li class="item promo-tiny firefox-ios random">
+        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/ios/">
         </a>
     </li>
     {% endif %}
