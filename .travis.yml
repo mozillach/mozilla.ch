@@ -1,0 +1,22 @@
+language: php
+
+php:
+  - '7.0'
+
+sudo: required
+
+services:
+  - docker
+
+cache:
+  directories:
+  - $HOME/.composer/cache
+
+after_success:
+  - docker build -t colinfrei/mozillachtest .
+  - docker login -e="$DOCKER_EMAIL" -u="colinfrei" -p="$DOCKER_PASSWORD"
+  - docker push colinfrei/mozillachtest
+#  - docker run -h mozilla.ch -p 80:80 -d -e "MOZILLAINS_KEY={mozillians API key}" colinfrei/mozillachtest
+
+#notifications:
+#  irc: "irc.mozilla.org#mozilla.ch"
