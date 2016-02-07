@@ -11,6 +11,8 @@ use ICal;
 class DefaultController extends Controller
 {
     private $mozillianData;
+    /** @var \ICal */
+    private $ical;
 
     /**
      * @Route("/{_locale}", name="homepage", requirements={
@@ -113,10 +115,10 @@ class DefaultController extends Controller
             $lines = explode("\n", $response->getBody(true));
 
             if(count($lines) > 5) {
-                $ical = new ICal($lines);
-                $events = $ical->events();
+                $this->ical = new ICal($lines);
+                $events = $this->ical->events();
                 foreach($events as $i => $event) {
-                    $events[$i]['TIMESTAMP'] = $ical->iCalDateToUnixTimestamp($event['DTSTART']);
+                    $events[$i]['TIMESTAMP'] = $this->getStartDate($event['DTSTAMP']);
                     $events[$i]['LOCATION'] = stripslashes($event['LOCATION']);
                     $events[$i]['SUMMARY'] = stripslashes($event['SUMMARY']);
                 }
@@ -128,6 +130,27 @@ class DefaultController extends Controller
         }
 
         return $events;
+    }
+
+    /**
+     * Handles the weird date time string we get from the iCal
+     * Like: 20160207T154151DTSTART;TZID=Europe/Zurich:20160209T180000DTEND;TZID=Europe/Zurich:20160209T200000
+     *
+     * @param $datetimeString
+     */
+    private function getStartDate($datetimeString)
+    {
+        if (strpos($datetimeString, 'DTSTART') !== false) {
+            // $date DTSTART;TZID= $tz : $date DTEND;TZID= $tz : $date
+            $datetimeString = substr(
+                $datetimeString,
+                strpos($datetimeString, ':'),
+                strpos($datetimeString, 'DTEND') - strpos($datetimeString, ':')
+            );
+        }
+
+        return $this->ical->iCalDateToUnixTimestamp($datetimeString);
+
     }
 
     private function getApp($id)
