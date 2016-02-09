@@ -19,5 +19,6 @@ parameters:
     # A secret key that's used to generate certain security-related tokens
     secret:            ThisTokenIsNotSoSecretChangeIt
 
-    mozillians.api_key:
+    # This is usually set using an environment variable, but you can set it in parameters.yml if you prefer
+    # mozillians.api_key:
     mozillians.group_names: switzerland
