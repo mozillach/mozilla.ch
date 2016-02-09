@@ -30,6 +30,9 @@ RUN php app/console cache:warmup --env=prod --no-debug
 # Dump assetic assets
 RUN php app/console assetic:dump --env=prod --no-debug
 
+RUN chown -R www-data:www-data app
+RUN chmod -R a+rw app/cache app/logs
+
 # Run stuff
 COPY start.sh /opt/start.sh
 CMD [ "/opt/start.sh" ]
