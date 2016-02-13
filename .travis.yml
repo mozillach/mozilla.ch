@@ -25,7 +25,6 @@ script: phpunit -c app/
 after_success:
   - docker build -t="$BUILT_CONTAINER_NAME" .
   - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
-  - docker tag "$BUILT_CONTAINER_NAME" "$BUILT_CONTAINER_NAME"
   - docker push "$BUILT_CONTAINER_NAME"
 #  - docker run -h mozilla.ch -p 80:80 -d -e "MOZILLAINS_KEY=$MOZILLIANS_KEY" $BUILT_CONTAINER_NAME
 
