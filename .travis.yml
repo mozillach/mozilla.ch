@@ -22,11 +22,6 @@ install:
 
 script: phpunit -c app/
 
-branches:
-  only:
-  - release
-  - travis
-
 after_success:
   - docker build -t="$BUILT_CONTAINER_NAME" .
   - docker login -e="$DOCKER_EMAIL" -u="colinfrei" -p="$DOCKER_PASSWORD"
