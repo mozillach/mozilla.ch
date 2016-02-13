@@ -18,6 +18,9 @@ COPY mozillach.conf /etc/apache2/sites-enabled/mozillach.conf
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 
+# Copy in the website
+COPY . .
+
 # Install vendor deps
 RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
 
