@@ -3,18 +3,21 @@ language: php
 php:
   - '7.0'
 
-sudo: required
+sudo: false
 
 services:
   - docker
+
+env:
+  global:
+  # this is necessary so cache building has the parameter
+  - SYMFONY__MOZILLIANS__API_KEY=null
 
 cache:
   directories:
   - $HOME/.composer/cache
 
-before_script:
-  # this is necessary so cache building has the parameter
-  - export SYMFONY__MOZILLIANS__API_KEY=null
+install:
   - composer install
 
 script: phpunit -c app/
