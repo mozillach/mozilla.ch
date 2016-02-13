@@ -13,7 +13,10 @@ cache:
   - $HOME/.composer/cache
 
 before_script:
+  # this is necessary so cache building has the parameter
+  - export SYMFONY__MOZILLIANS__API_KEY=null
   - composer install
+
 script: phpunit -c app/
 
 after_success:

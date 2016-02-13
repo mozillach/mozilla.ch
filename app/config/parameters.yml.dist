@@ -20,5 +20,5 @@ parameters:
     secret:            ThisTokenIsNotSoSecretChangeIt
 
     # This is usually set using an environment variable, but you can set it in parameters.yml if you prefer
-    mozillians.api_key:
+    # mozillians.api_key:
     mozillians.group_names: switzerland
