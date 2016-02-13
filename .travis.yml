@@ -12,6 +12,11 @@ cache:
   directories:
   - $HOME/.composer/cache
 
+env:
+  global:
+  # this is necessary so cache building has the parameter
+  - MOZILLIANS_KEY=null
+
 install:
   - composer install
 
@@ -19,8 +24,8 @@ script: phpunit -c app/
 
 after_success:
   - docker build -t mozillach/mozilla.ch-test .
-  #- docker login -e="$DOCKER_EMAIL" -u="colinfrei" -p="$DOCKER_PASSWORD"
-  #- docker push colinfrei/mozillachtest
+  - docker login -e="$DOCKER_EMAIL" -u="colinfrei" -p="$DOCKER_PASSWORD"
+  - docker push colinfrei/mozillachtest
 #  - docker run -h mozilla.ch -p 80:80 -d -e "MOZILLAINS_KEY={mozillians API key}" colinfrei/mozillachtest
 
 #notifications:
