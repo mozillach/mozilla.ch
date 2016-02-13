@@ -22,13 +22,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 RUN git clone -b release --depth 1 https://github.com/mozillach/mozilla.ch.git .
 
 # Install vendor deps
-RUN composer.phar install --no-dev --optimize-autoloader
-
-# Warm up cache
-RUN php app/console cache:warmup --env=prod --no-debug
-
-# Dump assetic assets
-RUN php app/console assetic:dump --env=prod --no-debug
+RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
 
 RUN chown -R www-data:www-data app
 RUN chmod -R a+rw app/cache app/logs
