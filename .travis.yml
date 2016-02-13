@@ -36,7 +36,7 @@ branches:
 after_success:
   - docker build -t="$CONTAINER_NAME" .
   - docker login -e="$DOCKER_EMAIL" -u="colinfrei" -p="$DOCKER_PASSWORD"
-  - docker push $CONTAINER_NAME
+  - docker push "$CONTAINER_NAME:$TRAVIS_BRANCH"
 #  - docker run -h mozilla.ch -p 80:80 -d -e "MOZILLAINS_KEY=$MOZILLIANS_KEY" $CONTAINER_NAME
 
 #notifications:
