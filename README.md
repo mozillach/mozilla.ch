@@ -26,7 +26,7 @@ Run `docker build -t mozillach/mozilla.ch` to build the docker container.
 The deployed docker container is based on the release branch and built with Travis CI.
 
 ### Running the Container
-Replace `{mozillians API key}` with a mozillians API key for the v2 API with public access privileges. See [API Keys]{#api-keys} for how to get one.
+Replace `{mozillians API key}` with a mozillians API key for the v2 API with public access privileges. See [API Keys](#api-keys) for how to get one.
 
 Run `docker run -e MOZILLIANS_KEY={mozillians API key} mozillach/mozilla.ch` to start provisioning and then start apache.
 
