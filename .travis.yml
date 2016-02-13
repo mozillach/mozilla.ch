@@ -10,17 +10,12 @@ services:
 
 env:
   global:
-  - "MOZILLIANS_KEY=null"
-  - "BUILT_CONTAINER_NAME=colinfrei/mozilachtest:$TRAVIS_BRANCH"
+  - MOZILLIANS_KEY=null
+  - BUILT_CONTAINER_NAME="colinfrei/mozilachtest:$TRAVIS_BRANCH"
 
 cache:
   directories:
   - $HOME/.composer/cache
-
-env:
-  global:
-  # this is necessary so cache building has the parameter
-  - MOZILLIANS_KEY=null
 
 install:
   - composer install
