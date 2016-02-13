@@ -24,9 +24,6 @@ RUN git clone -b release --depth 1 https://github.com/mozillach/mozilla.ch.git .
 # Install vendor deps
 RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
 
-RUN chown -R www-data:www-data app
-RUN chmod -R a+rw app/cache app/logs
-
 # Open ports
 EXPOSE 80 443
 
