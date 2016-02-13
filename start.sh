@@ -1,7 +1,7 @@
 #! /bin/sh
 
 # Run composer scripts, since we have the ENV variable now
-composer.phar run-script
+composer.phar run-script post-install-cmd
 
 # Warm up cache
 php app/console cache:warmup --env=prod --no-debug
