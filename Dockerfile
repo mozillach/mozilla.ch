@@ -20,6 +20,7 @@ RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local
 
 # Copy in the website
 COPY . .
+RUN rm start.sh mozillach.conf
 
 # Install vendor deps
 RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
