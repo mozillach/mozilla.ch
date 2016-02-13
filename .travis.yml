@@ -7,7 +7,12 @@ sudo: false
 
 services:
   - docker
-  
+
+env:
+  global:
+  # this is necessary so cache building has the parameter
+  - MOZILLIANS_KEY=null
+
 cache:
   directories:
   - $HOME/.composer/cache
