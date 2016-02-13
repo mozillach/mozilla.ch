@@ -11,7 +11,7 @@ services:
 env:
   global:
   # this is necessary so cache building has the parameter
-  - SYMFONY__MOZILLIANS__API_KEY=null
+  - MOZILLIANS_KEY=null
 
 cache:
   directories:
