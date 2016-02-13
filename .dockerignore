@@ -1,12 +1,11 @@
 Capfile
 Vagrantfile
+Dockerfile
 LICENSE
 README.md
 composer.phar
-.travis.yml
 *.htaccess
-.git/
-.gitignore
+.*
 vendor/
 logs/
 bin/
