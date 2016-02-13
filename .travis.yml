@@ -11,8 +11,8 @@ services:
 env:
   global:
   # this is necessary so cache building has the parameter
-  - MOZILLIANS_KEY=null
-  - CONTAINER_NAME=colinfrei/mozilachtest:$TRAVIS_BRANCH
+  - "MOZILLIANS_KEY=null"
+  - "CONTAINER_NAME=colinfrei/mozilachtest:$TRAVIS_BRANCH"
 
 cache:
   directories:
