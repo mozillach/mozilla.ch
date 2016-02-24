@@ -39,3 +39,5 @@ Replace `{mozillians API key}` with a mozillians API key for the v2 API with pub
 Run `docker run -e MOZILLIANS_KEY={mozillians API key} mozillach/mozilla.ch` to start provisioning and then start apache.
 
 To run it in a deployment situation use `docker run -h mozilla.ch -p 443:443 -v /path/to/certnstuff:/usr/local/apache2/conf -d -e "MOZILLAINS_KEY={mozillians API key}" mozillach/mozilla.ch`. Make sure you insert the correct path to the certificates for `/path/to/certsnstuff` and replace `{mozillians API key}` with a valid key for the mozillians.org API.
+
+For local tests of the container, you can use `test-docker.sh` to start the container on the local port 4430. This currently doesn't support setting the mozillians API key.
