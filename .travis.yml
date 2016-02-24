@@ -11,7 +11,7 @@ services:
 env:
   global:
   - MOZILLIANS_KEY=null
-  - BUILT_CONTAINER_NAME="$DOCKER_USERNAME/mozillachtest:$TRAVIS_BRANCH"
+  - BUILT_CONTAINER_NAME="$TRAVIS_REPO_SLUG:$TRAVIS_BRANCH"
 
 cache:
   directories:
