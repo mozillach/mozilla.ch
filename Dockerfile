@@ -13,20 +13,26 @@ RUN apt-get purge -y --auto-remove libicu-dev zlib1g-dev && \
 
 # Apache config
 RUN a2enmod rewrite
+RUN a2enmod ssl
+RUN a2enmod headers
+RUN mkdir -p /usr/local/apache2/conf/
 COPY mozillach.conf /etc/apache2/sites-enabled/mozillach.conf
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
 
-# Copy in the website
-COPY . .
-RUN rm start.sh mozillach.conf
+# Copy in only composer relevant files, so the composer step is only re-run when those change
+COPY composer.json composer.lock ./
 
 # Install vendor deps
 RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
 
+# Copy in the website
+COPY . .
+RUN rm start.sh mozillach.conf
+
 # Open ports
-EXPOSE 80 443
+EXPOSE 443
 
 # Run stuff
 COPY start.sh /opt/start.sh
