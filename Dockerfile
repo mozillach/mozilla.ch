@@ -16,7 +16,6 @@ RUN a2enmod rewrite
 RUN a2enmod ssl
 RUN a2enmod headers
 RUN mkdir -p /usr/local/apache2/conf/
-COPY mozillach.conf /etc/apache2/sites-enabled/mozillach.conf
 
 # Install composer
 RUN curl -sS https://getcomposer.org/installer | php -- --install-dir=/usr/local/bin
@@ -26,6 +25,8 @@ COPY composer.json composer.lock ./
 
 # Install vendor deps
 RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
+
+COPY mozillach.conf /etc/apache2/sites-enabled/mozillach.conf
 
 # Copy in the website
 COPY . .
