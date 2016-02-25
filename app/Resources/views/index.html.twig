@@ -1,4 +1,4 @@
-{{ settiles([1, 2, 3, 4]) }}
+{{ settiles([0, 1, 2]) }}
 {% import "tiles/random.html.twig" as random %}
 {% set facescount = random(20) %}
 <!DOCTYPE html>
@@ -100,8 +100,10 @@
                         <script src="https://platform.twitter.com/widgets.js"></script>
                     </li>
                     {{ random.rendertinytile() }}
-                    <li class="item promo-large-landscape">
-                        TODO: EMPTY FOR NOW
+                    <li class="item promo-large-landscape mdn no-background">
+                      <a class="panel-link" rel="external" href="https://developer.mozilla.org">
+                          <h2>Mozilla Developer Network</h2>
+                      </a>
                     </li>
                     <li class="item promo-small-landscape past-events">
                         <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/events/past">
