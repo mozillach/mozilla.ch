@@ -36,6 +36,8 @@ resources/main.css
 Thumbs.db
 Desktop.ini
 
+.docker-certs
+
 # Never ignore #
 # Only apply this rule to the main repository's gitignore files
 !/.gitignore

@@ -69,7 +69,7 @@
                         </a>
                     </li>
                     <li class="item promo-small-landscape firefox-download">
-                        <a class="panel-link" rel="external" href="https://download.mozilla.org">
+                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/all/">
                             <div class="primary">
                                 <h2 class="go">{% trans %}tiles.download-firefox{% endtrans %}</h2>
                                 <img width="176" height="184" src="https://www.mozilla.org/media/img/home/voices/promos/download-firefox/firefox-logo.png">
@@ -97,11 +97,7 @@
                     </li>
                     <li class="item promo-large-portrait no-background">
                         <a class="twitter-timeline" href="https://twitter.com/MozillaCH" data-widget-id="581826491673128960" data-chrome="noheader nofooter">Tweets by @MozillaCH</a>
-                        <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0];
-                            if(!d.getElementById(id)){
-                                js=d.createElement(s);js.id=id;js.src="https://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);
-                            }}(document,"script","twitter-wjs");
-                        </script>
+                        <script src="https://platform.twitter.com/widgets.js"></script>
                     </li>
                     {{ random.rendertinytile() }}
                     <li class="item promo-large-landscape ch-apps">
@@ -246,7 +242,7 @@
         <dialog>
             <a id="close_ndg-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
             <div id="ndg">
-                <blockquote>{% trans %}ndg.quote{% endtrans %}
+                <blockquote><p>{% trans %}ndg.quote{% endtrans %}</p>
                 <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}ndg.manifesto{% endtrans %}</a></cite></blockquote>
                 <p>{% trans %}ndg.desc{% endtrans %}</p>
 		<div class="ndgbox">

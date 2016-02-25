@@ -1,0 +1,17 @@
+Capfile
+Vagrantfile
+Dockerfile
+LICENSE
+README.md
+composer.phar
+*.htaccess
+.*
+vendor/
+logs/
+bin/
+app/cache/
+app/logs/
+app/config/parameters.yml
+web/bundles/
+!*.gitkeep
+test-docker.sh

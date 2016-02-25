@@ -1,0 +1,32 @@
+language: php
+
+php:
+  - '7.0'
+
+sudo: false
+
+services:
+  - docker
+
+env:
+  global:
+  - MOZILLIANS_KEY=null
+  - BUILT_CONTAINER_NAME="$TRAVIS_REPO_SLUG:$TRAVIS_BRANCH"
+
+cache:
+  directories:
+  - $HOME/.composer/cache
+
+install:
+  - composer install
+
+script: phpunit -c app/
+
+after_success:
+  - docker build -t="$BUILT_CONTAINER_NAME" .
+  - docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD"
+  - docker push "$BUILT_CONTAINER_NAME"
+#  - docker run -h mozilla.ch -p 80:80 -d -e "MOZILLAINS_KEY=$MOZILLIANS_KEY" $BUILT_CONTAINER_NAME
+
+#notifications:
+#  irc: "irc.mozilla.org#mozilla.ch"
