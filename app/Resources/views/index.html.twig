@@ -100,10 +100,8 @@
                         <script src="https://platform.twitter.com/widgets.js"></script>
                     </li>
                     {{ random.rendertinytile() }}
-                    <li class="item promo-large-landscape ch-apps">
-                        <a class="panel-link" href="javascript:void" target="_self">
-                            <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
-                        </a>
+                    <li class="item promo-large-landscape">
+                        TODO: EMPTY FOR NOW
                     </li>
                     <li class="item promo-small-landscape past-events">
                         <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/events/past">
@@ -207,37 +205,6 @@
             </div>
         </nav>
     </footer>
-    <div id="overlay" hidden>
-        <dialog>
-            <a id="close_overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
-            <ul id="ch_apps">
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'grrds-puzzle-1' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'grrds-4-in-a-row' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'grrds-dice' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'srfpods' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'takemeto' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'mines' }
-                )) }}
-            </ul>
-        </dialog>
-    </div>
     <div id="ndg-overlay" hidden>
         <dialog>
             <a id="close_ndg-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
