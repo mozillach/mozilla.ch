@@ -5,13 +5,9 @@ tiles:
     pastevents: Past Events
     follow-twitter: Follow us on Twitter
     download-firefox: Download Firefox
-    firefox-os: Learn about Firefox OS
-    webmaker: Make the Web you want
     campaign: Meet Firefox Hello
     dev-edition: Introducing Firefox Developer Edition
     firefox-android: Put your Firefox on your Android
-    marketplace: Get web apps on the Firefox Marketplace
-    gearstore: Officla Mozilla gear is here
     donation: Donate to Mozilla
     external-blog-posts: Blogposts
     help: Help
@@ -19,7 +15,6 @@ tiles:
     privacy: Value your privacy!
     mail: Contact
     ndg: No to surveillance state
-    independent: Choose Independent
 header:
     support: Support
     mission: Mission

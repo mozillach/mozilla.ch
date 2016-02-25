@@ -5,13 +5,9 @@ tiles:
     pastevents: Vergangene Events
     follow-twitter: Folge uns auf Twitter
     download-firefox: Firefox herunterladen
-    firefox-os: Lerne Firefox OS kennen
-    webmaker: Entwickle das Web, das du möchtest
     campaign: Lerne Firefox Hello kennen
     dev-edition: Hier kommt Firefox Developer Edition
     firefox-android: Hole dir Firefox auf dein Android-Gerät
-    marketplace: Installiere Web Apps vom Firefox Marketplace
-    gearstore: Hier gibt es die offiziellen Mozilla-Fanartikel
     donation: Spenden
     external-blog-posts: Blogposts
     help: Hilfe
@@ -19,7 +15,6 @@ tiles:
     privacy: Schütze deine Privatsphäre!
     mail: Kontakt
     ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
-    independent: Choose Independent
 header:
     support: Support
     mission: Mission

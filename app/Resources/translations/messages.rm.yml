@@ -5,13 +5,9 @@ tiles:
     pastevents: Occurrenzas vargadas
     follow-twitter: Ans suonda sin Twitter
     download-firefox: Telechargiar Firefox
-    firefox-os: Emprenda dapli davart Firefox OS
-    webmaker: Fa il web che ti vuls
     campaign: Emprenda d'enconuscher Firefox Hello
     dev-edition: Voilà: Firefox per sviluppaders
     firefox-android: Chargia Firefox sin tes telefonin dad Android
-    marketplace: Telechargiar web-apps dal Firefox Marketplace
-    gearstore: Ussa datti la vestgadira uffiziala da Mozilla
     donation: Donar a Mozilla
     external-blog-posts: Posts da blog
     help: Agid
@@ -19,7 +15,6 @@ tiles:
     privacy: Stima tia sfera privata!
     mail: Contact
     ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
-    independent: Tscherna l'independenza
 header:
     support: Agid
     mission: Missiun
