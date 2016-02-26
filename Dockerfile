@@ -1,6 +1,7 @@
 FROM php:7.0-apache
 
 ENV SYMFONY_ENV=prod
+ENV BEHIND_PROXY=1
 
 RUN apt-get update -q && apt-get install -yq git libicu-dev zlib1g-dev libicu52 zlib1g --no-install-recommends
 
@@ -13,7 +14,6 @@ RUN apt-get purge -y --auto-remove libicu-dev zlib1g-dev && \
 
 # Apache config
 RUN a2enmod rewrite
-RUN a2enmod ssl
 RUN a2enmod headers
 RUN mkdir -p /usr/local/apache2/conf/
 
@@ -33,7 +33,7 @@ COPY . .
 RUN rm start.sh mozillach.conf
 
 # Open ports
-EXPOSE 443
+EXPOSE 80
 
 # Run stuff
 COPY start.sh /opt/start.sh
