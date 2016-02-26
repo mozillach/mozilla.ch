@@ -25,19 +25,9 @@ Run `docker build -t mozillach/mozilla.ch` to build the docker container.
 
 The deployed docker container is based on the release branch and built with Travis CI.
 
-### Certs for the Container
-The docker container's apache is only configured for port 443. This means you will need to supply it with a certificate. It expects three files in `/usr/local/apache2/conf/`:
- - **server.key** The private key of the server
- - **server.crt** Certificate for the server
- - **ca.crt** Certificate chain file
- 
-You can use the `test-docker.sh` to generate dummy versions of these files and run the container.
-
 ### Running the Container
 Replace `{mozillians API key}` with a mozillians API key for the v2 API with public access privileges. See [API Keys](#api-keys) for how to get one.
 
 Run `docker run -e MOZILLIANS_KEY={mozillians API key} mozillach/mozilla.ch` to start provisioning and then start apache.
 
-To run it in a deployment situation use `docker run -h mozilla.ch -p 443:443 -v /path/to/certnstuff:/usr/local/apache2/conf -d -e "MOZILLAINS_KEY={mozillians API key}" mozillach/mozilla.ch`. Make sure you insert the correct path to the certificates for `/path/to/certsnstuff` and replace `{mozillians API key}` with a valid key for the mozillians.org API.
-
-For local tests of the container, you can use `test-docker.sh` to start the container on the local port 4430. This currently doesn't support setting the mozillians API key.
+To run it in a deployment situation use `docker run -h mozilla.ch -p 80:80 -d -e "MOZILLAINS_KEY={mozillians API key}" mozillach/mozilla.ch`. The container should not be directly exposed to incoming connections, since it respects forwarded headers by default.
