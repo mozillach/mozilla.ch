@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" version="1.1"
+     viewBox="-8 -8 16 16">
+
+  <title>mozilla.ch - favicon</title>
+
+  <desc>
+    This is mozilla.ch's favicon. The background is solid
+    red. There's a large white letter "m" at the bottom
+    and a small white Swiss cross in the top right corner.
+  </desc>
+
+  <rect id="background" fill="#c33"
+        x="-8" y="-8" width="16" height="16" />
+
+  <path id="moz_logo" fill="none" stroke="#fff" stroke-width="2"
+        d="M-4,-2 v8 -5.5 q1,-1.5 2.5,-1.5 c1.5,0 1.5,0 1.5,2 v5
+           -5.5 q1,-1.5 2.5,-1.5 c1.5,0 1.5,0 1.5,1.5 v5.5" />
+
+  <path id="swiss_cross" fill="#fff"
+        d="M4,-5 v-1 h1 v1 h1 v1 h-1 v1 h-1 v-1 h-1 v-1 z" />
+
+</svg>
+
