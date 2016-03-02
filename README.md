@@ -23,7 +23,7 @@ Run `docker build -t mozillach/mozilla.ch` to build the docker container.
 ### Releasing a New Docker Container
 [![Travis CI Builds](https://travis-ci.org/mozillach/mozilla.ch.svg?branch=release)](https://travis-ci.org/mozillach/mozilla.ch)
 
-The deployed docker container is based on the release branch and built with Travis CI.
+The deployed docker container is based on the release branch and built directly on docker hub.
 
 ### Running the Container
 Replace `{mozillians API key}` with a mozillians API key for the v2 API with public access privileges. See [API Keys](#api-keys) for how to get one.
