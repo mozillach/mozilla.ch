@@ -1,7 +1,7 @@
 FROM php:7.0-apache
 
 ENV SYMFONY_ENV=prod
-ENV BEHIND_PROXY=1
+ENV BEHIND_PROXY=0
 
 RUN apt-get update -q && apt-get install -yq git libicu-dev zlib1g-dev libicu52 zlib1g --no-install-recommends
 
