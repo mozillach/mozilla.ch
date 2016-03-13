@@ -1,4 +1,4 @@
-{{ settiles([1, 2, 3, 4]) }}
+{{ settiles([0, 1, 2]) }}
 {% import "tiles/random.html.twig" as random %}
 {% set facescount = random(20) %}
 <!DOCTYPE html>
@@ -9,8 +9,10 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>mozilla.ch</title>
+    <title>{% trans %}general.title{% endtrans %}</title>
     <meta name="description" content="">
+
+    <meta name="twitter:widgets:csp" content="on">
 
     <link rel="shortcut icon" sizes="16x16" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="icon" sizes="16x16" type="image/png" href="favicon.png">
@@ -103,10 +105,10 @@
                         <script src="https://platform.twitter.com/widgets.js"></script>
                     </li>
                     {{ random.rendertinytile() }}
-                    <li class="item promo-large-landscape ch-apps">
-                        <a class="panel-link" href="javascript:void" target="_self">
-                            <h2>{% trans %}tiles.ch-apps{% endtrans %}</h2>
-                        </a>
+                    <li class="item promo-large-landscape mdn no-background">
+                      <a class="panel-link" rel="external" href="https://developer.mozilla.org">
+                          <h2>Mozilla Developer Network</h2>
+                      </a>
                     </li>
                     <li class="item promo-small-landscape past-events">
                         <a class="panel-link" rel="external" href="http://www.meetup.com/Mozilla-Meetup-Switzerland/events/past">
@@ -210,37 +212,6 @@
             </div>
         </nav>
     </footer>
-    <div id="overlay" hidden>
-        <dialog>
-            <a id="close_overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
-            <ul id="ch_apps">
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'grrds-puzzle-1' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'grrds-4-in-a-row' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'grrds-dice' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'srfpods' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'takemeto' }
-                )) }}
-                {{ render(controller(
-                    'AppBundle:Default:marketplaceApp',
-                    { 'id': 'mines' }
-                )) }}
-            </ul>
-        </dialog>
-    </div>
     <div id="ndg-overlay" hidden>
         <dialog>
             <a id="close_ndg-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
@@ -248,10 +219,9 @@
                 <blockquote><p>{% trans %}ndg.quote{% endtrans %}</p>
                 <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}ndg.manifesto{% endtrans %}</a></cite></blockquote>
                 <p>{% trans %}ndg.desc{% endtrans %}</p>
-		<div class="ndgbox">
-			<a href="{% trans %}ndg.url{% endtrans %}" rel="external">{% trans %}ndg.url{% endtrans %}</a>
-			<a href="{% trans %}ndg.url2{% endtrans %}" rel="external">{% trans %}ndg.url2{% endtrans %}</a>
-		</div>
+                <div class="ndgbox">
+                  <a href="{% trans %}ndg.url{% endtrans %}" rel="external">{% trans %}ndg.url{% endtrans %}</a>
+              </div>
             </div>
         </dialog>
     </div>

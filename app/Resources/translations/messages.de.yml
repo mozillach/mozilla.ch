@@ -5,14 +5,8 @@ tiles:
     pastevents: Vergangene Events
     follow-twitter: Folge uns auf Twitter
     download-firefox: Firefox herunterladen
-    ch-apps: Firefox OS Apps aus der Schweiz
-    firefox-os: Lerne Firefox OS kennen
-    webmaker: Entwickle das Web, das du möchtest
     campaign: Lerne Firefox Hello kennen
     dev-edition: Hier kommt Firefox Developer Edition
-    firefox-android: Hole dir Firefox auf dein Android-Gerät
-    marketplace: Installiere Web Apps vom Firefox Marketplace
-    gearstore: Hier gibt es die offiziellen Mozilla-Fanartikel
     donation: Spenden
     external-blog-posts: Blogposts
     help: Hilfe
@@ -20,7 +14,7 @@ tiles:
     privacy: Schütze deine Privatsphäre!
     mail: Kontakt
     ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
-    independent: Choose Independent
+    smarton: Informiere dich über das Web
 header:
     support: Support
     mission: Mission
@@ -37,8 +31,9 @@ get-in-touch:
     description: Setze dich mit der Schweizer Community in Verbindung, stelle uns Deine Fragen und nimm an unseren Events teil.
 general:
     donate: Spenden
+    title: Mozilla Schweiz
 footer:
-    copyright: Teile dieses Inhalts stehen unter einem ©1998–2015 von einzelnen Mitwirkenden an mozilla.org. Der Inhalt steht unter einer <a href="https://mozilla.org/foundation/licensing/website-content/">Creative-Commons-Lizenz</a>.
+    copyright: Teile dieses Inhalts stehen unter einem ©1998–2016 von einzelnen Mitwirkenden an mozilla.org. Der Inhalt steht unter einer <a href="https://mozilla.org/foundation/licensing/website-content/">Creative-Commons-Lizenz</a>.
     contact: Kontakt
     partner: Werde Partner
     firefoxaffiliates: Firefox-Partnerprogramm
@@ -52,7 +47,6 @@ footer:
     mozilla-ch: Mozilla Schweiz:
 ndg:
     url: https://www.nachrichtendienstgesetz.ch/
-    url2: https://ndg-referendum.ch/
     quote: Die Sicherheit und der Schutz der Daten einer Person im Internet sind von grundlegender Bedeutung und dürfen nicht als optional betrachtet werden.
     manifesto: Mozilla Manifesto
-    desc: Mozilla steht für die Privatsphäre aller Internet-Benutzer ein. Dies ist tief in unserem Manifesto verankert. Nach diversen Privatsphäre-Initiativen in den USA, Indien, Frankreich und Deutschland, gilt es nun das Referendum gegen die Nachrichtendienst-Gesetz-Reform zu unterstützen. Die Schweizer Mozilla-Community bittet daher alle Internetbenutzer sich über die geplante Reform zu informieren und den Referendumsbogen zu unterschreiben. Weitere Informationen sowie den Referendungsbogen findest du auf den untenstehenden Webseiten.
+    desc: Mozilla steht für die Privatsphäre aller Internet-Benutzer ein. Dies ist tief in unserem Manifesto verankert. Nach diversen Privatsphäre-Initiativen in den USA, Indien, Frankreich und Deutschland, gilt es nun uns gegen die Nachrichtendienst-Gesetz-Reform zu stellen. Die Schweizer Mozilla-Community bittet daher alle Internetbenutzer sich über die geplante Abstimmung, welche voraussichtlich im September 2016 stattfindet, zu informieren. Weitere Informationen findest du auf den untenstehenden Webseiten.
