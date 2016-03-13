@@ -9,10 +9,15 @@
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>mozilla.ch</title>
+    <title>{% trans %}general.title{% endtrans %}</title>
     <meta name="description" content="">
 
-    <link rel="shortcut icon" sizes="16x16" href="favicon.ico">
+    <meta name="twitter:widgets:csp" content="on">
+
+    <link rel="shortcut icon" sizes="16x16" type="image/vnd.microsoft.icon" href="favicon.ico">
+    <link rel="icon" sizes="16x16" type="image/png" href="favicon.png">
+    <link rel="icon" sizes="any" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" sizes="129x129" type="image/png" href="apple-touch-icon.png">
 
     <link rel="canonical" hreflang="{{ app.request.locale }}" href="{{ app.request.getSchemeAndHttpHost() ~ app.request.getRequestUri() }}">
     <link rel="alternate" hreflang="x-default" href="{{ app.request.getSchemeAndHttpHost() }}">
@@ -69,10 +74,10 @@
                         </a>
                     </li>
                     <li class="item promo-small-landscape firefox-download">
-                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/all/">
+                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/new/">
                             <div class="primary">
                                 <h2 class="go">{% trans %}tiles.download-firefox{% endtrans %}</h2>
-                                <img width="176" height="184" src="https://www.mozilla.org/media/img/home/voices/promos/download-firefox/firefox-logo.png">
+                                <img width="176" height="184" src="/images/firefox_logo-only.svg">
                             </div>
                         </a>
                     </li>

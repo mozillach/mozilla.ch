@@ -32,6 +32,7 @@ get-in-touch:
     description: Get in touch with the Swiss community, ask your questions and participate at our events.
 general:
     donate: Donate
+    title: Mozilla Switzerland
 footer:
     copyright: Portions of this content are ©1998–2015 by individual mozilla.org contributors. Content available under a <a href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>.
     contact: Contact us
