@@ -173,9 +173,9 @@
                 <ul class="links-join">
                     <li><a href="https://mozilla.org/contact/spaces/">{% trans %}footer.contact{% endtrans %}</a></li>
                     <li class="wrap"><a href="https://mozilla.org/about/partnerships/">{% trans %}footer.partner{% endtrans %}</a></li>
-                    <li class="clear"><a href="https://sendto.mozilla.org/page/contribute/" class="donate">{% trans %}general.donate{% endtrans %}</a></li>
-                    <li class="wrap"><a href="https://affiliates.mozilla.org/">{% trans %}footer.firefoxaffiliates{% endtrans %}</a></li>
-                    <li class="clear"><a href="https://github.com/mozillacommunitych/mozilla.ch">{% trans %}footer.contribute{% endtrans %}</a></li>
+                    <li class="clear"><a href="https://donate.mozilla.org/?currency=chf" class="donate">{% trans %}general.donate{% endtrans %}</a></li>
+                    <li class="wrap"><a href="https://www.mozilla.org/contribute/friends/">{% trans %}footer.firefoxaffiliates{% endtrans %}</a></li>
+                    <li class="clear"><a href="https://github.com/mozillach/mozilla.ch">{% trans %}footer.contribute{% endtrans %}</a></li>
                 </ul>
                 <ul class="links-legal">
                     <li><a href="https://mozilla.org/privacy/">{% trans %}footer.privacy{% endtrans %}</a></li>
@@ -216,11 +216,15 @@
         <dialog>
             <a id="close_ndg-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
             <div id="ndg">
-                <blockquote><p>{% trans %}ndg.quote{% endtrans %}</p>
-                <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}ndg.manifesto{% endtrans %}</a></cite></blockquote>
+                <blockquote>
+                    <p>{% trans %}ndg.quote{% endtrans %}</p>
+                    <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}ndg.manifesto{% endtrans %}</a></cite>
+                </blockquote>
+
                 <p>{% trans %}ndg.desc{% endtrans %}</p>
+
                 <div class="ndgbox">
-                  <a href="{% trans %}ndg.url{% endtrans %}" rel="external">{% trans %}ndg.url{% endtrans %}</a>
+                    <a href="{% trans %}ndg.url{% endtrans %}" rel="external">{% trans %}ndg.urldesc{% endtrans %}</a>
               </div>
             </div>
         </dialog>

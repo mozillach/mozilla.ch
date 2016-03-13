@@ -89,6 +89,7 @@
     max-height: -webkit-calc(~"100vh - 140px");
     max-height: calc(~"100vh - 140px");
     padding: 2em;
+    font-size: 1.2em;
     line-height: 1.5;
 
     blockquote {
@@ -97,22 +98,15 @@
         background-color: rgb(246, 244, 236);
         font-style: italic;
         font-size: 1.2em;
-        font-family: serif;
+        line-height: 1em;
 
-        p:before {
-            content: open-quote;
-            font-size: 3em;
-            color: rgb(86, 90, 92);
-        }
-
-        p:after {
-            content: close-quote;
-            font-size: 3em;
-            color: rgb(86, 90, 92);
+        p {
+          text-align: center;
         }
 
         cite {
             display: block;
+            text-align: center;
 
             &:before {
                 content: "\2014 \2009";
