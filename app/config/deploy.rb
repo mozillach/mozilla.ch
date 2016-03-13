@@ -1,10 +1,10 @@
 set :application, "Mozilla.ch"
 set :domain,      "mozilla.ch"
-set :deploy_to,   "/var/www/mozillach" 
+set :deploy_to,   "/var/www/mozillach"
 set :app_path,    "app"
 set :user,        "michael"
 
-set :repository,  "git@github.com:mozillacommunitych/mozilla.ch.git"
+set :repository,  "git@github.com:mozillach/mozilla.ch.git"
 set :scm,         :git
 # Or: `accurev`, `bzr`, `cvs`, `darcs`, `subversion`, `mercurial`, `perforce`, or `none`
 
