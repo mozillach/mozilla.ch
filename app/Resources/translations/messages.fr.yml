@@ -5,14 +5,8 @@ tiles:
     pastevents: Activités passées
     follow-twitter: Suivez-nous sur Twitter
     download-firefox: Téléchargez Firefox
-    ch-apps: Applications Firefox OS réalisées en Suisse
-    firefox-os: Découvrez Firefox OS
-    webmaker: Bâtissez le Web que vous désirez
     campaign: Découvrez Firefox Hello
     dev-edition: Découvrez Firefox Developer Edition
-    firefox-android: Ajouter votre Firefox à votre Android
-    marketplace: Obtenez des applications sur le Firefox Marketplace
-    gearstore: Les produits dérivés officiels de Mozilla sont disponibles
     donation: Faites un don
     external-blog-posts: Messages sur le blog
     help: Aide
@@ -20,7 +14,7 @@ tiles:
     privacy: Donnez de la valeur à votre vie privée!
     mail: Contact
     ndg: NON à l’extension de la surveillance
-    independent: Choississez l'Indépendance
+    smarton: Plus malin sur le Web
 header:
     support: Support
     mission: Mission
@@ -37,8 +31,9 @@ get-in-touch:
     description: Restez en contact avec la communauté suisse, posez vos questions et prenez part à nos événements.
 general:
     donate: Faire un don
+    title: Mozilla Suisse
 footer:
-    copyright: Certaines parties de ce contenu sont ©1998–2015 par les contributeurs individuels de mozilla.org. Le contenu est disponible sous <a href="https://mozilla.org/foundation/licensing/website-content/">license Creative Commons</a>.
+    copyright: Certaines parties de ce contenu sont ©1998–2016 par les contributeurs individuels de mozilla.org. Le contenu est disponible sous <a href="https://mozilla.org/foundation/licensing/website-content/">license Creative Commons</a>.
     contact: Contactez-nous
     partner: Partenariats
     firefoxaffiliates: Affiliés Firefox
@@ -52,7 +47,6 @@ footer:
     mozilla-ch: Mozilla Suisse:
 ndg:
     url: https://www.lrens.ch/
-    url2: https://lrens-referendum.ch/
     quote: La sécurité des personnes sur Internet est fondamentale et ne doit pas être facultative.
     manifesto: Le manifeste Mozilla
-    desc: Mozilla se soucie de la vie priveée de tous les utilisateurs d'Internet. Ceci est une conséquence de notre manifeste. Après de multiples initiatives en relation avec la vie privée aux USA, en Inde, en France et en Allemagne, il est temps de supporter le référendum contre la réforme de la loi sur les services de renseignement. La communauté Mozilla suisse propose à chaque utilisateur d'Internet de s'informer sur la réforme et de signer la feuille du référendum. Vous trouverez plus d'information ainsi que le formulaire de signature sur les sites ci-dessous (en français et en allemand).
+    desc: Mozilla se soucie de la vie priveée de tous les utilisateurs d'Internet. Ceci est une conséquence de notre manifeste. Après de multiples initiatives en relation avec la vie privée aux USA, en Inde, en France et en Allemagne, il est temps de supporter le référendum contre la réforme de la loi sur les services de renseignement. La communauté Mozilla suisse propose à chaque utilisateur d'Internet de s'informer sur le prochain vote qui aura probablement lien en septembre 2016. Vous trouverez plus d'information sur les sites ci-dessous (en français et en allemand).

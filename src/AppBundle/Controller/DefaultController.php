@@ -45,13 +45,6 @@ class DefaultController extends Controller
         return $this->render('tiles/upcoming_event.html.twig', array('event' => reset($events)));
     }
 
-    public function marketplaceAppAction($id)
-    {
-        $app = $this->getApp($id);
-
-        return $this->render('marketplace_app.html.twig', array('application' => $app));
-    }
-
     private function getMozillianData()
     {
         if (isset($this->mozillianData)) {
@@ -151,23 +144,6 @@ class DefaultController extends Controller
 
         return $this->ical->iCalDateToUnixTimestamp($datetimeString);
 
-    }
-
-    private function getApp($id)
-    {
-        $cachedApps = unserialize($this->getCache()->fetch('firefox_marketplace_apps'));
-        if(isset($cachedApps[$id])) {
-            $app = $cachedApps[$id];
-        } else {
-            $response = $this->container->get('firefox_marketplace.client')->get('apps/app/' . $id)->send();
-
-            $app = json_decode($response->getBody(true), true);
-
-            $cachedApps[$id] = $app;
-            $this->getCache()->save('firefox_marketplace_apps', serialize($cachedApps), 3600);
-        }
-
-        return $app;
     }
 
     private function getCache()
