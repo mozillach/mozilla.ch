@@ -32,6 +32,7 @@ get-in-touch:
 general:
     donate: Faire un don
     title: Mozilla Suisse
+    desc: Mozilla Switzerland is a volunteer run organization engaged in promoting openness, innovation, and opportunity on the Web in the country. Mozilla Switzerland is part of the global community of Mozilla Foundation.
 footer:
     copyright: Certaines parties de ce contenu sont ©1998–2016 par les contributeurs individuels de mozilla.org. Le contenu est disponible sous <a href="https://mozilla.org/foundation/licensing/website-content/">license Creative Commons</a>.
     contact: Contactez-nous
