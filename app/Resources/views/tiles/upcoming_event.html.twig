@@ -14,7 +14,7 @@
                         <h4>{{ event.SUMMARY|e }}</h4>
                 </a>
                 <time class="event-info" datetime="{{ event.TIMESTAMP|date(constant('DATE_W3C')) }}">{{ event.TIMESTAMP|localizeddate('long', 'none', app.request.locale) }}</time>
-                <span class="event-info location"><p>{{ event.LOCATION|e }}</p></span>
+                <span class="event-info location"><p>{{ event.LOCATION }}</p></span>
             </div>
         </div>
     </div>
