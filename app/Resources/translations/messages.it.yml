@@ -13,7 +13,7 @@ tiles:
     helpurl: http://forum.mozillaitalia.org/
     privacy: Dai un valore alla tua privacy!
     mail: Contatti
-    ndg: No allo stato di sorveglianza
+    surveillance-laws: No allo stato di sorveglianza
     smarton: Diventa un esperto del Web
 header:
     support: Supporto
@@ -46,9 +46,13 @@ footer:
     other-languages: Altre lingue:
     go: Vai
     mozilla-ch: Mozilla Switzerland:
-ndg:
-    url: https://www.nachrichtendienstgesetz.ch/
-    urldesc: nachrichtendienstgesetz.ch
+surveillance-laws:
     quote: La sicurezza e la privacy di ogni persona su Internet sono prerogative fondamentali e non devono essere considerate facoltative.
     manifesto: Il manifesto di Mozilla
     desc: Mozilla tutela la privacy di ogni persona su internet. Questo é definito nel nostro manifesto. Dopo molte iniziative sulla privacy in USA, India, Francia e Germania, ora é il momento di prendere posizione contro la riforma sui servizi di spionaggio giá pianificata. La community Svizzera di Mozilla chiede ad ogni utente di internet di informarsi sulla riforma riguardo il voto che ci sará probabilmente nel Settembre del 2016. Puoi trovare maggiori informazioni nei siti sottostanti (sfortunatamente le informazioni sono in Tedesco e Francese).
+    ndg:
+        url: https://www.nachrichtendienstgesetz.ch/
+        urldesc: nachrichtendienstgesetz.ch
+    buepf:
+        url: https://www.buepf.ch/
+        urldesc: buepf.ch

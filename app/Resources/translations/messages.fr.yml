@@ -13,7 +13,7 @@ tiles:
     helpurl: https://support.mozilla.org
     privacy: Donnez de la valeur à votre vie privée!
     mail: Contact
-    ndg: NON à l’extension de la surveillance
+    surveillance-laws: NON à l’extension de la surveillance
     smarton: Plus malin sur le Web
 header:
     support: Support
@@ -46,9 +46,13 @@ footer:
     other-languages: Autres langues:
     go: Aller
     mozilla-ch: Mozilla Suisse:
-ndg:
-    url: https://www.lrens.ch/
-    urldesc: nachrichtendienstgesetz.ch
+surveillance-laws:
     quote: La sécurité des personnes sur Internet est fondamentale et ne doit pas être facultative.
     manifesto: Le manifeste Mozilla
     desc: Mozilla se soucie de la vie priveée de tous les utilisateurs d'Internet. Ceci est une conséquence de notre manifeste. Après de multiples initiatives en relation avec la vie privée aux USA, en Inde, en France et en Allemagne, il est temps de supporter le référendum contre la réforme de la loi sur les services de renseignement. La communauté Mozilla suisse propose à chaque utilisateur d'Internet de s'informer sur le prochain vote qui aura probablement lien en septembre 2016. Vous trouverez plus d'information sur les sites ci-dessous (en français et en allemand).
+    ndg:
+        url: https://www.lrens.ch/
+        urldesc: lrens.ch
+    buepf:
+        url: https://www.lscpt.ch/
+        urldesc: lscpt.ch
