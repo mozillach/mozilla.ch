@@ -10,9 +10,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <title>{% trans %}general.title{% endtrans %}</title>
-    <meta name="description" content="">
+    <meta name="description" content="{% trans %}general.desc{% endtrans %}">
 
     <meta name="twitter:widgets:csp" content="on">
+    <meta name="twitter:dnt" content="on">
 
     <link rel="shortcut icon" sizes="16x16" type="image/vnd.microsoft.icon" href="favicon.ico">
     <link rel="icon" sizes="16x16" type="image/png" href="favicon.png">
@@ -50,7 +51,7 @@
                     {% trans %}header.menu{% endtrans %}
                 </span>
                 <ul id="nav-main-menu">
-                    <li class="first"><a href="https://sendto.mozilla.org/page/contribute/">{% trans %}general.donate{% endtrans %}</a></li>
+                    <li class="first"><a href="https://donate.mozilla.org/?currency=chf">{% trans %}general.donate{% endtrans %}</a></li>
                     <li><a href="https://www.mozilla.org/mission">{% trans %}header.mission{% endtrans %}</a></li>
                     <li><a href="https://support.mozilla.org/">{% trans %}header.support{% endtrans %}</a></li>
                     <li class="last"><a href="https://www.mozilla.org/">mozilla.org</a></li>
@@ -68,9 +69,9 @@
         <section class="promo-grid-wrapper">
             <div class="promo-grid-inner">
                 <ul class="promo-grid">
-                    <li class="item promo-large-portrait ndg">
+                    <li class="item promo-large-portrait surveillance-laws">
                         <a class="panel-link" href="javascript:void" target="_self">
-                            <h2>{% trans %}tiles.ndg{% endtrans %}</h2>
+                            <h2>{% trans %}tiles.surveillance-laws{% endtrans %}</h2>
                         </a>
                     </li>
                     <li class="item promo-small-landscape firefox-download">
@@ -212,19 +213,19 @@
             </div>
         </nav>
     </footer>
-    <div id="ndg-overlay" hidden>
+    <div id="surveillance-laws-overlay" hidden>
         <dialog>
-            <a id="close_ndg-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
-            <div id="ndg">
+            <a id="close_surveillance-laws-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
+            <div id="surveillance-laws">
                 <blockquote>
-                    <p>{% trans %}ndg.quote{% endtrans %}</p>
-                    <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}ndg.manifesto{% endtrans %}</a></cite>
+                    <p>{% trans %}surveillance-laws.quote{% endtrans %}</p>
+                    <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}surveillance-laws.manifesto{% endtrans %}</a></cite>
                 </blockquote>
 
-                <p>{% trans %}ndg.desc{% endtrans %}</p>
+                <p>{% trans %}surveillance-laws.desc{% endtrans %}</p>
 
-                <div class="ndgbox">
-                    <a href="{% trans %}ndg.url{% endtrans %}" rel="external">{% trans %}ndg.urldesc{% endtrans %}</a>
+                <div class="surveillance-laws-box">
+                    <a href="{% trans %}surveillance-laws.buepf.url{% endtrans %}" rel="external">{% trans %}surveillance-laws.buepf.urldesc{% endtrans %}</a>
               </div>
             </div>
         </dialog>

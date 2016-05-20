@@ -13,7 +13,7 @@ tiles:
     helpurl: http://mozilla.de/hilfe/
     privacy: Schütze deine Privatsphäre!
     mail: Kontakt
-    ndg: Nein zum Über&shy;wa&shy;chungs&shy;staat
+    surveillance-laws: Nein zum Über&shy;wa&shy;chungs&shy;staat
     smarton: Informiere dich über das Web
 header:
     support: Support
@@ -32,6 +32,7 @@ get-in-touch:
 general:
     donate: Spenden
     title: Mozilla Schweiz
+    desc: Mozilla Schweiz ist eine Organisation von Freiwilligen, die sich für die Förderung von Offenheit, Innovation und Chancen im Web in diesem Land einsetzt. Mozilla Schweiz ist teil der weltweiten Gemeinschaft der Mozilla Foundation.
 footer:
     copyright: Teile dieses Inhalts stehen unter einem ©1998–2016 von einzelnen Mitwirkenden an mozilla.org. Der Inhalt steht unter einer <a href="https://mozilla.org/foundation/licensing/website-content/">Creative-Commons-Lizenz</a>.
     contact: Kontakt
@@ -45,9 +46,13 @@ footer:
     other-languages: Andere Sprachen:
     go: Los
     mozilla-ch: Mozilla Schweiz:
-ndg:
-    url: https://www.nachrichtendienstgesetz.ch/
-    urldesc: nachrichtendienstgesetz.ch
+surveillance-laws:
     quote: Die Sicherheit und der Schutz der Daten einer Person im Internet sind von grundlegender Bedeutung und dürfen nicht als optional betrachtet werden.
     manifesto: Mozilla Manifesto
-    desc: Mozilla steht für die Privatsphäre aller Internet-Benutzer ein. Dies ist tief in unserem Manifesto verankert. Nach diversen Privatsphäre-Initiativen in den USA, Indien, Frankreich und Deutschland, gilt es nun uns gegen die Nachrichtendienst-Gesetz-Reform zu stellen. Die Schweizer Mozilla-Community bittet daher alle Internetbenutzer sich über die geplante Abstimmung, welche voraussichtlich im September 2016 stattfindet, zu informieren. Weitere Informationen findest du auf den untenstehenden Webseiten.
+    desc: Mozilla steht für die Privatsphäre aller Internet-Benutzer ein. Dies ist tief in unserem Manifesto verankert. Nach diversen Privatsphäre-Initiativen in anderen Ländern und unseren Initiativen betreffend des NDG-Referendums, welches im September zur Abstimmung kommt, gibt es Weiteres für uns zu tun.<br>Bis am 7. Juni läuft die Frist für das Referendum gegen die BÜPF-Revision, welche die Privatsphäre jedes Internet-Benutzers gefährdet. Die Schweizer Mozilla-Community bittet daher alle Internetbenutzer sich über dieses auf unterstehenden Webseiten zu informieren und das Referendum zu unterschreiben.
+    ndg:
+        url: https://www.nachrichtendienstgesetz.ch/
+        urldesc: nachrichtendienstgesetz.ch
+    buepf:
+        url: https://www.buepf.ch/
+        urldesc: buepf.ch

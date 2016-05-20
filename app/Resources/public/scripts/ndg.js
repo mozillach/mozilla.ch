@@ -1,10 +1,10 @@
 window.addEventListener("load", function() {
-    var overlay = new Overlay(document.getElementById("ndg-overlay"));
-    document.querySelector(".ndg a").addEventListener("click", function(e) {
+    var overlay = new Overlay(document.getElementById("surveillance-laws-overlay"));
+    document.querySelector(".surveillance-laws a").addEventListener("click", function(e) {
         e.preventDefault();
         overlay.show();
     }, true);
-    document.getElementById("close_ndg-overlay").addEventListener("mouseup", function(e) {
+    document.getElementById("close_surveillance-laws-overlay").addEventListener("mouseup", function(e) {
         e.preventDefault();
         overlay.hide();
     }, true);

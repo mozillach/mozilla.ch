@@ -13,7 +13,7 @@ tiles:
     helpurl: https://support.mozilla.org/
     privacy: Stima tia sfera privata!
     mail: Contact
-    ndg: Na al stadi survegliader
+    surveillance-laws: Na al stadi survegliader
     smarton: T'infurmescha davart il web
 header:
     support: Agid
@@ -32,6 +32,7 @@ get-in-touch:
 general:
     donate: Donar
     title: Mozilla Svizra
+    desc: Mozilla Svizra è ina organisaziun manada da voluntaris ed engaschada per promover l’avertadad, l’innovaziun ed las pussaivladads en il web per noss pajais. Mozilla Svizra fa part da la communitad globala da la Mozilla Foundation.
 footer:
     copyright: Parts dal cuntegn èn ©1998–2016 da divers contribuents a mozilla.org. Il cuntegn stat a disposiziun tenor la <a href="https://mozilla.org/foundation/licensing/website-content/">licenza da Creative Commons</a>.
     contact: Ans contactescha
@@ -45,9 +46,13 @@ footer:
     other-languages: Autras linguas:
     go: Dai
     mozilla-ch: Mozilla Svizra:
-ndg:
-    url: https://www.nachrichtendienstgesetz.ch/
-    urldesc: nachrichtendienstgesetz.ch
+surveillance-laws:
     quote: La segirtad ed la protecziun da datas persunalas en l'internet è d'impurtanza fundamentala na dastga betg vegnir contemplada sco opziunala.
     manifesto: Mozilla Manifesto
     desc: Mozilla s'engascha per la sfera privata da tut ils utilisaders da l'internet. Quai è francà profundamain en noss "Manifesto". Suenter diversas iniziativas per la sfera privata en ils Stadis Unids da l'America, en l'India, en Frantscha ed en Germania sustegna Mozilla ussa era il referendum encunter la refurma da la lescha davart il servetsch d'infurmaziun. Mozilla Svizra dumonda perquai tut ils utilisaders da l'internet da s'infurmar davart la refurma planisada e da suttascriver il talun da referendum. Ulteriuras infurmaziuns ed il talun da referendum chattas ti sin las paginas menziunadas sutvart.
+    ndg:
+        url: https://www.nachrichtendienstgesetz.ch/
+        urldesc: nachrichtendienstgesetz.ch
+    buepf:
+        url: https://www.buepf.ch/
+        urldesc: buepf.ch
