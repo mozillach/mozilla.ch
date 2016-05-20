@@ -13,7 +13,7 @@ tiles:
     helpurl: http://forum.mozillaitalia.org/
     privacy: Dai un valore alla tua privacy!
     mail: Contatti
-    ndg: No allo stato di sorveglianza
+    surveillance-laws: No allo stato di sorveglianza
     smarton: Diventa un esperto del Web
 header:
     support: Supporto
@@ -32,11 +32,12 @@ get-in-touch:
 general:
     donate: Dona
     title: Mozilla Svizzera
+    desc: Mozilla Svizzera é una organizzazione di volontari che si occupa di promuovere apertura, innovazione e opportunitá nel Web nel suo paese. Mozilla Switzerland é parte di una community globale della Mozilla Foundation.
 footer:
     copyright: Parte di questo contenuto è del ©1998–2016 di contributori individuali dimozilla.org. Contenuto disponibile sotto <a href="https://mozilla.org/foundation/licensing/website-content/">Creative Commons license</a>
     contact: Contattaci
     partner: Diventa un Partner
-    firefoxaffiliates: Affiliati Firefox
+    firefoxaffiliates: Firefox Friends
     contribute: Contribuisci a questo sito
     privacy: Privacy
     cookies: Cookie
@@ -45,8 +46,13 @@ footer:
     other-languages: Altre lingue:
     go: Vai
     mozilla-ch: Mozilla Switzerland:
-ndg:
-    url: https://www.nachrichtendienstgesetz.ch/
+surveillance-laws:
     quote: La sicurezza e la privacy di ogni persona su Internet sono prerogative fondamentali e non devono essere considerate facoltative.
     manifesto: Il manifesto di Mozilla
-    desc: Mozilla tutela la privacy di ogni persona su internet. Questo é definito nel nostro manifesto. Dopo molte iniziative sulla privacy in USA, India, Francia e Germania, ora é il momento di sostenere il referendum contro una riforma della legge sullo spionaggio. La community Svizzera di Mozilla chiede ad ogni utente di internet di informarsi sulla riforma e firmare il referendum. Puoi trovare maggiori informazioni ed il modulo per partecipare sul sito sottostante (sfortunatamente le informazioni sono in Tedesco e Francese).
+    desc: Mozilla tiene alla privacy di tutti gli utenti su internet. Tutto questo é scritto nel nostro manifesto. Dopo molte iniziative in diversi paesi e la nostra campagna per il NDG-Referendum, che é stato votato in settembre, abbiamo ancora molto da fare.<br>Il Referendum per la revisione della legge BÜPF é iniziato e finità il 7 luglio. La revisione tratta la privacy di tutti gli utenti su internet.La community svizzera Mozilla chiede a tutti gli utenti di internet di informarsi riguardo questo referendum sui siti sottostanti e di partecipare al referendum.
+    ndg:
+        url: https://www.nachrichtendienstgesetz.ch/
+        urldesc: nachrichtendienstgesetz.ch
+    buepf:
+        url: https://www.buepf.ch/
+        urldesc: buepf.ch

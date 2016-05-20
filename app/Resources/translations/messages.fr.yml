@@ -13,7 +13,7 @@ tiles:
     helpurl: https://support.mozilla.org
     privacy: Donnez de la valeur à votre vie privée!
     mail: Contact
-    ndg: NON à l’extension de la surveillance
+    surveillance-laws: NON à l’extension de la surveillance
     smarton: Plus malin sur le Web
 header:
     support: Support
@@ -32,11 +32,12 @@ get-in-touch:
 general:
     donate: Faire un don
     title: Mozilla Suisse
+    desc: Mozilla Switzerland is a volunteer run organization engaged in promoting openness, innovation, and opportunity on the Web in the country. Mozilla Switzerland is part of the global community of Mozilla Foundation.
 footer:
     copyright: Certaines parties de ce contenu sont ©1998–2016 par les contributeurs individuels de mozilla.org. Le contenu est disponible sous <a href="https://mozilla.org/foundation/licensing/website-content/">license Creative Commons</a>.
     contact: Contactez-nous
     partner: Partenariats
-    firefoxaffiliates: Affiliés Firefox
+    firefoxaffiliates: Firefox Friends
     contribute: Contribuer à cette page
     privacy: Vie privée
     cookies: Cookies
@@ -45,8 +46,13 @@ footer:
     other-languages: Autres langues:
     go: Aller
     mozilla-ch: Mozilla Suisse:
-ndg:
-    url: https://www.lrens.ch/
+surveillance-laws:
     quote: La sécurité des personnes sur Internet est fondamentale et ne doit pas être facultative.
     manifesto: Le manifeste Mozilla
-    desc: Mozilla se soucie de la vie priveée de tous les utilisateurs d'Internet. Ceci est une conséquence de notre manifeste. Après de multiples initiatives en relation avec la vie privée aux USA, en Inde, en France et en Allemagne, il est temps de supporter le référendum contre la réforme de la loi sur les services de renseignement. La communauté Mozilla suisse propose à chaque utilisateur d'Internet de s'informer sur le prochain vote qui aura probablement lien en septembre 2016. Vous trouverez plus d'information sur les sites ci-dessous (en français et en allemand).
+    desc: Mozilla défend la vie privé des utilisateurs d'Internet. Ceci est inscrit dans notre manifeste. Après de multiple initiatives dans différents pays et notre campagne en faveur du référendum concernant la NGD (loi sur le renseignement) qui va été voté septembre, nous sommes à nouveau sollicités.<br>Le référendum sur la LSCPT (loi sur la surveillance de la correspondance par poste et télécommunication) a commencé et se termine le 7 juillet. La révision de la loi sur la surveillance menace la vie privé des utilisateurs d'Internet. La communauté Mozilla en Suisse demande à tous de s'informer sur ce référendum en allant sur le site Internet ci-dessous et de signer celui-ci.
+    ndg:
+        url: https://www.lrens.ch/
+        urldesc: lrens.ch
+    buepf:
+        url: https://www.lscpt.ch/
+        urldesc: lscpt.ch
