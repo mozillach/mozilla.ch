@@ -111,7 +111,7 @@ class DefaultController extends Controller
                 $this->ical = new ICal($lines);
                 $events = $this->ical->events();
                 foreach($events as $i => $event) {
-                    $events[$i]['TIMESTAMP'] = $this->getStartDate($event['DTSTAMP']);
+                    $events[$i]['TIMESTAMP'] = $this->getStartDate($event['DTSTART']);
                     $events[$i]['LOCATION'] = stripslashes($event['LOCATION']);
                     $events[$i]['SUMMARY'] = stripslashes($event['SUMMARY']);
                 }
