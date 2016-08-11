@@ -121,7 +121,7 @@ class DefaultController extends Controller
             $this->getCache()->save('mozilla_reps_events', serialize($events), 3600);
         }
 
-        return $events ?: array();
+        return $events ?? array();
     }
 
     /**
