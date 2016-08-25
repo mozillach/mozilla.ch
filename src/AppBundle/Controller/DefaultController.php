@@ -100,6 +100,8 @@ class DefaultController extends Controller
 
     private function getEventFeed()
     {
+        $events = null;
+        
         if ($cachedEvents = $this->getCache()->fetch('mozilla_reps_events')) {
             $events = unserialize($cachedEvents);
         } else {
@@ -107,7 +109,7 @@ class DefaultController extends Controller
 
             $lines = explode("\n", $response->getBody(true));
 
-            if(count($lines) > 5) {
+            if(count($lines) > 8) {
                 $this->ical = new ICal($lines);
                 $events = $this->ical->events();
                 foreach($events as $i => $event) {
@@ -116,13 +118,10 @@ class DefaultController extends Controller
                     $events[$i]['SUMMARY'] = stripslashes($event['SUMMARY']);
                 }
             }
-            else {
-                $events = array();
-            }
             $this->getCache()->save('mozilla_reps_events', serialize($events), 3600);
         }
 
-        return $events;
+        return $events ?? array();
     }
 
     /**
