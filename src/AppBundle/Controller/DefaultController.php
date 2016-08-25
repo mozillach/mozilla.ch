@@ -109,7 +109,7 @@ class DefaultController extends Controller
 
             $lines = explode("\n", $response->getBody(true));
 
-            if(count($lines) > 5) {
+            if(count($lines) > 8) {
                 $this->ical = new ICal($lines);
                 $events = $this->ical->events();
                 foreach($events as $i => $event) {
