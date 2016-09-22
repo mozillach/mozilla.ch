@@ -13,9 +13,11 @@ class AppKernel extends Kernel
             new Symfony\Bundle\TwigBundle\TwigBundle(),
             new Symfony\Bundle\MonologBundle\MonologBundle(),
             new Symfony\Bundle\SwiftmailerBundle\SwiftmailerBundle(),
+            new Sp\BowerBundle\SpBowerBundle(),
             new Symfony\Bundle\AsseticBundle\AsseticBundle(),
             new Doctrine\Bundle\DoctrineBundle\DoctrineBundle(),
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
+            new Lunetics\LocaleBundle\LuneticsLocaleBundle(),
 
             new Endroid\Bundle\TwitterBundle\EndroidTwitterBundle(),
             new Misd\GuzzleBundle\MisdGuzzleBundle(),
