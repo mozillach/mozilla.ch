@@ -5,8 +5,9 @@ This is the official repository for the mozilla.ch website.
 ## Local Setup
 
 1. Install composer: https://getcomposer.org/download/
-2. Run ```php composer.phar install```
-3. Start server: ```php app/console server:run ```
+2. Install bower: http://bower.io/
+3. Run `php composer.phar install`
+4. Start server: `php app/console server:run`
 
 ### API Keys
 For the Mozillian faces you need a mozillians API key. You can generate one [here](https://mozillians.org/en-US/apikeys/). Set the key as the value for `mozillians.api_key` in [app/config/parameters.yml](/app/config/parameters.yml) (doesn't exist in the repo, it's generated with composer). Alternatively you can set the environment variable `MOZILLIANS_KEY`.
@@ -18,7 +19,7 @@ All other used APIs don't need a key for the used scopes.
 ### Building the Docker Container
 Make sure you have docker installed.
 
-Run `docker build -t mozillach/mozilla.ch` to build the docker container.
+Run `docker build -t mozillach/mozilla.ch .` to build the docker container.
 
 ### Releasing a New Docker Container
 [![Travis CI Builds](https://travis-ci.org/mozillach/mozilla.ch.svg?branch=release)](https://travis-ci.org/mozillach/mozilla.ch)

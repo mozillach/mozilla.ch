@@ -16,7 +16,7 @@ class DefaultController extends Controller
 
     /**
      * @Route("/{_locale}", name="homepage", requirements={
-           "_locale": "(de|en|fr|it|rm)"
+           "_locale": "de|en|fr|it|rm"
        })
      */
     public function indexAction()

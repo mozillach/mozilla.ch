@@ -18,6 +18,7 @@ cache:
   - $HOME/.composer/cache
 
 install:
+  - npm install -g bower
   - composer install
 
 script: phpunit -c app/

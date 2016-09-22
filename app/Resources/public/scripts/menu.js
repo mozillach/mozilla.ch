@@ -1,3 +1,4 @@
+// @license magnet:?xt=urn:btih:3877d6d54b3accd4bc32f8a48bf32ebc0901502a&dn=mpl-2.0.txt MPL-2.0
 /* This Source Code Form is subject to the terms of the Mozilla Public
  * License, v. 2.0. If a copy of the MPL was not distributed with this
  * file, You can obtain one at http://mozilla.org/MPL/2.0/. */
@@ -532,4 +533,4 @@ NavMain.closeSmallSubmenu = function(menu)
 $(document).ready(NavMain.init);
 
 })();
-
+// @license-end
