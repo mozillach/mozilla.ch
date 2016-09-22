@@ -1,0 +1,11 @@
+<form id="lang_form">
+    <label for="language">{% trans %}footer.other-languages{% endtrans %}</label>
+    <select id="language" name="lang">
+    {% for locale in locales %}
+        <option lang="{{ locale.locale }}" value="{{ locale.locale }}"{% if app.request.locale == locale.locale %} selected="selected"{% endif %}>{{ locale.locale_target_language }}</option>
+    {% endfor %}
+    </select>
+    <noscript>
+        <button type="submit">{% trans %}footer.go{% endtrans %}</button>
+    </noscript>
+</form>

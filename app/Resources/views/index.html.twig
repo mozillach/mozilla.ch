@@ -22,22 +22,24 @@
 
     <link rel="canonical" hreflang="{{ app.request.locale }}" href="{{ app.request.getSchemeAndHttpHost() ~ app.request.getRequestUri() }}">
     <link rel="alternate" hreflang="x-default" href="{{ app.request.getSchemeAndHttpHost() }}">
-    <link rel="alternate" hreflang="de-CH" href="{{ app.request.getSchemeAndHttpHost() }}/de" title="Deutsch">
-    <link rel="alternate" hreflang="en-CH" href="{{ app.request.getSchemeAndHttpHost() }}/en" title="English">
-    <link rel="alternate" hreflang="fr-CH" href="{{ app.request.getSchemeAndHttpHost() }}/fr" title="Français">
-    <link rel="alternate" hreflang="it-CH" href="{{ app.request.getSchemeAndHttpHost() }}/it" title="Italiano">
-    <link rel="alternate" hreflang="rm" href="{{ app.request.getSchemeAndHttpHost() }}/rm" title="Rumantsch">
+    {{ locale_switcher(null, null, 'lang_links.html.twig') }}
 
     {% stylesheets '../app/Resources/public/less/index.less' filter='lessphp' %}
         <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
     {% endstylesheets %}
+    {% stylesheets '@mozilla_tabzilla_css' %}
+        <link rel="stylesheet" type="text/css" href="{{ asset_url }}" />
+    {% endstylesheets %}
 
-    <script src="https://www.mozilla.org/media/js/libs/jquery-1.7.1.min.js"></script>
-
-    <!-- Tabzilla intergration -->
-    <link href="https://www.mozilla.org/media/css/tabzilla-min.css" rel="stylesheet" />
-    <script src="https://www.mozilla.org/tabzilla/tabzilla.js"></script>
-
+    {# Load bower dependencies before our main scripts. Sadly masonry's
+       dependencies somehow don't get loaded correctly with the assetic asset
+       alias. #}
+    {% javascripts '@minimal_overlay_js'
+                   '../app/Resources/public/components/masonry/dist/masonry.pkgd.js'
+                   '@jquery_js'
+                   '@resize_sensor_js' %}
+        <script src="{{ asset_url }}"></script>
+    {% endjavascripts %}
     {% javascripts '../app/Resources/public/scripts/*.js' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
@@ -45,7 +47,9 @@
 <body>
     <header id="masthead">
         <div class="container">
-            <a href="/{{ app.request.locale }}/" id="tabzilla" data-infobar="update" aria-label="Mozilla links">Mozilla</a>
+            <div id="tabzilla">
+                <a href="https://mozilla.org/">Mozilla</a>
+            </div>
             <nav id="nav-main" role="navigation">
                 <span class="toggle" role="button" aria-expanded="false" aria-controls="nav-main-menu" tabindex="0">
                     {% trans %}header.menu{% endtrans %}
@@ -54,7 +58,6 @@
                     <li class="first"><a href="https://donate.mozilla.org/?currency=chf">{% trans %}general.donate{% endtrans %}</a></li>
                     <li><a href="https://www.mozilla.org/mission">{% trans %}header.mission{% endtrans %}</a></li>
                     <li><a href="https://support.mozilla.org/">{% trans %}header.support{% endtrans %}</a></li>
-                    <li class="last"><a href="https://www.mozilla.org/">mozilla.org</a></li>
                 </ul>
             </nav>
         </div>
@@ -155,7 +158,7 @@
                         </a>
                     </li>
                     <li>
-                        <a class="contact" rel="external" href="https://lists.mozilla.org/listinfo/community-switzerland">
+                        <a class="contact" rel="external" href="https://discourse.mozilla-community.org/c/communities/switzerland">
                             <h2>{% trans %}get-in-touch.title{% endtrans %}</h2>
                             <p>{% trans %}get-in-touch.description{% endtrans %}</p>
                         </a>
@@ -196,19 +199,7 @@
                     </li>
                 </ul>
                 <div class="lang-switcher">
-                    <form id="lang_form">
-                        <label for="language">{% trans %}footer.other-languages{% endtrans %}</label>
-                        <select id="language" name="lang">
-                            <option lang="de-CH" value="de" {% if app.request.locale == "de" %} selected="selected"{% endif %}>Deutsch</option>
-                            <option lang="en" value="en" {% if app.request.locale == "en" %} selected="selected"{% endif %}>English</option>
-                            <option lang="fr-CH" value="fr" {% if app.request.locale == "fr" %} selected="selected"{% endif %}>Français</option>
-                            <option lang="it-CH" value="it" {% if app.request.locale == "it" %} selected="selected"{% endif %}>Italiano</option>
-                            <option lang="rm" value="rm" {% if app.request.locale == "rm" %} selected="selected"{% endif %}>Rumantsch</option>
-                        </select>
-                        <noscript>
-                            <button type="submit">{% trans %}footer.go{% endtrans %}</button>
-                        </noscript>
-                    </form>
+                    {{ locale_switcher(null, null, 'lang_switcher.html.twig') }}
                 </div>
             </div>
         </nav>

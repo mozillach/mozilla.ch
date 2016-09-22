@@ -89,4 +89,24 @@ endroid_twitter:
     access_token: "18315356-RCP5xh2tCvvRlw8ZcTsZW2tRnMa9SVwv7mkn2dXC5"
     access_token_secret: "1AuZgnv3D1IFlINwVXMiDv0pMFGrnq7tw7fyJkjxncBwN"
 
+sp_bower:
+    assetic:
+        enabled: true
+    bundles:
+        AppBundle:
+            config_dir: ../..
+            asset_dir: app/Resources/public/components
 
+lunetics_locale:
+    guessing_order:
+        - query
+        - router
+        - browser
+    allowed_locales:
+        - de
+        - fr
+        - it
+        - rm
+        - en
+    switcher:
+        show_current_locale: true

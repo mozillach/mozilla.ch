@@ -1,0 +1,3 @@
+{% for locale in locales %}
+<link rel="alternate" hreflang="{{ locale.locale }}" href="{{ app.request.getSchemeAndHttpHost() }}/{{ locale.locale }}" title="{{ locale.locale_target_language }}">
+{% endfor %}

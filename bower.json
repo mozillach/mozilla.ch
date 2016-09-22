@@ -1,0 +1,15 @@
+{
+  "name": "app",
+  "homepage": "https://mozilla.ch",
+  "description": "",
+  "moduleType": [],
+  "private": true,
+  "dependencies": {
+    "mozilla-tabzilla": "^0.5.1",
+    "masonry": "^4.0.0",
+    "minimal-overlay": "^1.0.0",
+    "jquery": "^2.2.1",
+    "resize-sensor": "^0.0.5",
+    "open-sans-fontface": "^1.4.2"
+  }
+}
