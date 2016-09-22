@@ -36,7 +36,8 @@
        alias. #}
     {% javascripts '@minimal_overlay_js'
                    '../app/Resources/public/components/masonry/dist/masonry.pkgd.js'
-                   '@jquery_js' %}
+                   '@jquery_js'
+                   '@resize_sensor_js' %}
         <script src="{{ asset_url }}"></script>
     {% endjavascripts %}
     {% javascripts '../app/Resources/public/scripts/*.js' %}
