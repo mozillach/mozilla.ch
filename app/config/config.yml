@@ -99,6 +99,7 @@ sp_bower:
             asset_dir: app/Resources/public/components
 
 lunetics_locale:
+    strict_mode: true
     guessing_order:
         - query
         - router
