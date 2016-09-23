@@ -3,7 +3,7 @@ FROM php:7.0-apache
 ENV SYMFONY_ENV=prod
 ENV BEHIND_PROXY=1
 
-RUN apt-get update -q && apt-get install -yq git libicu-dev zlib1g-dev libicu52 zlib1g npm --no-install-recommends
+RUN apt-get update -q && apt-get install -yq git libicu-dev zlib1g-dev libicu52 zlib1g nodejs nodejs-legacy npm --no-install-recommends
 
 # PHP config
 RUN docker-php-ext-install intl mbstring zip opcache
@@ -25,8 +25,7 @@ COPY composer.json composer.lock ./
 RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
 
 # Clean up packages
-RUN npm uninstall -g bower
-RUN apt-get purge -y --auto-remove libicu-dev zlib1g-dev npm git && \
+RUN apt-get purge -y --auto-remove libicu-dev zlib1g-dev npm && \
     rm -rf /var/lib/apt/lists/*
 
 COPY mozillach.conf /etc/apache2/sites-enabled/mozillach.conf

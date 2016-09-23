@@ -12,6 +12,10 @@ bin/
 app/cache/
 app/logs/
 app/config/parameters.yml
+app/bootstrap.php.cache
 web/bundles/
+web/js/
+web/css/
 !*.gitkeep
 test-docker.sh
+app/Resources/public/components/
