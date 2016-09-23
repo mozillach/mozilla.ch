@@ -90,6 +90,7 @@ endroid_twitter:
     access_token_secret: "1AuZgnv3D1IFlINwVXMiDv0pMFGrnq7tw7fyJkjxncBwN"
 
 sp_bower:
+    allow_root: true
     assetic:
         enabled: true
     bundles:
