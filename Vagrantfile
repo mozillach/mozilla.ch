@@ -11,10 +11,9 @@ Vagrant.configure(2) do |config|
   # provisioning with a shell script.
   config.vm.provision "shell", inline: <<-SHELL
     sudo apt-get update
-    sudo apt-get install -y php7.0-cli php7.0-intl php7.0-curl php7.0-xml nodejs npm
+    sudo apt-get install -y php7.0-cli php7.0-intl php7.0-curl php7.0-xml nodejs-legacy npm
     sudo npm install -g bower
     sudo ln -s /usr/local/bin/bower /usr/bin/bower
-    sudo ln -s /usr/bin/nodejs /usr/bin/node
     cd /vagrant
     curl -sS https://getcomposer.org/installer | php
     ./composer.phar install
