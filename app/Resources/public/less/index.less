@@ -112,15 +112,6 @@
     background: none;
 }
 
-.promo-small-landscape.firefox-download .primary {
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
-    padding: 0;
-}
-
 .promo-small-landscape.dev-edition {
     .panel-link {
         position: absolute;
@@ -230,16 +221,51 @@ html[lang|="en"] .promo-small-landscape.privacy {
     font-size: 1.3em;
 }
 
-.promo-large-portrait.surveillance-laws {
-    background-color: #27AE60;
-    background-image: url("/images/camera.svg");
-    background-position: center bottom;
-    background-repeat: no-repeat;
-    text-align: center;
-    font-size: 1.3em;
+// Firefox Download
+.promo-large-portrait.firefox-download {
+    background: #6fbe4a;
 
     h2 {
-	    padding-top: 40px;
+        padding-top: 30px;
+        text-align: center;
+
+        &.go:after {
+            position: absolute;
+            bottom: -48px;
+            left: 50%;
+            width: 38px;
+            height: 38px;
+            margin-left: -20px;
+            font-family: 'FA-Icons-Home';
+            .font-size(30px);
+            content: '\f103';
+            border: 2px solid #fff;
+            border-radius: 100%;
+            opacity: 0.6;
+        }
+    }
+
+    img {
+        position: absolute;
+        bottom: 15px;
+        left: 30px;
+    }
+
+    .primary {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        padding: 0;
+    }
+}
+
+html[lang|="en"] {
+    .promo-large-portrait.firefox-download {
+        .secondary .download-link .download-subtitle {
+            .font-size(18px);
+        }
     }
 }
 
@@ -332,23 +358,4 @@ html[lang|="en"] .promo-small-landscape.privacy {
 
 #nav-main-menu::before {
     background: transparent url("https://www.mozilla.org/media/img/sandstone/menu-point.png") no-repeat scroll;
-}
-
-.surveillance-laws-box {
-    text-align: center;
-}
-.surveillance-laws-box a {
-    display: inline-block;
-    padding: 1em;
-    margin: 2em 0;
-    font-size: 18px;
-    border-radius: 6px;
-    color: rgb(255, 255, 255);
-    background-color: rgb(39, 174, 96);
-    border-color: rgb(34, 153, 85);
-
-    &:hover {
-        background-color: rgb(30, 132, 73);
-        border-color: rgb(23, 103, 57);
-    }
 }

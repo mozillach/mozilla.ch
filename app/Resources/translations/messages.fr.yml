@@ -46,13 +46,3 @@ footer:
     other-languages: Autres langues:
     go: Aller
     mozilla-ch: Mozilla Suisse:
-surveillance-laws:
-    quote: La sécurité des personnes sur Internet est fondamentale et ne doit pas être facultative.
-    manifesto: Le manifeste Mozilla
-    desc: Mozilla défend la vie privé des utilisateurs d'Internet. Ceci est inscrit dans notre manifeste. Après de multiple initiatives dans différents pays et notre campagne en faveur du référendum concernant la NGD (loi sur le renseignement) qui va été voté septembre, nous sommes à nouveau sollicités.<br>Le référendum sur la LSCPT (loi sur la surveillance de la correspondance par poste et télécommunication) a commencé et se termine le 7 juillet. La révision de la loi sur la surveillance menace la vie privé des utilisateurs d'Internet. La communauté Mozilla en Suisse demande à tous de s'informer sur ce référendum en allant sur le site Internet ci-dessous et de signer celui-ci.
-    ndg:
-        url: https://www.lrens.ch/
-        urldesc: lrens.ch
-    buepf:
-        url: https://www.lscpt.ch/
-        urldesc: lscpt.ch
