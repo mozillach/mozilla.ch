@@ -80,19 +80,10 @@
                           </div>
                       </a>
                     </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
-                    </li>
-                    <li class="item promo-face">
-                        {{ render(controller(
-                            'AppBundle:Default:contributorTile',
-                            { 'index': facescount }
-                        )) }}
-                        {% set facescount = facescount + 1 %}
+                    <li class="item promo-small-landscape discuss">
+                        <a class="panel-link" rel="external" href="https://discourse.mozilla-community.org/c/communities/switzerland">
+                            <h2>{% trans %}tiles.discuss{% endtrans %}</h2>
+                        </a>
                     </li>
                     <li class="item promo-face">
                         {{ render(controller(
