@@ -26,9 +26,26 @@ Run `docker build -t mozillach/mozilla.ch .` to build the docker container.
 
 The deployed docker container is based on the release branch and built directly on docker hub. To release this container to the productive website, contact the Community IT team for now (#communityit on irc.mozilla.org).
 
-### Running the Container
+### Running the Container (Production)
 Replace `{mozillians API key}` with a mozillians API key for the v2 API with public access privileges. See [API Keys](#api-keys) for how to get one.
 
 Run `docker run -e MOZILLIANS_KEY={mozillians API key} mozillach/mozilla.ch` to start provisioning and then start apache.
 
-To run it in a deployment situation use `docker run -h mozilla.ch -p 80:80 -d -e "MOZILLAINS_KEY={mozillians API key}" mozillach/mozilla.ch`. The container should not be directly exposed to incoming connections, since it respects forwarded headers by default.
+### Running the Container (Very experimental)
+Install [docker-compose](https://docs.docker.com/compose/install/) if not already included in your docker build. Now open ```/etc/hosts``` and add
+
+```
+127.0.0.1   mozilla.ch
+```
+
+Now you can run the command below. Replace `{mozillians API key}` with a mozillians API key for the v2 API with public access privileges. See [API Keys](#api-keys) for how to get one.
+
+```
+MOZILLIANS_KEY={mozillians API key} docker-compose up
+```
+
+to start the container. The website is now available through `mozilla.ch` and you can just reload that page to see your changes. Do not forget to remove the ```/etc/hosts``` entry after you're done.
+
+**Current problems:**
+* Code changes do not seem to be picked up automatically or the content
+* Eliminate the second step with /etc/hosts. It would be great to have this on localhost:8000 or similar.
