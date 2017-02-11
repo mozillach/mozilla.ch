@@ -15,6 +15,7 @@ tiles:
     mail: Contatti
     surveillance-laws: No allo stato di sorveglianza
     smarton: Diventa un esperto del Web
+    discuss: Discussione
 header:
     support: Supporto
     mission: Missione
@@ -46,13 +47,3 @@ footer:
     other-languages: Altre lingue:
     go: Vai
     mozilla-ch: Mozilla Switzerland:
-surveillance-laws:
-    quote: La sicurezza e la privacy di ogni persona su Internet sono prerogative fondamentali e non devono essere considerate facoltative.
-    manifesto: Il manifesto di Mozilla
-    desc: Mozilla tiene alla privacy di tutti gli utenti su internet. Tutto questo é scritto nel nostro manifesto. Dopo molte iniziative in diversi paesi e la nostra campagna per il NDG-Referendum, che é stato votato in settembre, abbiamo ancora molto da fare.<br>Il Referendum per la revisione della legge BÜPF é iniziato e finità il 7 luglio. La revisione tratta la privacy di tutti gli utenti su internet.La community svizzera Mozilla chiede a tutti gli utenti di internet di informarsi riguardo questo referendum sui siti sottostanti e di partecipare al referendum.
-    ndg:
-        url: https://www.nachrichtendienstgesetz.ch/
-        urldesc: nachrichtendienstgesetz.ch
-    buepf:
-        url: https://www.buepf.ch/
-        urldesc: buepf.ch
