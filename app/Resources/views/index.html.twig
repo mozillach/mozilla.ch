@@ -34,8 +34,7 @@
     {# Load bower dependencies before our main scripts. Sadly masonry's
        dependencies somehow don't get loaded correctly with the assetic asset
        alias. #}
-    {% javascripts '@minimal_overlay_js'
-                   '../app/Resources/public/components/masonry/dist/masonry.pkgd.js'
+    {% javascripts '../app/Resources/public/components/masonry/dist/masonry.pkgd.js'
                    '@jquery_js'
                    '@resize_sensor_js' %}
         <script src="{{ asset_url }}"></script>
