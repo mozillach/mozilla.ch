@@ -2,7 +2,7 @@
 
 This is the official repository for the mozilla.ch website.
 
-## Local Setup
+## Local Setup with Vagrant
 
 1. Install composer: https://getcomposer.org/download/
 2. Install bower: http://bower.io/
@@ -26,7 +26,7 @@ Install [docker-compose](https://docs.docker.com/compose/install/) if not alread
 Now you can run the command below. Replace `{mozillians API key}` with a mozillians API key for the v2 API with public access privileges. See [API Keys](#api-keys) for how to get one.
 
 ```
-MOZILLIANS_KEY={mozillians API key} docker-compose up
+MOZILLIANS_KEY={mozillians API key} docker-compose -f docker-compose.yml -f docker-compose.dev.yml up
 ```
 
 to start the container. The website is now available through `mozilla.ch` and you can just reload that page to see your changes. Do not forget to remove the ```/etc/hosts``` entry after you're done.
