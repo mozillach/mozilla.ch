@@ -8,4 +8,5 @@ services:
      - .:/var/www/html/
     environment:
      - MOZILLIANS_KEY=${MOZILLIANS_KEY}
-     - SYMFONY_ENV=dev
+     - SYMFONY_ENV=prod
+     - BEHIND_PROXY=1

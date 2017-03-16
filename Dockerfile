@@ -1,8 +1,5 @@
 FROM php:7.0-apache
 
-ENV SYMFONY_ENV=prod
-ENV BEHIND_PROXY=1
-
 RUN apt-get update -q && apt-get install -yq git libicu-dev zlib1g-dev libicu52 zlib1g nodejs nodejs-legacy npm --no-install-recommends
 
 # PHP config
@@ -22,7 +19,7 @@ RUN npm install -g bower
 COPY composer.json composer.lock ./
 
 # Install vendor deps
-RUN composer.phar install --no-dev --optimize-autoloader --no-scripts
+RUN if [ $SYMFONY_ENV=="prod" ]; then composer.phar install --no-dev --optimize-autoloader --no-scripts; else composer.phar install --optimize-autoloader --no-scripts; fi
 
 # Clean up packages
 RUN apt-get purge -y --auto-remove libicu-dev zlib1g-dev npm && \
