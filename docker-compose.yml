@@ -4,8 +4,6 @@ services:
     build: .
     ports:
      - "80:80"
-    volumes:
-     - .:/var/www/html/
     environment:
      - MOZILLIANS_KEY=${MOZILLIANS_KEY}
      - SYMFONY_ENV=prod
