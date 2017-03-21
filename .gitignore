@@ -18,6 +18,7 @@
 .idea
 *~
 
+*.log
 /.vagrant/
 
 # Don't include the build main.css file.

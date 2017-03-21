@@ -34,8 +34,7 @@
     {# Load bower dependencies before our main scripts. Sadly masonry's
        dependencies somehow don't get loaded correctly with the assetic asset
        alias. #}
-    {% javascripts '@minimal_overlay_js'
-                   '../app/Resources/public/components/masonry/dist/masonry.pkgd.js'
+    {% javascripts '../app/Resources/public/components/masonry/dist/masonry.pkgd.js'
                    '@jquery_js'
                    '@resize_sensor_js' %}
         <script src="{{ asset_url }}"></script>
@@ -72,17 +71,17 @@
         <section class="promo-grid-wrapper">
             <div class="promo-grid-inner">
                 <ul class="promo-grid">
-                    <li class="item promo-large-portrait surveillance-laws">
-                        <a class="panel-link" href="javascript:void" target="_self">
-                            <h2>{% trans %}tiles.surveillance-laws{% endtrans %}</h2>
-                        </a>
+                    <li class="item promo-large-portrait firefox-download">
+                      <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/new/">
+                          <div class="primary">
+                              <h2 class="go">{% trans %}tiles.download-firefox{% endtrans %}</h2>
+                              <img width="228" height="237" src="/images/firefox_logo-only.svg">
+                          </div>
+                      </a>
                     </li>
-                    <li class="item promo-small-landscape firefox-download">
-                        <a class="panel-link" rel="external" href="https://www.mozilla.org/firefox/new/">
-                            <div class="primary">
-                                <h2 class="go">{% trans %}tiles.download-firefox{% endtrans %}</h2>
-                                <img width="176" height="184" src="/images/firefox_logo-only.svg">
-                            </div>
+                    <li class="item promo-small-landscape discuss">
+                        <a class="panel-link" rel="external" href="https://discourse.mozilla-community.org/c/communities/switzerland">
+                            <h2>{% trans %}tiles.discuss{% endtrans %}</h2>
                         </a>
                     </li>
                     <li class="item promo-face">
@@ -204,22 +203,5 @@
             </div>
         </nav>
     </footer>
-    <div id="surveillance-laws-overlay" hidden>
-        <dialog>
-            <a id="close_surveillance-laws-overlay" class="close-overlay" href="javascript:void" target="_self">x</a>
-            <div id="surveillance-laws">
-                <blockquote>
-                    <p>{% trans %}surveillance-laws.quote{% endtrans %}</p>
-                    <cite><a href="https://www.mozilla.org/about/manifesto/" rel="external">{% trans %}surveillance-laws.manifesto{% endtrans %}</a></cite>
-                </blockquote>
-
-                <p>{% trans %}surveillance-laws.desc{% endtrans %}</p>
-
-                <div class="surveillance-laws-box">
-                    <a href="{% trans %}surveillance-laws.buepf.url{% endtrans %}" rel="external">{% trans %}surveillance-laws.buepf.urldesc{% endtrans %}</a>
-              </div>
-            </div>
-        </dialog>
-    </div>
 </body>
 </html>
