@@ -20,8 +20,6 @@
         "sensio/framework-extra-bundle": "~3.0,>=3.0.2",
         "incenteev/composer-parameter-handler": "~2.0",
         "johngrogg/ics-parser": "~1.0",
-        "endroid/twitter": "~1.1",
-        "endroid/twitter-bundle": "~1.1",
         "leafo/lessphp": "0.5.*",
         "misd/guzzle-bundle": "~1.1",
         "sp/bower-bundle": "^0.11.0",

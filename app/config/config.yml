@@ -82,13 +82,6 @@ services:
         class: Doctrine\Common\Cache\FilesystemCache
         arguments: ['%kernel.cache_dir%']
 
-
-endroid_twitter:
-    consumer_key: "XRv9AxrIRyZTz4DIMoOPskQFI"
-    consumer_secret: "daYpMnlbuTHY39frqekiYRDpGuKObxnCNZH1bLjLIbtDGVsh84"
-    access_token: "18315356-RCP5xh2tCvvRlw8ZcTsZW2tRnMa9SVwv7mkn2dXC5"
-    access_token_secret: "1AuZgnv3D1IFlINwVXMiDv0pMFGrnq7tw7fyJkjxncBwN"
-
 sp_bower:
     allow_root: true
     assetic:

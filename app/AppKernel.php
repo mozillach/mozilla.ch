@@ -19,7 +19,6 @@ class AppKernel extends Kernel
             new Sensio\Bundle\FrameworkExtraBundle\SensioFrameworkExtraBundle(),
             new Lunetics\LocaleBundle\LuneticsLocaleBundle(),
 
-            new Endroid\Bundle\TwitterBundle\EndroidTwitterBundle(),
             new Misd\GuzzleBundle\MisdGuzzleBundle(),
 
             new AppBundle\AppBundle(),
